@@ -1,0 +1,2305 @@
+TODO
+fix errors
+update amp-dev@1.0.5 --> amp-dev@1.0.6
+
+npm run develop
+
+> amp-dev@1.0.5 develop
+> npx gulp develop
+
+[12:01:48 PM] › ℹ  info      Config: environment=development test=false
+[12:01:50] Using gulpfile /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/gulpfile.js
+[12:01:50] Starting 'develop'...
+[12:01:50] Starting 'buildFrontend'...
+[12:01:50] Starting 'sass'...
+[12:01:50] Starting 'templates'...
+[12:01:50] Starting 'icons'...
+[12:01:50] Starting 'buildFrontend21'...
+$ npm run build:frontend
+
+> amp-dev@1.0.5 build:frontend
+> cd frontend21 && webpack --mode production
+
+
+[12:01:56] Finished 'icons' after 5.6 s
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+26  │ ┌     &.amp-active ~ header #{$root} {
+27  │ │       display: flex;
+28  │ │     }
+    │ └─── nested rule
+... │
+31  │     display: flex;
+    │     ^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/molecules/banner.scss 31:3  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+26  │ ┌     &.amp-active ~ header #{$root} {
+27  │ │       display: flex;
+28  │ │     }
+    │ └─── nested rule
+... │
+32  │     align-items: center;
+    │     ^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/molecules/banner.scss 32:3  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+26  │ ┌     &.amp-active ~ header #{$root} {
+27  │ │       display: flex;
+28  │ │     }
+    │ └─── nested rule
+... │
+33  │     justify-content: center;
+    │     ^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/molecules/banner.scss 33:3  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+26  │ ┌     &.amp-active ~ header #{$root} {
+27  │ │       display: flex;
+28  │ │     }
+    │ └─── nested rule
+... │
+34  │     height: $bannerHeight;
+    │     ^^^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/molecules/banner.scss 34:3  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+26  │ ┌     &.amp-active ~ header #{$root} {
+27  │ │       display: flex;
+28  │ │     }
+    │ └─── nested rule
+... │
+35  │     padding: 0 5px;
+    │     ^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/molecules/banner.scss 35:3  root stylesheet
+
+Warning: 7 repetitive deprecation warnings omitted.
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ╷
+26 │ ┌     .amp-mode-touch & {
+27 │ │       position: relative;
+28 │ │     }
+   │ └─── nested rule
+29 │       border: 0;
+   │       ^^^^^^^^^ declaration
+   ╵
+    frontend/scss/components/molecules/format-toggle.scss 29:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/molecules/format-visual-stories.scss
+32 │       box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.05);
+   │       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/component-frame.scss
+83 │   &:after { @include gradient-stories; }
+   │   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ nested rule
+   ╵
+    frontend/scss/components/molecules/format-visual-stories.scss 32:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/molecules/format-visual-websites.scss
+44 │       box-shadow: 20px 40px 60px -5px rgba(0, 0, 0,0.25);
+   │       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/component-frame.scss
+78 │   &:after { @include gradient-websites; }
+   │   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ nested rule
+   ╵
+    frontend/scss/components/molecules/format-visual-websites.scss 44:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/molecules/format-visual-websites.scss
+45 │       animation: 10s ease-in-out 3.5s infinite both slide;
+   │       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/component-frame.scss
+78 │   &:after { @include gradient-websites; }
+   │   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ nested rule
+   ╵
+    frontend/scss/components/molecules/format-visual-websites.scss 45:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/molecules/format-visual.scss
+110│       box-shadow: 30px 90px 60px -40px rgba(0, 0, 0, 0.5);
+   │       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/component-frame.scss
+70 │ ┌     @media (min-width: 1280px) {
+71 │ │       font-size: inherit;
+72 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/molecules/format-visual.scss 110:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/molecules/format-visual.scss
+111│       animation: 10s ease-in-out infinite bounce -4s;
+   │       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/component-frame.scss
+70 │ ┌     @media (min-width: 1280px) {
+71 │ │       font-size: inherit;
+72 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/molecules/format-visual.scss 111:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/molecules/jumbo.scss
+35 │       margin: 0;
+   │       ^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+72 │ ┌   @media (min-width: 768px) {
+73 │ │     font-size: 3.5rem;
+74 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/molecules/jumbo.scss 35:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ┌──> frontend/scss/components/molecules/teaser-example.scss
+116 │         padding-bottom: 41%;
+    │         ^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    ┌──> frontend/scss/components/molecules/_teaser.scss
+104 │ ┌     &:before {
+105 │ │         content: '';
+106 │ │         position: absolute;
+107 │ │         left: -1px;
+108 │ │         bottom: 0;
+109 │ │         width: calc(100% + 2px);
+110 │ │         height: 150px;
+111 │ │         background: linear-gradient(0deg, rgba(0,0,0,0.12), rgba(0,0,0,0));
+112 │ │         z-index: 1;
+113 │ │     }
+    │ └─── nested rule
+    ╵
+    frontend/scss/components/molecules/teaser-example.scss 116:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/molecules/teaser-faq.scss
+23 │       flex-basis: 100%;
+   │       ^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/molecules/_teaser.scss
+29 │ ┌     @media (min-width: 575px) {
+30 │ │         margin: 0 0 2em;
+31 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/molecules/teaser-faq.scss 23:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/molecules/teaser-faq.scss
+24 │       margin: 0 0 2rem;
+   │       ^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/molecules/_teaser.scss
+29 │ ┌     @media (min-width: 575px) {
+30 │ │         margin: 0 0 2em;
+31 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/molecules/teaser-faq.scss 24:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/molecules/teaser-success-story.scss
+21 │       margin-bottom: 20px;
+   │       ^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/molecules/_teaser.scss
+29 │ ┌     @media (min-width: 575px) {
+30 │ │         margin: 0 0 2em;
+31 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/molecules/teaser-success-story.scss 21:5  root stylesheet
+
+[12:01:59] Finished 'templates' after 8.57 s
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/case-grid.scss
+32 │       margin-top: 0;
+   │       ^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/case-grid.scss 32:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ╷
+21 │ ┌     @media (min-width: 768px) {
+22 │ │       height: 60px;
+23 │ │       width: 60px;
+24 │ │     }
+   │ └─── nested rule
+25 │       display: flex;
+   │       ^^^^^^^^^^^^^ declaration
+   ╵
+    frontend/scss/components/organisms/fragment-slider-controls.scss 25:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+21  │ ┌     @media (min-width: 768px) {
+22  │ │       height: 60px;
+23  │ │       width: 60px;
+24  │ │     }
+    │ └─── nested rule
+... │
+26  │       justify-content: center;
+    │       ^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/organisms/fragment-slider-controls.scss 26:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+21  │ ┌     @media (min-width: 768px) {
+22  │ │       height: 60px;
+23  │ │       width: 60px;
+24  │ │     }
+    │ └─── nested rule
+... │
+27  │       z-index: 3;
+    │       ^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/organisms/fragment-slider-controls.scss 27:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+21  │ ┌     @media (min-width: 768px) {
+22  │ │       height: 60px;
+23  │ │       width: 60px;
+24  │ │     }
+    │ └─── nested rule
+... │
+28  │       border: none;
+    │       ^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/organisms/fragment-slider-controls.scss 28:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+21  │ ┌     @media (min-width: 768px) {
+22  │ │       height: 60px;
+23  │ │       width: 60px;
+24  │ │     }
+    │ └─── nested rule
+... │
+29  │       border-radius: 50%;
+    │       ^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/organisms/fragment-slider-controls.scss 29:5  root stylesheet
+
+Warning: 4 repetitive deprecation warnings omitted.
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ╷
+44 │ ┌       &.copy {
+45 │ │         min-width: 100%;
+46 │ │       }
+   │ └─── nested rule
+47 │         opacity: 0;
+   │         ^^^^^^^^^^ declaration
+   ╵
+    frontend/scss/components/organisms/fragment-slider-texts.scss 47:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+44  │ ┌       &.copy {
+45  │ │         min-width: 100%;
+46  │ │       }
+    │ └─── nested rule
+... │
+48  │         transition: opacity 400ms, transform 400ms;
+    │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/organisms/fragment-slider-texts.scss 48:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+44  │ ┌       &.copy {
+45  │ │         min-width: 100%;
+46  │ │       }
+    │ └─── nested rule
+... │
+49  │         transition-delay: 400ms;
+    │         ^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/organisms/fragment-slider-texts.scss 49:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/fragment-slider-texts.scss
+125│       margin: 0 0 30px 0;
+   │       ^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+72 │ ┌   @media (min-width: 768px) {
+73 │ │     font-size: 3.5rem;
+74 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/fragment-slider-texts.scss 125:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/_mixins.scss
+18 │     filter: drop-shadow(0 30px 30px -15px rgba(0, 0, 0, 0.25));
+   │     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_image.scss
+36 │ ┌     @media (min-width: 768px) {
+37 │ │         margin-right: 0;
+38 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/_mixins.scss 18:3                    drop-shadow()
+    frontend/scss/components/atoms/_image.scss 60:3    @import
+    frontend/scss/components/organisms/help.scss 16:9  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/sampler.scss
+41 │           margin: 0;
+   │           ^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+72 │ ┌   @media (min-width: 768px) {
+73 │ │     font-size: 3.5rem;
+74 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/sampler.scss 41:9  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/search.scss
+158│       opacity: 0;
+   │       ^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_button.scss
+58 │ ┌   @media (min-width: 768px) {
+59 │ │     padding: 1em 2em;
+60 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/search.scss 158:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/search.scss
+159│       pointer-events: none;
+   │       ^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_button.scss
+58 │ ┌   @media (min-width: 768px) {
+59 │ │     padding: 1em 2em;
+60 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/search.scss 159:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/search.scss
+160│       position: absolute;
+   │       ^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_button.scss
+58 │ ┌   @media (min-width: 768px) {
+59 │ │     padding: 1em 2em;
+60 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/search.scss 160:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/search.scss
+161│       top: 11px;
+   │       ^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_button.scss
+58 │ ┌   @media (min-width: 768px) {
+59 │ │     padding: 1em 2em;
+60 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/search.scss 161:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/search.scss
+162│       right: 10px;
+   │       ^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_button.scss
+58 │ ┌   @media (min-width: 768px) {
+59 │ │     padding: 1em 2em;
+60 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/search.scss 162:5  root stylesheet
+
+Warning: 1 repetitive deprecation warnings omitted.
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/atoms/_color.scss
+26 │   @mixin color-websites { color: color('white'); }
+   │                           ^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/atoms/_color.scss 26:25        color-websites()
+    frontend/scss/components/organisms/stage-ads.scss 91:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/stage-ads.scss
+92 │         margin: 0;
+   │         ^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/stage-ads.scss 92:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/atoms/_color.scss
+24 │   @mixin color-white { color: color('white'); }
+   │                        ^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/atoms/_color.scss 24:22             color-white()
+    frontend/scss/components/organisms/stage-amp-conf.scss 94:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/stage-amp-conf.scss
+95 │         margin: 0;
+   │         ^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/stage-amp-conf.scss 95:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/atoms/_color.scss
+24 │   @mixin color-white { color: color('white'); }
+   │                        ^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/atoms/_color.scss 24:22               color-white()
+    frontend/scss/components/organisms/stage-amp-fest.scss 122:13  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/stage-amp-fest.scss
+123│               margin: 0;
+   │               ^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/stage-amp-fest.scss 123:13  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/atoms/_color.scss
+24 │   @mixin color-white { color: color('white'); }
+   │                        ^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/atoms/_color.scss 24:22       color-white()
+    frontend/scss/components/organisms/stage-cs.scss 93:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/stage-cs.scss
+94 │         margin: 0;
+   │         ^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/stage-cs.scss 94:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/atoms/_color.scss
+29 │   @mixin color-e-mails { color: color('charade'); }
+   │                          ^^^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/atoms/_color.scss 29:24          color-e-mails()
+    frontend/scss/components/organisms/stage-email.scss 91:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/stage-email.scss
+92 │         margin: 0;
+   │         ^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/stage-email.scss 92:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/atoms/_color.scss
+27 │   @mixin color-stories { color: color('charade'); }
+   │                          ^^^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/atoms/_color.scss 27:24            color-stories()
+    frontend/scss/components/organisms/stage-stories.scss 91:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/stage-stories.scss
+92 │         margin: 0;
+   │         ^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/stage-stories.scss 92:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/atoms/_color.scss
+24 │   @mixin color-white { color: color('white'); }
+   │                        ^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/atoms/_color.scss 24:22          color-white()
+    frontend/scss/components/organisms/stage-tools.scss 94:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/stage-tools.scss
+95 │         margin: 0;
+   │         ^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/stage-tools.scss 95:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/atoms/_color.scss
+26 │   @mixin color-websites { color: color('white'); }
+   │                           ^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/atoms/_color.scss 26:25    color-websites()
+    frontend/scss/components/organisms/stage.scss 91:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/stage.scss
+92 │         margin: 0;
+   │         ^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/stage.scss 92:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/survey.scss
+156│         opacity: 1;
+   │         ^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_button.scss
+53 │ ┌   &:hover {
+54 │ │     transform: translateY(-0.125em);
+55 │ │     box-shadow: 0 25px 20px -15px rgba(0, 0, 0, 0.15);
+56 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/survey.scss 156:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/survey.scss
+157│         user-select: none;
+   │         ^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_button.scss
+53 │ ┌   &:hover {
+54 │ │     transform: translateY(-0.125em);
+55 │ │     box-shadow: 0 25px 20px -15px rgba(0, 0, 0, 0.15);
+56 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/survey.scss 157:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/survey.scss
+158│         margin-right: 10px;
+   │         ^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_button.scss
+53 │ ┌   &:hover {
+54 │ │     transform: translateY(-0.125em);
+55 │ │     box-shadow: 0 25px 20px -15px rgba(0, 0, 0, 0.15);
+56 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/survey.scss 158:7  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+80  │ ┌     @media (min-width: 1024px) {
+81  │ │       max-width: 70%;
+82  │ │     }
+    │ └─── nested rule
+... │
+87  │     padding-left: 30px;
+    │     ^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/templates/_default.scss 87:3          content-white-bg()
+    frontend/scss/components/templates/component-detail.scss 35:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+80  │ ┌     @media (min-width: 1024px) {
+81  │ │       max-width: 70%;
+82  │ │     }
+    │ └─── nested rule
+... │
+88  │     padding-right: 30px;
+    │     ^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/templates/_default.scss 88:3          content-white-bg()
+    frontend/scss/components/templates/component-detail.scss 35:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+80  │ ┌     @media (min-width: 1024px) {
+81  │ │       max-width: 70%;
+82  │ │     }
+    │ └─── nested rule
+... │
+89  │     background: color('whisper');
+    │     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/templates/_default.scss 89:3          content-white-bg()
+    frontend/scss/components/templates/component-detail.scss 35:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+80  │ ┌     @media (min-width: 1024px) {
+81  │ │       max-width: 70%;
+82  │ │     }
+    │ └─── nested rule
+... │
+90  │     box-shadow: 0 25px 40px 0 rgba(0,0,0,0.05);
+    │     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/templates/_default.scss 90:3          content-white-bg()
+    frontend/scss/components/templates/component-detail.scss 35:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/component-detail.scss
+36 │       padding-left: 0;
+   │       ^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/templates/_default.scss
+96 │ ┌   @media (min-width: 1024px) {
+97 │ │     grid-column: 6 / 25;
+98 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/component-detail.scss 36:5  root stylesheet
+
+Warning: 1 repetitive deprecation warnings omitted.
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+80  │ ┌     @media (min-width: 1024px) {
+81  │ │       max-width: 70%;
+82  │ │     }
+    │ └─── nested rule
+... │
+87  │     padding-left: 30px;
+    │     ^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/templates/_default.scss 87:3          content-white-bg()
+    frontend/scss/components/templates/courses-overview.scss 35:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+80  │ ┌     @media (min-width: 1024px) {
+81  │ │       max-width: 70%;
+82  │ │     }
+    │ └─── nested rule
+... │
+88  │     padding-right: 30px;
+    │     ^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/templates/_default.scss 88:3          content-white-bg()
+    frontend/scss/components/templates/courses-overview.scss 35:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+80  │ ┌     @media (min-width: 1024px) {
+81  │ │       max-width: 70%;
+82  │ │     }
+    │ └─── nested rule
+... │
+89  │     background: color('whisper');
+    │     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/templates/_default.scss 89:3          content-white-bg()
+    frontend/scss/components/templates/courses-overview.scss 35:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+80  │ ┌     @media (min-width: 1024px) {
+81  │ │       max-width: 70%;
+82  │ │     }
+    │ └─── nested rule
+... │
+90  │     box-shadow: 0 25px 40px 0 rgba(0,0,0,0.05);
+    │     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/templates/_default.scss 90:3          content-white-bg()
+    frontend/scss/components/templates/courses-overview.scss 35:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/custom-content.scss
+76 │       margin-bottom: 7em;
+   │       ^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/_mixins.scss
+7  │ ┌     @media (min-width: 768px) {
+8  │ │         padding-left: 0;
+9  │ │         padding-right: 0;
+10 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/custom-content.scss 76:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+29  │ ┌     @media (min-width: 575px) {
+30  │ │         margin: 0 0 2em;
+31  │ │     }
+    │ └─── nested rule
+... │
+35  │       position: relative;
+    │       ^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/molecules/_teaser.scss 35:2          teaser-linking()
+    frontend/scss/components/templates/custom-content.scss 139:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+29  │ ┌     @media (min-width: 575px) {
+30  │ │         margin: 0 0 2em;
+31  │ │     }
+    │ └─── nested rule
+... │
+36  │       display: block;
+    │       ^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/molecules/_teaser.scss 36:2          teaser-linking()
+    frontend/scss/components/templates/custom-content.scss 139:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+29  │ ┌     @media (min-width: 575px) {
+30  │ │         margin: 0 0 2em;
+31  │ │     }
+    │ └─── nested rule
+... │
+37  │       transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    │       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/molecules/_teaser.scss 37:2          teaser-linking()
+    frontend/scss/components/templates/custom-content.scss 139:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/custom-content.scss
+140│       height: 100%;
+   │       ^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/molecules/_teaser.scss
+29 │ ┌     @media (min-width: 575px) {
+30 │ │         margin: 0 0 2em;
+31 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/custom-content.scss 140:5  root stylesheet
+
+Warning: 1 repetitive deprecation warnings omitted.
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/docs-detail.scss
+36 │       background: color('whisper');
+   │       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/templates/_default.scss
+80 │ ┌     @media (min-width: 1024px) {
+81 │ │       max-width: 70%;
+82 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/docs-detail.scss 36:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+80  │ ┌     @media (min-width: 1024px) {
+81  │ │       max-width: 70%;
+82  │ │     }
+    │ └─── nested rule
+... │
+87  │     padding-left: 30px;
+    │     ^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/templates/_default.scss 87:3              content-white-bg()
+    frontend/scss/components/templates/docs-guides-overview.scss 43:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+80  │ ┌     @media (min-width: 1024px) {
+81  │ │       max-width: 70%;
+82  │ │     }
+    │ └─── nested rule
+... │
+88  │     padding-right: 30px;
+    │     ^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/templates/_default.scss 88:3              content-white-bg()
+    frontend/scss/components/templates/docs-guides-overview.scss 43:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+80  │ ┌     @media (min-width: 1024px) {
+81  │ │       max-width: 70%;
+82  │ │     }
+    │ └─── nested rule
+... │
+89  │     background: color('whisper');
+    │     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/templates/_default.scss 89:3              content-white-bg()
+    frontend/scss/components/templates/docs-guides-overview.scss 43:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+80  │ ┌     @media (min-width: 1024px) {
+81  │ │       max-width: 70%;
+82  │ │     }
+    │ └─── nested rule
+... │
+90  │     box-shadow: 0 25px 40px 0 rgba(0,0,0,0.05);
+    │     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/templates/_default.scss 90:3              content-white-bg()
+    frontend/scss/components/templates/docs-guides-overview.scss 43:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/faq-overview.scss
+34 │           margin: 0;
+   │           ^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+72 │ ┌   @media (min-width: 768px) {
+73 │ │     font-size: 3.5rem;
+74 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/faq-overview.scss 34:9  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/guide.scss
+30 │       background: color('whisper');
+   │       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/templates/_default.scss
+80 │ ┌     @media (min-width: 1024px) {
+81 │ │       max-width: 70%;
+82 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/guide.scss 30:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/roadmap.scss
+92 │       max-width: 600px;
+   │       ^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/templates/_default.scss
+80 │ ┌     @media (min-width: 1024px) {
+81 │ │       max-width: 70%;
+82 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/roadmap.scss 92:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/roadmap.scss
+93 │       margin: 0 auto;
+   │       ^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/templates/_default.scss
+80 │ ┌     @media (min-width: 1024px) {
+81 │ │       max-width: 70%;
+82 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/roadmap.scss 93:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+159 │ ┌           .ap-a-pill-text {
+160 │ │             color: color('white');
+161 │ │           }
+    │ └─── nested rule
+... │
+163 │             background-color: currentColor;
+    │             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    frontend/scss/components/templates/roadmap.scss 163:11  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/success-story.scss
+50 │       grid-column: 1;
+   │       ^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/templates/_default.scss
+80 │ ┌     @media (min-width: 1024px) {
+81 │ │       max-width: 70%;
+82 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/success-story.scss 50:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/template.scss
+78 │             color: color('white');
+   │             ^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/template.scss 78:11  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/template.scss
+79 │             margin: 0;
+   │             ^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/template.scss 79:11  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/use-cases.scss
+25 │       max-width: 100vw;
+   │       ^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/templates/_default.scss
+24 │ ┌   @media (min-width: 768px) {
+25 │ │     display: grid;
+26 │ │     grid-gap: 30px;
+27 │ │     grid-template-columns: repeat(24, minmax(0, 1fr));
+28 │ │     padding: 0 30px;
+29 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/use-cases.scss 25:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/molecules/_headline-icon.scss
+33 │       padding-top: 80px;
+   │       ^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+72 │ ┌   @media (min-width: 768px) {
+73 │ │     font-size: 3.5rem;
+74 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/molecules/_headline-icon.scss 33:5  @import
+    frontend/scss/components/templates/what-is-amp.scss 21:9     root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/molecules/_headline-icon.scss
+34 │       margin-bottom: 0;
+   │       ^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+72 │ ┌   @media (min-width: 768px) {
+73 │ │     font-size: 3.5rem;
+74 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/molecules/_headline-icon.scss 34:5  @import
+    frontend/scss/components/templates/what-is-amp.scss 21:9     root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/molecules/_headline-icon.scss
+35 │       margin-left: -1em;
+   │       ^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+72 │ ┌   @media (min-width: 768px) {
+73 │ │     font-size: 3.5rem;
+74 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/molecules/_headline-icon.scss 35:5  @import
+    frontend/scss/components/templates/what-is-amp.scss 21:9     root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/organisms/case-grid.scss
+32 │       margin-top: 0;
+   │       ^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/atoms/_headline.scss
+55 │ ┌   @media (min-width: 1024px) {
+56 │ │     font-size: 4rem;
+57 │ │   }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/organisms/case-grid.scss 32:5    @import
+    frontend/scss/components/templates/what-is-amp.scss 26:9  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/what-is-amp.scss
+44 │       margin-bottom: 7em;
+   │       ^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/_mixins.scss
+7  │ ┌     @media (min-width: 768px) {
+8  │ │         padding-left: 0;
+9  │ │         padding-right: 0;
+10 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/what-is-amp.scss 44:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/working-group.scss
+61 │       max-width: 600px;
+   │       ^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/templates/_default.scss
+80 │ ┌     @media (min-width: 1024px) {
+81 │ │       max-width: 70%;
+82 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/working-group.scss 61:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/working-group.scss
+62 │       margin: 0 auto;
+   │       ^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/templates/_default.scss
+80 │ ┌     @media (min-width: 1024px) {
+81 │ │       max-width: 70%;
+82 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/working-group.scss 62:5  root stylesheet
+
+Deprecation Warning: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+   ┌──> frontend/scss/components/templates/examples/manual.scss
+30 │       background: color('whisper');
+   │       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+   ╵
+   ┌──> frontend/scss/components/templates/_default.scss
+80 │ ┌     @media (min-width: 1024px) {
+81 │ │       max-width: 70%;
+82 │ │     }
+   │ └─── nested rule
+   ╵
+    frontend/scss/components/templates/examples/manual.scss 30:5  root stylesheet
+
+[12:02:03] Finished 'sass' after 13 s
+<i> [FileManagerPlugin] copied "./dist/static/sprite.svg" to "../dist/static/frontend/sprite.svg
+
+<i> [FileManagerPlugin] copied "./static/img/**/*" to "../dist/static/frontend/img
+
+assets by status 45.4 KiB [cached] 2 assets
+assets by status 61.3 KiB [compared for emit]
+  asset ./base.html 49 KiB [compared for emit]
+  asset static/sprite.svg 12.3 KiB [compared for emit] [minimized] (name: spritemap)
+Entrypoint main 45.4 KiB = static/frontend/main.33623cad536f0c2bd427.css 43.5 KiB static/main.20e14b0e177799270db2.js 1.88 KiB
+orphan modules 136 KiB (javascript) 1.01 KiB (runtime) [orphan] 16 modules
+runtime modules 279 bytes 1 module
+code generated modules 90 bytes (javascript) 46.2 KiB (css/mini-extract) [code generated]
+  modules by path ./scss/*.scss 50 bytes (javascript) 46.2 KiB (css/mini-extract)
+    ./scss/amp-dev.scss 50 bytes [built] [code generated]
+    css ../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./scss/amp-dev.scss 46.2 KiB [built] [code generated]
+  ./amp-dev.js 39 bytes [built] [code generated]
+  spritemap-dummy-module 1 bytes [code generated]
+
+WARNING in ./scss/amp-dev.scss (./scss/amp-dev.scss.webpack[javascript/auto]!=!../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./scss/amp-dev.scss)
+Module Warning (from ../node_modules/sass-loader/dist/cjs.js):
+Deprecation Warning on line 17, column 4 of file:///mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/frontend21/scss/components/content/stage.scss:17:4:
+Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+17 |     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3em), 0 100%, 0 100%);
+
+
+scss/components/content/stage.scss 18:5  @import
+scss/amp-dev.scss 24:9                   root stylesheet
+ @ ./scss/amp-dev.scss
+ @ ./amp-dev.js 1:0-37
+
+WARNING in ./scss/amp-dev.scss (./scss/amp-dev.scss.webpack[javascript/auto]!=!../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./scss/amp-dev.scss)
+Module Warning (from ../node_modules/sass-loader/dist/cjs.js):
+Deprecation Warning on line 156, column 8 of file:///mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/frontend21/scss/components/extra/about/components-showcase.scss:156:8:
+Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+156 |         font-family: $fontFamilyCode;
+
+
+scss/components/extra/about/components-showcase.scss 157:9  @import
+scss/amp-dev.scss 32:9                                      root stylesheet
+ @ ./scss/amp-dev.scss
+ @ ./amp-dev.js 1:0-37
+
+WARNING in ./scss/amp-dev.scss (./scss/amp-dev.scss.webpack[javascript/auto]!=!../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./scss/amp-dev.scss)
+Module Warning (from ../node_modules/sass-loader/dist/cjs.js):
+Deprecation Warning on line 157, column 8 of file:///mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/frontend21/scss/components/extra/about/components-showcase.scss:157:8:
+Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+157 |         font-size: 12px;
+
+
+scss/components/extra/about/components-showcase.scss 158:9  @import
+scss/amp-dev.scss 32:9                                      root stylesheet
+ @ ./scss/amp-dev.scss
+ @ ./amp-dev.js 1:0-37
+
+WARNING in ./scss/amp-dev.scss (./scss/amp-dev.scss.webpack[javascript/auto]!=!../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./scss/amp-dev.scss)
+Module Warning (from ../node_modules/sass-loader/dist/cjs.js):
+Deprecation Warning on line 158, column 8 of file:///mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/frontend21/scss/components/extra/about/components-showcase.scss:158:8:
+Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+158 |         line-height: 1.42rem;
+
+
+scss/components/extra/about/components-showcase.scss 159:9  @import
+scss/amp-dev.scss 32:9                                      root stylesheet
+ @ ./scss/amp-dev.scss
+ @ ./amp-dev.js 1:0-37
+
+WARNING in ./scss/amp-dev.scss (./scss/amp-dev.scss.webpack[javascript/auto]!=!../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./scss/amp-dev.scss)
+Module Warning (from ../node_modules/sass-loader/dist/cjs.js):
+Deprecation Warning on line 159, column 8 of file:///mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/frontend21/scss/components/extra/about/components-showcase.scss:159:8:
+Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+159 |         font-weight: 700;
+
+
+scss/components/extra/about/components-showcase.scss 160:9  @import
+scss/amp-dev.scss 32:9                                      root stylesheet
+ @ ./scss/amp-dev.scss
+ @ ./amp-dev.js 1:0-37
+
+webpack 5.93.0 compiled with 5 warnings in 3336 ms
+
+
+[12:02:07] Finished 'buildFrontend21' after 17 s
+[12:02:07] Finished 'buildFrontend' after 17 s
+[12:02:07] Starting 'collectStatics'...
+[12:02:23 PM] › …  awaiting  Writing ZIPs ...
+[12:02:23 PM] › …  awaiting  Finished collecting static files!
+[12:02:23] Finished 'collectStatics' after 16 s
+[12:02:23] Starting 'run'...
+[12:02:23 PM] › ℹ  info      Watching icons, templates, styles and samples ...
+[12:02:23 PM] [Samples builder] › ℹ  info      Bootstrapping ...
+[12:02:23 PM] [Samples builder] › ✔  success   Created format transformer instance.
+[12:02:23 PM] [Samples builder] › ✔  success   Loaded story embed template.
+[12:02:23 PM] [Samples builder] › ✔  success   Loaded ads embed template.
+[12:02:24 PM] [Samples builder] › ✔  success   Cleaned destination paths.
+[12:02:24 PM] [Samples builder] › …  watching  Watching samples for changes ...
+[12:02:24 PM] [Samples builder] › ▶  start     Building samples ...
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 0.introduction/AMPHTML_Ads_Hello_World.html ...
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/0.introduction/AMPHTML_Ads_Hello_World.html has invalid title: "AMPHTML Ads Hello World" vs "Hello World"
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/0.introduction/AMPHTML_Ads_Hello_World.html has invalid title: "AMPHTML Ads Hello World" vs "Hello World"
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 0.introduction/AMPHTML_Ads_Hello_World.html!
+(node:1383) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 0.introduction/Hello_World.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 0.introduction/Hello_World.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 0.introduction/Hello_World_Email.html ...
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/0.introduction/Hello_World_Email.html has no title
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/0.introduction/Hello_World_Email.html has no title
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 0.introduction/Hello_World_Email.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 0.introduction/Stories_in_AMP.html ...
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/0.introduction/Stories_in_AMP.html has invalid title: "Stories in AMP" vs "Stories in AMP - Hello World"
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/0.introduction/Stories_in_AMP.html has invalid title: "Stories in AMP" vs "Stories in AMP - Hello World"
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 0.introduction/Stories_in_AMP.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-3d-gltf.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-3d-gltf.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-access-laterpay.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-access-laterpay.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-access.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-access.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-accordion.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-accordion.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-ad.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-ad.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-addthis.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-addthis.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-anim.html ...
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-anim.html has no title
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-anim.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-app-banner.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-app-banner.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-audio.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-audio.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-autocomplete-email.html ...
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-autocomplete-email.html has no title
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-autocomplete-email.html has no title
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-autocomplete-email.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-autocomplete.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-autocomplete.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-bind-macro.html ...
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-bind-macro.html has no title
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-bind-macro.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-bind-recaptcha.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-bind-recaptcha.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-bind.html ...
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-bind.html has no title
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-bind.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-bodymovin-animation.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-bodymovin-animation.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-brid-player.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-brid-player.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-brightcove.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-brightcove.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-call-tracking.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-call-tracking.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-carousel.html ...
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-carousel.html has no title
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-carousel.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-dailymotion.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-dailymotion.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-date-countdown.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-date-countdown.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-date-display.html ...
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-date-display.html has no title
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-date-display.html has no title
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-date-display.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-date-picker.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-date-picker.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-dynamic-css-classes.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-dynamic-css-classes.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-experiment.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-experiment.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-facebook-comments.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-facebook-comments.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-facebook-like.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-facebook-like.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-facebook-page.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-facebook-page.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-facebook.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-facebook.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-fit-text.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-fit-text.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-font.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-font.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-form.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-form.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-fx-collection.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-fx-collection.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-fx-flying-carpet.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-fx-flying-carpet.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-geo.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-geo.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-gfycat.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-gfycat.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-gist.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-gist.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-hulu.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-hulu.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-iframe.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-iframe.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-ima-video.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-ima-video.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-image-lightbox.html ...
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-image-lightbox.html has no title
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-image-lightbox.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-image-slider.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-image-slider.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-img.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-img.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-inputmask.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-inputmask.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-instagram.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-instagram.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-install-serviceworker.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-install-serviceworker.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-jwplayer.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-jwplayer.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-kaltura-player.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-kaltura-player.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-lightbox-gallery.html ...
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-lightbox-gallery.html!
+[12:02:24 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-lightbox.html ...
+[12:02:24 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-lightbox.html has no title
+[12:02:24 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-lightbox.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-list.html ...
+[12:02:25 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-list.html has no title
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-list.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-mustache.html ...
+[12:02:25 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-mustache.html has no title
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-mustache.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-next-page.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-next-page.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-o2-player.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-o2-player.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-pinterest.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-pinterest.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-pixel.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-pixel.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-reach-player.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-reach-player.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-reddit.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-reddit.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-render.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-render.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-selector.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-selector.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-sidebar.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-sidebar.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-social-share.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-social-share.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-soundcloud.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-soundcloud.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-springboard-player.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-springboard-player.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-sticky-ad.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-sticky-ad.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-story-360.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-story-360.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-story-interactive-quiz.html ...
+[12:02:25 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-story-interactive-quiz.html has invalid title: "amp-story-interactive-quiz" vs "Interactive quizzes with results"
+[12:02:25 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-story-interactive-quiz.html has invalid title: "amp-story-interactive-quiz" vs "Interactive quizzes with results"
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-story-interactive-quiz.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-story-shopping.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-story-shopping.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-timeago.html ...
+[12:02:25 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-timeago.html has no title
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-timeago.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-twitter.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-twitter.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-video-iframe.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-video-iframe.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-video.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-video.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-vimeo.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-vimeo.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-vine.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-vine.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-youtube.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-youtube.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 2.guides/Internationalization.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 2.guides/Internationalization.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 2.guides/Using_the_AMP_URL_API.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 2.guides/Using_the_AMP_URL_API.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample 2.guides/Using_the_Google_AMP_Cache.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample 2.guides/Using_the_Google_AMP_Cache.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample advertising-analytics/AMPHTML_ads_vs_non_AMP_ads.html ...
+[12:02:25 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/advertising-analytics/AMPHTML_ads_vs_non_AMP_ads.html has invalid title: "AMPHTML ads vs non AMP ads" vs "AMP Ads vs non-AMP Ads"
+[12:02:25 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/advertising-analytics/AMPHTML_ads_vs_non_AMP_ads.html has invalid title: "AMPHTML ads vs non AMP ads" vs "AMP Ads vs non-AMP Ads"
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample advertising-analytics/AMPHTML_ads_vs_non_AMP_ads.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample advertising-analytics/Doubleclick_AMP_Story_Ads.html ...
+[12:02:25 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/advertising-analytics/Doubleclick_AMP_Story_Ads.html has invalid title: "Doubleclick AMP Story Ads" vs "DoubleClick AMP Story Ads"
+[12:02:25 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/advertising-analytics/Doubleclick_AMP_Story_Ads.html has invalid title: "Doubleclick AMP Story Ads" vs "DoubleClick AMP Story Ads"
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample advertising-analytics/Doubleclick_AMP_Story_Ads.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample advertising-analytics/Joining_Analytics_Sessions.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample advertising-analytics/Joining_Analytics_Sessions.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample advertising-analytics/Publisher_Served_AMP_Story_Ads.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample advertising-analytics/Publisher_Served_AMP_Story_Ads.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample advertising-analytics/Tracking_Core_Web_Vitals.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample advertising-analytics/Tracking_Core_Web_Vitals.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample e-commerce/AMP_for_E-Commerce_Getting_Started.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample e-commerce/AMP_for_E-Commerce_Getting_Started.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample e-commerce/Payments_in_AMP.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample e-commerce/Payments_in_AMP.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample e-commerce/Product_Browse_Page.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample e-commerce/Product_Browse_Page.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample e-commerce/Product_Page.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample e-commerce/Product_Page.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample multimedia-animations/Advanced_Video_Docking.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample multimedia-animations/Advanced_Video_Docking.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample multimedia-animations/Animated_hamburger_menu.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample multimedia-animations/Animated_hamburger_menu.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample multimedia-animations/Click-to-play_overlay_for_amp-video.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample multimedia-animations/Click-to-play_overlay_for_amp-video.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample multimedia-animations/Custom_Loading_Indicators.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample multimedia-animations/Custom_Loading_Indicators.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample multimedia-animations/Image_Galleries_with_amp-carousel.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample multimedia-animations/Image_Galleries_with_amp-carousel.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample multimedia-animations/Integrating_Videos_in_AMP_an_Overview.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample multimedia-animations/Integrating_Videos_in_AMP_an_Overview.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample multimedia-animations/Rich_Media_Notifications.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample multimedia-animations/Rich_Media_Notifications.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample multimedia-animations/Scrollbound_Video_Ad.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample multimedia-animations/Scrollbound_Video_Ad.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample multimedia-animations/Supported_media_types_in_AMP_Stories.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample multimedia-animations/Supported_media_types_in_AMP_Stories.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample multimedia-animations/Video_Ad.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample multimedia-animations/Video_Ad.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample multimedia-animations/Video_Carousels_with_amp-carousel.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample multimedia-animations/Video_Carousels_with_amp-carousel.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample multimedia-animations/Video_rotate_to_fullscreen_with_hint.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample multimedia-animations/Video_rotate_to_fullscreen_with_hint.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample personalization/Geolocation_with_amp-list.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample personalization/Geolocation_with_amp-list.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample news-publishing/News_Article.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample news-publishing/News_Article.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample news-publishing/Recipe.html ...
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample news-publishing/Recipe.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Advanced_Server_Request.html ...
+[12:02:25 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Advanced_Server_Request.html has no title
+[12:02:25 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Advanced_Server_Request.html has no title
+[12:02:25 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Advanced_Server_Request.html!
+[12:02:25 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Client-side_filtering.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Client-side_filtering.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/ComboBox.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/ComboBox.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Conditional_State.html ...
+[12:02:26 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Conditional_State.html has no title
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Conditional_State.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Conference_Survey_Email.html ...
+[12:02:26 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Conference_Survey_Email.html has no title
+[12:02:26 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Conference_Survey_Email.html has no title
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Conference_Survey_Email.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Copy_Button.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Copy_Button.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Currency_Conversion.html ...
+[12:02:26 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Currency_Conversion.html has no title
+[12:02:26 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Currency_Conversion.html has no title
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Currency_Conversion.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Dynamic_Accordion.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Dynamic_Accordion.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Dynamic_Content_After_User-Interaction.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Dynamic_Content_After_User-Interaction.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Dynamically_updating_items_in_a_feed.html ...
+[12:02:26 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Dynamically_updating_items_in_a_feed.html has no title
+[12:02:26 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Dynamically_updating_items_in_a_feed.html has no title
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Dynamically_updating_items_in_a_feed.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Linked_Dropdowns.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Linked_Dropdowns.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Mixing_Dynamic_and_Cached_Data.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Mixing_Dynamic_and_Cached_Data.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Multi_Page_Flow.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Multi_Page_Flow.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Restrict_Duplicate_Selection.html ...
+[12:02:26 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Restrict_Duplicate_Selection.html has no title
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Restrict_Duplicate_Selection.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Show_More_Button.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Show_More_Button.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Slides_Ad.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Slides_Ad.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Stack_With_Bind_Ad.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Stack_With_Bind_Ad.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Tic_Tac_Toe.html ...
+[12:02:26 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Tic_Tac_Toe.html has invalid title: "Tic Tac Toe" vs "Tic-Tac-Toe"
+[12:02:26 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Tic_Tac_Toe.html has invalid title: "Tic Tac Toe" vs "Tic-Tac-Toe"
+[12:02:26 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Tic_Tac_Toe.html has no title
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Tic_Tac_Toe.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample style-layout/AMP_Story_Layouts.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample style-layout/AMP_Story_Layouts.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample style-layout/Banner_Ad.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample style-layout/Banner_Ad.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample style-layout/Carousel_Ad.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample style-layout/Carousel_Ad.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample style-layout/Dark_Mode_Toggle.html ...
+[12:02:26 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/style-layout/Dark_Mode_Toggle.html has invalid title: "Dark Mode Toggle" vs "Dark Mode"
+[12:02:26 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/style-layout/Dark_Mode_Toggle.html has invalid title: "Dark Mode Toggle" vs "Dark Mode"
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample style-layout/Dark_Mode_Toggle.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample style-layout/Desktop_and_Landscape_Mode_Support.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample style-layout/Desktop_and_Landscape_Mode_Support.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample style-layout/How_to_support_Images_with_unknown_Dimensions.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample style-layout/How_to_support_Images_with_unknown_Dimensions.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample style-layout/Lightbox_Ad.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample style-layout/Lightbox_Ad.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample style-layout/Tab_Panels_with_amp-selector.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample style-layout/Tab_Panels_with_amp-selector.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample user-consent/Advanced_User_Consent_Flow.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample user-consent/Advanced_User_Consent_Flow.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample user-consent/Client_Side_User_Consent_Flow.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample user-consent/Client_Side_User_Consent_Flow.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample user-consent/External_User_Consent_Flow.html ...
+[12:02:26 PM] [Samples builder] › ✔  success   Built sample user-consent/External_User_Consent_Flow.html!
+[12:02:26 PM] [Samples builder] › …  awaiting  Building sample user-consent/Geolocation-based_Consent_Flow.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample user-consent/Geolocation-based_Consent_Flow.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample user-consent/Granular_User_Consent.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample user-consent/Granular_User_Consent.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample user-consent/Server_Side_User_Consent_Flow.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample user-consent/Server_Side_User_Consent_Flow.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample user-consent/Story_User_Consent.html ...
+[12:02:27 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/user-consent/Story_User_Consent.html has invalid title: "Story User Consent" vs "User Consent"
+[12:02:27 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/user-consent/Story_User_Consent.html has invalid title: "Story User Consent" vs "User Consent"
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample user-consent/Story_User_Consent.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample user-consent/User_Consent_Modal_UI.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample user-consent/User_Consent_Modal_UI.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample visual-effects/AMP_Story_Animations.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample visual-effects/AMP_Story_Animations.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample visual-effects/Animated_Snackbar.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample visual-effects/Animated_Snackbar.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample visual-effects/Basics_of_orientation_effects.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample visual-effects/Basics_of_orientation_effects.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample visual-effects/Basics_of_scrollbound_effects.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample visual-effects/Basics_of_scrollbound_effects.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample visual-effects/CSS_animation_in_email.html ...
+[12:02:27 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/visual-effects/CSS_animation_in_email.html has no title
+[12:02:27 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/visual-effects/CSS_animation_in_email.html has no title
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample visual-effects/CSS_animation_in_email.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample visual-effects/Ken_Burns.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample visual-effects/Ken_Burns.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample visual-effects/Scroll_to_top.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample visual-effects/Scroll_to_top.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample visual-effects/Scrollbound_Animation_Ad.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample visual-effects/Scrollbound_Animation_Ad.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-analytics/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-analytics.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-live-list/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-live-list.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-script/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-script.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-recaptcha-input/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-recaptcha-input.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-story-interactive-poll/index.html ...
+[12:02:27 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-story-interactive-poll/index.html has invalid title: "amp-story-interactive-poll" vs "Interactive polls with results"
+[12:02:27 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/1.components/amp-story-interactive-poll/index.html has invalid title: "amp-story-interactive-poll" vs "Interactive polls with results"
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-story-interactive-poll.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-user-notification/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-user-notification.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample 1.components/amp-web-push/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample 1.components/amp-web-push.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample e-commerce/Checkout_Flow/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample e-commerce/Checkout_Flow.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample e-commerce/Hotel/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample e-commerce/Hotel.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample e-commerce/Housing/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample e-commerce/Housing.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample e-commerce/Shopping_Cart/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample e-commerce/Shopping_Cart.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample news-publishing/Live_Blog/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample news-publishing/Live_Blog.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Article_Bookmark_Email/index.html ...
+[12:02:27 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Article_Bookmark_Email/index.html has no title
+[12:02:27 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Article_Bookmark_Email/index.html has no title
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Article_Bookmark_Email.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Comment_Section/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Comment_Section.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Favorite_Button/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Favorite_Button.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Poll/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Poll.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Paged_List/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Paged_List.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/SeatMap/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/SeatMap.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/SeatMap_Multiple_Selection/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/SeatMap_Multiple_Selection.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Star_Rating/index.html ...
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Star_Rating.html!
+[12:02:27 PM] [Samples builder] › …  awaiting  Building sample interactivity-dynamic-content/Subscription_Settings/index.html ...
+[12:02:27 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Subscription_Settings/index.html has no title
+[12:02:27 PM] [Parse Samples] › ⚠  warning   /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/examples/source/interactivity-dynamic-content/Subscription_Settings/index.html has no title
+[12:02:27 PM] [Samples builder] › ✔  success   Built sample interactivity-dynamic-content/Subscription_Settings.html!
+[12:02:27 PM] [Samples builder] › ✔  success   Wrote sample sitemap.
+[12:02:27 PM] [Samples builder] › ✔  success   Wrote component samples map.
+[12:02:27 PM] [Samples builder] › ☒  complete  Built samples.
+[12:02:27 PM] › ✔  success   Configured Grow!
+[12:02:52 PM] [Grow] › ⚠  warning   /home/gig/.pyenv/versions/3.9.18/lib/python3.9/site-packages/grow/server/main.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[12:02:53 PM] [Grow] › ℹ  info      Will extract page infos for highlight list /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/platform/config/search-promoted-pages.json
+[12:02:55 PM] [Grow] › ℹ  info      Page infos for highlight list /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/platform/config/search-promoted-pages.json written for all locales into /mnt/e/users/gigster/workspace/repos/amp/amp.dev.9/dist/static/files/search-promoted-pages
+[12:03:08 PM] [Grow] › ℹ  info      1512 routes rebuilt in 12.688 s
+[12:03:08 PM] [Grow] › ℹ  info      250 routes built in 12.621 s
+[12:03:08 PM] [Grow] › ✔  success   Grow started successfully.
+[12:03:19 PM] [Platform] › ℹ  info      Starting platform
+[12:03:19 PM] [Platform] › …  awaiting  Starting platform with environment development on http://localhost:8080 ...
+[12:03:19 PM] [Page Cache] › ⚠  warning   No Redis instances available. Falling back to LRU
+[12:03:19] Finished 'run' after 55 s
+[12:03:19 PM] [Google Search] › ⚠  warning   Missing Google Custom Search key, site search will not be available! Environment variable AMP_DEV_CREDENTIAL_GOOGLE_CSE_API_KEY is not set.
+[12:03:19 PM] › ℹ  info      playground dev server listening on 8083
+[12:03:19 PM] › ℹ  info      go dev server listening on 8086
+[12:03:19 PM] › ℹ  info      log dev server listening on 8087
+[12:03:19 PM] › ℹ  info      preview dev server listening on 8084
+[12:03:19 PM] [Platform] › ✔  success   server listening on 8080!
+[12:03:19 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.551 s
+1512 routes rebuilt in 3.394 s
+1512 routes rebuilt in 3.385 s
+[12:03:22 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.330 s
+[12:03:25 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.409 s
+[12:03:28 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.249 s
+[12:03:32 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.213 s
+[12:03:35 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.304 s
+[12:03:38 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.173 s
+[12:03:41 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.301 s
+[12:03:45 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.296 s
+[12:03:48 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.285 s
+[12:03:51 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.163 s
+[12:03:54 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.190 s
+[12:03:58 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.307 s
+[12:04:01 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.235 s
+[12:04:04 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.207 s
+[12:04:07 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.260 s
+[12:04:11 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.317 s
+[12:04:14 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.206 s
+[12:04:17 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.308 s
+[12:04:21 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.231 s
+[12:04:24 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.255 s
+[12:04:27 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.269 s
+[12:04:30 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.348 s
+[12:04:34 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.130 s
+[12:04:37 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.140 s
+[12:04:40 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.221 s
+[12:04:43 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.222 s
+[12:04:46 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.229 s
+[12:04:50 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.261 s
+[12:04:53 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.208 s
+[12:04:56 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.276 s
+[12:04:59 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.271 s
+[12:05:03 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.300 s
+[12:05:06 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.128 s
+[12:05:09 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.303 s
+[12:05:12 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.215 s
+[12:05:16 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.257 s
+[12:05:19 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.299 s
+[12:05:22 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.343 s
+[12:05:25 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.064 s
+[12:05:29 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.356 s
+[12:05:32 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.310 s
+[12:05:36 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.391 s
+[12:05:39 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.175 s
+[12:05:42 PM] [Grow] › ℹ  info      1512 routes rebuilt in 3.308 s
+[TIMING] GET /documentation/guides-and-tutorials/websites/start/create/ 8.6ms [404]
+[TIMING] GET /favicon.ico 2.0ms [404]
+

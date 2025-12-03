@@ -1,0 +1,81 @@
+
+option
+new project
+
+Select a resource
+dailyfood.io
+
+
+dailyfood.io
+Organization	787668221827	
+
+You're working in
+Project number: 170767685187
+Project ID: amp-2-1704405298450 (AMP-2)
+
+
+AMP-2
+Project amp-2-1704405298450	
+
+Gemini API
+Project	gen-lang-client-0005618857	
+
+extend-intel
+Project	gen-lang-client-0318085909	
+
+knowledge-graph
+Project	knowledge-graph-244915	
+
+maps
+Project	maps-1559645082478	
+
+translation-101
+Project	translation-101-243716	
+
+system-gsuite
+Folder	70467121193	
+
+apps-script
+Folder	189460161985
+
+
+to add information about a project
+https://console.cloud.google.com/iam-admin/labels?project=amp-2-1704405298450
+
+
+### **Method 1: Direct Navigation**
+1. Click the **hamburger menu (☰)** in the top-left
+2. Scroll to **IAM & Admin** section
+3. Click **Settings**
+4. You should see the project info card with:
+   - Project name (editable)
+   - Project ID (read-only)
+   - Project number (read-only)
+   - **Labels section** (where you can add key-value pairs)
+
+## **Note About Descriptions:**
+
+Google Cloud projects don't actually have a dedicated "Description" field in the traditional sense. Instead, you use:
+
+**Labels** - Key-value pairs like:
+- `purpose: amp-dev-search`
+- `environment: development`
+- `description: AMP.dev GCS integration`
+
+**Or just update the Project Name** to be more descriptive:
+- Current: "AMP-2"
+- New: "AMP.dev Search & GCS Integration"
+
+
+tree:
+
+organization
+  project
+
+menus:
+
+for organization
+  organization sidebar menu
+
+for project
+  project sidebare menu

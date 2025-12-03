@@ -1,0 +1,226 @@
+
+RESOLVE
+
+--------------------------
+Windows PowerShell 7 - AWS
+
+Copy:
+  aws s3 cp E:/DIRECTORY/file-source.gz s3://BucketName/DirectoryName/proposal.html
+    --content-type text/html
+	--content-encoding gzip
+	--acl public-read
+
+  aws s3 cp E:/DIRECTORY/AmstelvarAlpha-VF.woff2 s3://BucketName/DirectoryName/AmstelvarAlpha-VF.woff2
+    --content-type font/woff2
+	--cache-control public,max-age=31536000,immutable
+	--acl public-read
+
+Remove:
+  aws s3 rm s3://BucketName/DirectoryName/ --recursive
+
+Create bucket folder:
+  aws s3 put-object --bucket NAME --key test
+
+------------
+PowerShell 7
+
+Profile Administration
+
+  Check modules:
+  Get-Module powershell-yaml -ListAvailable | Select Name,Version,Path
+
+  Set policy:
+  Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
+
+  Normal dev shell: no flags
+  pwsh -File .\profile-generator.ps1 -ValuesPath .\profile-values.yaml
+
+    debugging generator
+    -NoProfile
+    
+    show debug output
+    -ShowDebug
+    
+    only validate config, do not generate files
+    -ValidateOnly
+  
+Search-replace:
+
+  (Get-Content c:\temp\test.txt) | Foreach-Object {$_ -replace '_!_',"`n"} | Set-Content c:\temp\test.txt
+
+Purge CSS:
+
+  purgecss --css "E:/directory/compose.css" --content "E:/directory/compose.html" --output "E:/directory/purged"
+
+===
+
+Entry point is Microsoft.PowerShell_profile.ps1 which includes this value
+. "E:\users\<name>\workspace\dev\profiles\ps\profile.generated.ps1"
+
+Change to source directory
+cd E:\users\gigster\workspace\dev\profiles\claude
+
+Remove 'downloaded from internet' block on files
+Unblock-File -Path .\build7.ps1
+Get-ChildItem -Path . -Filter *.ps1 -Recurse | Unblock-File
+Unblock-File -Path "E:\users\gigster\workspace\dev\profiles\templates\unix_builder.sh"
+
+Session policy bypass
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+
+Run build
+& .\build.ps1 -ConfigPath ".\values.yaml" -UnixTemplatesPath "E:\users\gigster\workspace\dev\profiles\claude\templates"
+
+---
+
+Run Terminal-AWS
+pwsh.exe -NoExit -File "E:\users\<name>\workspace\dev\profiles\ps\profile.generated.ps1" -Mode AWS
+
+Commands
+Title: AWS & External CLI Integration
+Description: text
+aws s3 cp, aws s3 sync, aws s3api list-objects, aws ec2 describe-instances
+
+Example
+Title: AWS & External CLI Integration
+Description: text
+aws s3 sync "E:\mysite\content" "s3://mybucket/content" --acl public-read
+
+---
+
+Commands
+Title: Check PATH objects
+Description: text
+($env:PATH -split ';') | Select-Object -First 6
+
+Commands
+Title: Check processors
+Description: text
+(Get-Command node).Source
+(Get-Command python).Source
+
+---
+
+Commands
+Title: Files & Directories
+Description: text
+Get-ChildItem, Get-Item, Test-Path, New-Item, Copy-Item, Move-Item, Rename-Item, Remove-Item, Resolve-Path, Get-Location, Set-Location
+
+Example
+Title: Files & Directories
+Description: Copy all .ps1 files to backup folder, preserving structure
+Get-ChildItem -Recurse -Filter *.ps1 | Copy-Item -Destination E:\backup -Container
+
+---
+
+Commands
+Title: Text and Content Manipulation
+Description: text
+Get-Content, Set-Content, Add-Content, Out-File
+
+Example
+Title: Text and Content Manipulation
+Description: text
+Get-Content .\log.txt | Where-Object { $_ -match "ERROR" } | Out-File .\errors.txt
+
+---
+
+Commands
+Title: Regex & String Processing
+Description: text
+Select-String, -match, -notmatch, -replace, [regex], [System.Text.RegularExpressions.RegexOptions]
+
+Example
+Title: Regex & String Processing
+Description: Extract email addresses from all .txt files
+Select-String -Path *.txt -Pattern '\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b' -AllMatches | ForEach-Object { $_.Matches.Value } | Sort-Object -Unique
+
+---
+
+Commands
+Title: Pipeline Processing & Data Shaping
+Description: text
+ForEach-Object, Where-Object, Sort-Object, Group-Object, Measure-Object, Select-Object, Format-Table, Format-List
+
+Example
+Title: Pipeline Processing & Data Shaping
+Description: text
+Get-Process | Sort-Object CPU -Descending | Select-Object -First 10 | Format-Table Name, CPU
+
+---
+
+Commands
+Title: Script Execution & Environment Control
+Description: text
+Start-Job, Receive-Job, Wait-Job, Remove-Job, Invoke-Command, Start-Process, Start-Transcript, Stop-Transcript
+
+Example
+Title: Pipeline Processing & Data Shaping
+Description: text
+Start-Job { Get-Process } | Wait-Job | Receive-Job
+
+---
+
+Commands
+Title: Debugging & Diagnostics
+Description: text
+Set-StrictMode, Try/Catch/Finally, $ErrorActionPreference, Write-Verbose, Write-Debug, Write-Warning, Write-Error
+
+Example
+Title: Debugging & Diagnostics
+Description: text
+Trace-Command -Name ParameterBinding -Expression { .\script.ps1 } -PSHost
+
+---
+
+Commands
+Title: Script Composition & Authoring
+Description: text
+New-Item, Set-Content, Add-Content, Out-File
+
+Example
+Title: Script Composition & Authoring
+Description: text
+Invoke-ScriptAnalyzer -Path . -Recurse -Severity Warning,Error
+
+---
+
+Commands
+Title: Testing & Validation
+Description: text
+Invoke-Pester, New-PesterConfiguration
+
+Example
+Title: Testing & Validation
+Description: text
+Invoke-Pester -Path .\tests -Output Detailed
+
+---
+
+Commands
+Title: Environment & Session Management
+Description: text
+$PSVersionTable, $env:PATH, Get-ChildItem Env:, Import-Module, Get-Module, Remove-Module
+
+Example
+Title: Environment & Session Management
+Description: text
+Get-ChildItem Env: | Sort-Object Name | Out-File env-vars.txt
+
+---
+
+Commands
+Title: Documentation & Discovery
+Description: text
+Get-Help, Get-Command, Get-Alias, Show-Command
+
+Example
+Title: Documentation & Discovery
+Description: text
+Get-Help Get-ChildItem -Online
+
+---
+
+
+# Run the build
+pwsh -NoProfile -ExecutionPolicy Bypass -File .\build.ps1 -ConfigPath ".\values.yaml" -UnixTemplatesPath "E:\users\gigster\workspace\dev\profiles\claude\templates"

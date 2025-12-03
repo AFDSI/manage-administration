@@ -1,0 +1,12 @@
+
+
+# Option 1: Run buildPages with debug output
+npx gulp buildPages --env local --loglevel debug
+
+# Option 2: Check the actual grow utility to understand the issue
+cat platform/lib/utils/grow.js | head -100
+
+# Option 3: Try running the full build sequence but just buildPages
+npx gulp buildPages --env local 2>&1 | tee build-pages.log
+# Then check the log for where it hangs
+tail -50 build-pages.log

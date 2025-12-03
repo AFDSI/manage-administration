@@ -1,0 +1,1755 @@
+.
+├── app.yaml
+├── .babelrc
+├── boilerplate
+│   ├── backend
+│   │   └── index.js
+│   ├── build.js
+│   ├── data
+│   │   ├── categories.json
+│   │   └── formats.json
+│   ├── .gitignore
+│   ├── lib
+│   │   ├── io.js
+│   │   └── templates.js
+│   └── templates
+│       ├── files
+│       │   ├── ads.html
+│       │   ├── bookend.json
+│       │   ├── email.html
+│       │   ├── serviceworkerIframe.html
+│       │   ├── serviceworkerJs.js
+│       │   ├── stories.html
+│       │   └── websites.html
+│       ├── index.html
+│       ├── partials
+│       │   ├── analytics
+│       │   ├── fonts
+│       │   ├── language-select
+│       │   ├── media
+│       │   ├── pwa
+│       │   ├── render-delaying
+│       │   └── structured-data
+│       └── styles
+│           ├── code-snippet.scss
+│           └── main.scss
+├── .cache
+│   └── .gitkeep
+├── CODE_OF_CONDUCT.md
+├── contributing
+│   ├── documentation.md
+│   └── samples.md
+├── CONTRIBUTING.md
+├── Dockerfile
+├── .dockerignore
+├── e2e.jest.config.js
+├── .editorconfig
+├── .eslintignore
+├── .eslintrc.json
+├── examples
+│   ├── api
+│   │   ├── amp-access
+│   │   │   ├── index.js
+│   │   │   └── login.html
+│   │   ├── amp-consent.js
+│   │   ├── amp-form.js
+│   │   ├── amp-inputmask.js
+│   │   ├── autosuggest.js
+│   │   ├── cache.js
+│   │   ├── echo.js
+│   │   ├── hello.js
+│   │   ├── photo-stream.js
+│   │   ├── product-browse-page.js
+│   │   ├── slow-response.js
+│   │   └── time.js
+│   ├── index.js
+│   ├── lib
+│   │   └── SampleRenderer.js
+│   ├── socket-server
+│   │   └── socket-server.js
+│   ├── source
+│   │   ├── 0.introduction
+│   │   │   ├── AMPHTML_Ads_Hello_World.html
+│   │   │   ├── Hello_World_Email.html
+│   │   │   ├── Hello_World.html
+│   │   │   ├── index.json
+│   │   │   └── Stories_in_AMP.html
+│   │   ├── 1.components
+│   │   │   ├── amp-3d-gltf.html
+│   │   │   ├── amp-access.html
+│   │   │   ├── amp-access-laterpay.html
+│   │   │   ├── amp-accordion.html
+│   │   │   ├── amp-addthis.html
+│   │   │   ├── amp-ad.html
+│   │   │   ├── amp-analytics
+│   │   │   ├── amp-anim.html
+│   │   │   ├── amp-app-banner.html
+│   │   │   ├── amp-audio.html
+│   │   │   ├── amp-autocomplete-email.html
+│   │   │   ├── amp-autocomplete.html
+│   │   │   ├── amp-bind.html
+│   │   │   ├── amp-bind-macro.html
+│   │   │   ├── amp-bind-recaptcha.html
+│   │   │   ├── amp-bodymovin-animation.html
+│   │   │   ├── amp-brid-player.html
+│   │   │   ├── amp-brightcove.html
+│   │   │   ├── amp-call-tracking.html
+│   │   │   ├── amp-carousel.html
+│   │   │   ├── amp-dailymotion.html
+│   │   │   ├── amp-date-countdown.html
+│   │   │   ├── amp-date-display.html
+│   │   │   ├── amp-date-picker.html
+│   │   │   ├── amp-dynamic-css-classes.html
+│   │   │   ├── amp-experiment.html
+│   │   │   ├── amp-facebook-comments.html
+│   │   │   ├── amp-facebook.html
+│   │   │   ├── amp-facebook-like.html
+│   │   │   ├── amp-facebook-page.html
+│   │   │   ├── amp-fit-text.html
+│   │   │   ├── amp-font.html
+│   │   │   ├── amp-form.html
+│   │   │   ├── amp-fx-collection.html
+│   │   │   ├── amp-fx-flying-carpet.html
+│   │   │   ├── amp-geo.html
+│   │   │   ├── amp-gfycat.html
+│   │   │   ├── amp-gist.html
+│   │   │   ├── amp-google-document-embed.html
+│   │   │   ├── amp-hulu.html
+│   │   │   ├── amp-iframe.html
+│   │   │   ├── amp-image-lightbox.html
+│   │   │   ├── amp-image-slider.html
+│   │   │   ├── amp-ima-video.html
+│   │   │   ├── amp-img.html
+│   │   │   ├── amp-inputmask.html
+│   │   │   ├── amp-instagram.html
+│   │   │   ├── amp-install-serviceworker.html
+│   │   │   ├── amp-jwplayer.html
+│   │   │   ├── amp-kaltura-player.html
+│   │   │   ├── amp-lightbox-gallery.html
+│   │   │   ├── amp-lightbox.html
+│   │   │   ├── amp-list.html
+│   │   │   ├── amp-live-list
+│   │   │   ├── amp-mustache.html
+│   │   │   ├── amp-next-page.html
+│   │   │   ├── amp-o2-player.html
+│   │   │   ├── amp-pinterest.html
+│   │   │   ├── amp-pixel.html
+│   │   │   ├── amp-reach-player.html
+│   │   │   ├── amp-recaptcha-input
+│   │   │   ├── amp-reddit.html
+│   │   │   ├── amp-render.html
+│   │   │   ├── amp-script
+│   │   │   ├── amp-selector.html
+│   │   │   ├── amp-sidebar.html
+│   │   │   ├── amp-social-share.html
+│   │   │   ├── amp-soundcloud.html
+│   │   │   ├── amp-springboard-player.html
+│   │   │   ├── amp-sticky-ad.html
+│   │   │   ├── amp-story-360.html
+│   │   │   ├── amp-story-interactive-poll
+│   │   │   ├── amp-story-interactive-quiz.html
+│   │   │   ├── amp-story-shopping.html
+│   │   │   ├── amp-timeago.html
+│   │   │   ├── amp-twitter.html
+│   │   │   ├── amp-user-notification
+│   │   │   ├── amp-video.html
+│   │   │   ├── amp-video-iframe.html
+│   │   │   ├── amp-vimeo.html
+│   │   │   ├── amp-vine.html
+│   │   │   ├── amp-web-push
+│   │   │   ├── amp-youtube.html
+│   │   │   └── index.json
+│   │   ├── 2.guides
+│   │   │   ├── index.json
+│   │   │   ├── Internationalization.html
+│   │   │   ├── Using_the_AMP_URL_API.html
+│   │   │   └── Using_the_Google_AMP_Cache.html
+│   │   ├── advertising-analytics
+│   │   │   ├── AMPHTML_ads_vs_non_AMP_ads.html
+│   │   │   ├── Doubleclick_AMP_Story_Ads.html
+│   │   │   ├── index.json
+│   │   │   ├── Joining_Analytics_Sessions.html
+│   │   │   ├── Publisher_Served_AMP_Story_Ads.html
+│   │   │   └── Tracking_Core_Web_Vitals.html
+│   │   ├── e-commerce
+│   │   │   ├── AMP_for_E-Commerce_Getting_Started.html
+│   │   │   ├── Checkout_Flow
+│   │   │   ├── Hotel
+│   │   │   ├── Housing
+│   │   │   ├── index.json
+│   │   │   ├── Payments_in_AMP.html
+│   │   │   ├── Product_Browse_Page.html
+│   │   │   ├── Product_Page.html
+│   │   │   └── Shopping_Cart
+│   │   ├── interactivity-dynamic-content
+│   │   │   ├── Advanced_Server_Request.html
+│   │   │   ├── Article_Bookmark_Email
+│   │   │   ├── Client-side_filtering.html
+│   │   │   ├── ComboBox.html
+│   │   │   ├── Comment_Section
+│   │   │   ├── Conditional_State.html
+│   │   │   ├── Conference_Survey_Email.html
+│   │   │   ├── Copy_Button.html
+│   │   │   ├── Currency_Conversion.html
+│   │   │   ├── Dynamic_Accordion.html
+│   │   │   ├── Dynamically_updating_items_in_a_feed.html
+│   │   │   ├── Dynamic_Content_After_User-Interaction.html
+│   │   │   ├── Favorite_Button
+│   │   │   ├── index.json
+│   │   │   ├── Linked_Dropdowns.html
+│   │   │   ├── Mixing_Dynamic_and_Cached_Data.html
+│   │   │   ├── Multi_Page_Flow.html
+│   │   │   ├── Paged_List
+│   │   │   ├── Poll
+│   │   │   ├── Restrict_Duplicate_Selection.html
+│   │   │   ├── SeatMap
+│   │   │   ├── SeatMap_Multiple_Selection
+│   │   │   ├── Show_More_Button.html
+│   │   │   ├── Slides_Ad.html
+│   │   │   ├── Stack_With_Bind_Ad.html
+│   │   │   ├── Star_Rating
+│   │   │   ├── Subscription_Settings
+│   │   │   └── Tic_Tac_Toe.html
+│   │   ├── multimedia-animations
+│   │   │   ├── Advanced_Video_Docking.html
+│   │   │   ├── Animated_hamburger_menu.html
+│   │   │   ├── Click-to-play_overlay_for_amp-video.html
+│   │   │   ├── Custom_Loading_Indicators.html
+│   │   │   ├── Image_Galleries_with_amp-carousel.html
+│   │   │   ├── index.json
+│   │   │   ├── Integrating_Videos_in_AMP_an_Overview.html
+│   │   │   ├── Rich_Media_Notifications.html
+│   │   │   ├── Scrollbound_Video_Ad.html
+│   │   │   ├── Supported_media_types_in_AMP_Stories.html
+│   │   │   ├── Video_Ad.html
+│   │   │   ├── Video_Carousels_with_amp-carousel.html
+│   │   │   └── Video_rotate_to_fullscreen_with_hint.html
+│   │   ├── news-publishing
+│   │   │   ├── index.json
+│   │   │   ├── Live_Blog
+│   │   │   ├── News_Article.html
+│   │   │   └── Recipe.html
+│   │   ├── personalization
+│   │   │   ├── Geolocation_with_amp-list.html
+│   │   │   ├── index.json
+│   │   │   └── OAuth2_Login
+│   │   ├── style-layout
+│   │   │   ├── AMP_Story_Layouts.html
+│   │   │   ├── Banner_Ad.html
+│   │   │   ├── Carousel_Ad.html
+│   │   │   ├── Dark_Mode_Toggle.html
+│   │   │   ├── Desktop_and_Landscape_Mode_Support.html
+│   │   │   ├── How_to_support_Images_with_unknown_Dimensions.html
+│   │   │   ├── index.json
+│   │   │   ├── Lightbox_Ad.html
+│   │   │   └── Tab_Panels_with_amp-selector.html
+│   │   ├── user-consent
+│   │   │   ├── Advanced_User_Consent_Flow.html
+│   │   │   ├── Client_Side_User_Consent_Flow.html
+│   │   │   ├── External_User_Consent_Flow.html
+│   │   │   ├── Geolocation-based_Consent_Flow.html
+│   │   │   ├── Granular_User_Consent.html
+│   │   │   ├── index.json
+│   │   │   ├── Server_Side_User_Consent_Flow.html
+│   │   │   ├── Story_User_Consent.html
+│   │   │   └── User_Consent_Modal_UI.html
+│   │   └── visual-effects
+│   │       ├── AMP_Story_Animations.html
+│   │       ├── Animated_Snackbar.html
+│   │       ├── Basics_of_orientation_effects.html
+│   │       ├── Basics_of_scrollbound_effects.html
+│   │       ├── CSS_animation_in_email.html
+│   │       ├── index.json
+│   │       ├── Ken_Burns.html
+│   │       ├── Scrollbound_Animation_Ad.html
+│   │       └── Scroll_to_top.html
+│   └── static
+│       ├── inline-examples
+│       │   ├── audio
+│       │   ├── data
+│       │   ├── images
+│       │   └── videos
+│       └── samples
+│           ├── files
+│           ├── fonts
+│           ├── glTF
+│           ├── hreflang
+│           ├── img
+│           ├── internationalization
+│           ├── json
+│           ├── linker
+│           ├── samples.json
+│           ├── standalone
+│           └── video
+├── frontend
+│   ├── icons
+│   │   ├── airplane.svg
+│   │   ├── amp-ads.svg
+│   │   ├── amp-email.svg
+│   │   ├── amp-stories.svg
+│   │   ├── amp-websites.svg
+│   │   ├── angle-down-light.svg
+│   │   ├── angle-down-solid.svg
+│   │   ├── arrow-down.svg
+│   │   ├── bar-chart-money.svg
+│   │   ├── basket.svg
+│   │   ├── bitmap.svg
+│   │   ├── bolt-broken-outline.svg
+│   │   ├── bolt-broken-solid.svg
+│   │   ├── bolt-code-circle.svg
+│   │   ├── bolt-code.svg
+│   │   ├── bolt-double-shield.svg
+│   │   ├── bolt-outline.svg
+│   │   ├── bolt-solid.svg
+│   │   ├── bookmark.svg
+│   │   ├── browser.svg
+│   │   ├── build.svg
+│   │   ├── built-in.svg
+│   │   ├── camera.svg
+│   │   ├── categorymenu.svg
+│   │   ├── checkmark-component.svg
+│   │   ├── checkmark.svg
+│   │   ├── circle-arrows-money.svg
+│   │   ├── cities-map-pin.svg
+│   │   ├── cities-map.svg
+│   │   ├── clipboard.svg
+│   │   ├── close.svg
+│   │   ├── code-architecture.svg
+│   │   ├── code-examples.svg
+│   │   ├── code-small.svg
+│   │   ├── code.svg
+│   │   ├── community.svg
+│   │   ├── compass.svg
+│   │   ├── components-flyout.svg
+│   │   ├── components.svg
+│   │   ├── contentmenu.svg
+│   │   ├── content-modules.svg
+│   │   ├── content-modules-wide.svg
+│   │   ├── convert.svg
+│   │   ├── cors.svg
+│   │   ├── develop.svg
+│   │   ├── device-desktop.svg
+│   │   ├── device-mobile.svg
+│   │   ├── device-tablet.svg
+│   │   ├── discover.svg
+│   │   ├── discussion.svg
+│   │   ├── distribution.svg
+│   │   ├── documents.svg
+│   │   ├── dolly.svg
+│   │   ├── download.svg
+│   │   ├── edit.svg
+│   │   ├── example-default.svg
+│   │   ├── examples-flyout.svg
+│   │   ├── example.svg
+│   │   ├── exclamation.svg
+│   │   ├── experimental.svg
+│   │   ├── extended.svg
+│   │   ├── external.svg
+│   │   ├── fast-loading.svg
+│   │   ├── flask.svg
+│   │   ├── github-logo.svg
+│   │   ├── github.svg
+│   │   ├── glasses.svg
+│   │   ├── globe.svg
+│   │   ├── gradient-map.svg
+│   │   ├── guidelines.svg
+│   │   ├── guides-documents.svg
+│   │   ├── guide.svg
+│   │   ├── help-documentation.svg
+│   │   ├── highlight-stripes.svg
+│   │   ├── integration.svg
+│   │   ├── interaction.svg
+│   │   ├── internal.svg
+│   │   ├── japan.svg
+│   │   ├── layers.svg
+│   │   ├── learn.svg
+│   │   ├── lego.svg
+│   │   ├── list.svg
+│   │   ├── lock.svg
+│   │   ├── logo.svg
+│   │   ├── logo-transparent.svg
+│   │   ├── magazine.svg
+│   │   ├── magnifier.svg
+│   │   ├── map.svg
+│   │   ├── menu.svg
+│   │   ├── money.svg
+│   │   ├── news.svg
+│   │   ├── notepad.svg
+│   │   ├── optimize-board.svg
+│   │   ├── optimize.svg
+│   │   ├── orientation-toggle.svg
+│   │   ├── page-experience.svg
+│   │   ├── paperplane.svg
+│   │   ├── pie-chart-money.svg
+│   │   ├── pixi-stripes.svg
+│   │   ├── play.svg
+│   │   ├── priority.svg
+│   │   ├── questionmark-outline.svg
+│   │   ├── questionmark.svg
+│   │   ├── quote.svg
+│   │   ├── reload.svg
+│   │   ├── roadmap-header.svg
+│   │   ├── rocket.svg
+│   │   ├── secure-code.svg
+│   │   ├── share.svg
+│   │   ├── sidebar-toggle.svg
+│   │   ├── simple-modules.svg
+│   │   ├── slack-logo.svg
+│   │   ├── slack.svg
+│   │   ├── smile.svg
+│   │   ├── speech-bubble.svg
+│   │   ├── speedometer.svg
+│   │   ├── stackoverflow.svg
+│   │   ├── star.svg
+│   │   ├── start.svg
+│   │   ├── storytelling.svg
+│   │   ├── students.svg
+│   │   ├── suitcase.svg
+│   │   ├── survey.svg
+│   │   ├── teachers.svg
+│   │   ├── template.svg
+│   │   ├── time-measurement.svg
+│   │   ├── time-principle.svg
+│   │   ├── time.svg
+│   │   ├── tutorial-nav.svg
+│   │   ├── tutorial.svg
+│   │   ├── twitter.svg
+│   │   ├── user-shield.svg
+│   │   ├── user.svg
+│   │   ├── ux-improvement.svg
+│   │   ├── ux.svg
+│   │   ├── versions.svg
+│   │   ├── view.svg
+│   │   ├── vitals-header.svg
+│   │   ├── warning-sign.svg
+│   │   ├── warning.svg
+│   │   ├── web-page.svg
+│   │   ├── wordpress.svg
+│   │   ├── wrench.svg
+│   │   └── youtube.svg
+│   ├── js
+│   │   └── story-progress.js
+│   ├── scss
+│   │   ├── base.scss
+│   │   ├── components
+│   │   │   ├── atoms
+│   │   │   ├── molecules
+│   │   │   ├── organisms
+│   │   │   └── templates
+│   │   ├── _extends.scss
+│   │   ├── _fonts.scss
+│   │   ├── _functions.scss
+│   │   ├── _mixins.scss
+│   │   └── _variables.scss
+│   └── templates
+│       ├── layouts
+│       │   ├── blank.j2
+│       │   ├── default.j2
+│       │   ├── example-pages
+│       │   └── sitemap.xml
+│       ├── macros
+│       │   ├── atoms.j2
+│       │   └── image.j2
+│       └── views
+│           ├── 2021
+│           ├── custom.j2
+│           ├── default.j2
+│           ├── detail
+│           ├── errors
+│           ├── examples
+│           ├── meta.j2
+│           ├── overview
+│           └── partials
+├── frontend21
+│   ├── amp-dev.ejs
+│   ├── amp-dev.js
+│   ├── scss
+│   │   ├── amp-dev.scss
+│   │   ├── components
+│   │   │   ├── banner.scss
+│   │   │   ├── breadcrumbs.scss
+│   │   │   ├── button.scss
+│   │   │   ├── clip.scss
+│   │   │   ├── code-preview.scss
+│   │   │   ├── code-snippet.scss
+│   │   │   ├── component-intro.scss
+│   │   │   ├── content
+│   │   │   ├── content.scss
+│   │   │   ├── copy-script.scss
+│   │   │   ├── documentation-content.scss
+│   │   │   ├── extra
+│   │   │   ├── filter-bubbles-list.scss
+│   │   │   ├── format-toggle.scss
+│   │   │   ├── header.scss
+│   │   │   ├── highlight-stripes.scss
+│   │   │   ├── home
+│   │   │   ├── icon.scss
+│   │   │   ├── icon-text.scss
+│   │   │   ├── language-selector.scss
+│   │   │   ├── nav-link.scss
+│   │   │   ├── pie-chart.scss
+│   │   │   ├── pill.scss
+│   │   │   ├── search-trigger.scss
+│   │   │   ├── section.scss
+│   │   │   ├── sidebar.scss
+│   │   │   ├── sidebar-toggle.scss
+│   │   │   ├── table-component.scss
+│   │   │   ├── tag.scss
+│   │   │   ├── teaser-component.scss
+│   │   │   ├── teaser-grid.scss
+│   │   │   ├── text-block.scss
+│   │   │   ├── text-media.scss
+│   │   │   └── toc.scss
+│   │   ├── functions.scss
+│   │   ├── mixins.scss
+│   │   └── variables.scss
+│   ├── static
+│   │   ├── fonts
+│   │   │   ├── fira-mono-v7-latin-500.woff
+│   │   │   ├── fira-mono-v7-latin-500.woff2
+│   │   │   ├── noto-sans-v7-latin-700.woff
+│   │   │   ├── noto-sans-v7-latin-700.woff2
+│   │   │   ├── noto-sans-v7-latin-regular.woff
+│   │   │   ├── noto-sans-v7-latin-regular.woff2
+│   │   │   ├── poppins-v5-latin-700.woff
+│   │   │   └── poppins-v5-latin-700.woff2
+│   │   └── img
+│   │       ├── deco-foundation-457x457.svg
+│   │       ├── eleventy.svg
+│   │       ├── favicon-128x128.png
+│   │       ├── icon-build-64x64.svg
+│   │       ├── icon-flash-64x64.svg
+│   │       ├── icon-flexible-64x64.svg
+│   │       ├── icon-heart-64x64.svg
+│   │       ├── icon-logo-30x30.svg
+│   │       ├── icon-performance-64x64.svg
+│   │       ├── icon-touch-points-64x64.svg
+│   │       ├── nextjs.svg
+│   │       └── wordpress-inverted.svg
+│   └── webpack.config.js
+├── .gcloudignore
+├── gitblah-o5en
+├── .github
+│   ├── ISSUE_TEMPLATE
+│   │   ├── bug.md
+│   │   ├── config.yml
+│   │   ├── content.md
+│   │   ├── --content-proposal-.md
+│   │   ├── feature.md
+│   │   ├── story_creation_tool.md
+│   │   └── tool.md
+│   └── workflows
+│       ├── deploy.yaml
+│       ├── lint.yaml
+│       ├── sync-doc.yaml
+│       ├── test-platform.yaml
+│       └── test-playground.yaml
+├── .gitignore
+├── gulpfile.js
+│   ├── build.js
+│   ├── deploy.js
+│   ├── deploy-static.js
+│   ├── develop.js
+│   ├── import
+│   │   ├── importAdVendorList.js
+│   │   ├── importRoadmap.js
+│   │   └── importWorkingGroups.js
+│   ├── index.js
+│   ├── lint.js
+│   ├── packager.js
+│   ├── staticify.js
+│   ├── testSetup.js
+│   ├── thumbor.js
+│   ├── validate.js
+│   └── whoAmI.js
+├── .husky
+│   ├── _
+│   │   ├── .gitignore
+│   │   └── husky.sh
+│   ├── .gitignore
+│   └── pre-push
+├── jest.config.js
+├── jest-puppeteer.config.js
+├── LICENSE
+├── _manifest
+│   ├── extensions
+│   ├── files
+│   └── tree.txt
+├── netlify
+│   ├── configs
+│   │   ├── amp.dev
+│   │   │   └── netlify.toml
+│   │   ├── playground.amp.dev
+│   │   │   └── netlify.toml
+│   │   └── preview.amp.dev
+│   │       └── netlify.toml
+│   └── functions
+│       ├── autosuggest.js
+│       ├── cache.js
+│       ├── examples_api_amp-access_authorization
+│       │   └── examples_api_amp-access_authorization.js
+│       ├── examples_api_amp-access_login
+│       │   ├── examples_api_amp-access_login.js
+│       │   └── login.html
+│       ├── examples_api_amp-access_logout
+│       │   └── examples_api_amp-access_logout.js
+│       ├── examples_api_amp-access_pingback
+│       │   └── examples_api_amp-access_pingback.js
+│       ├── examples_api_amp-access_submit
+│       │   └── examples_api_amp-access_submit.js
+│       ├── examples_api_amp-consent_get_consent
+│       │   └── examples_api_amp-consent_get_consent.js
+│       ├── examples_api_amp-consent_get_consent_server_side
+│       │   └── examples_api_amp-consent_get_consent_server_side.js
+│       ├── examples_api_amp-form_submit_form
+│       │   └── examples_api_amp-form_submit_form.js
+│       ├── examples_api_amp-form_submit_form_input_text_xhr
+│       │   └── examples_api_amp-form_submit_form_input_text_xhr.js
+│       ├── examples_api_amp-form_submit_form_xhr
+│       │   └── examples_api_amp-form_submit_form_xhr.js
+│       ├── examples_api_amp-form_verify_form_input_text_xhr
+│       │   └── examples_api_amp-form_verify_form_input_text_xhr.js
+│       ├── examples_api_amp-inputmask
+│       │   └── examples_api_amp-inputmask.js
+│       ├── examples_api_autosuggest_address
+│       │   ├── autosuggest.js
+│       │   └── examples_api_autosuggest_address.js
+│       ├── examples_api_autosuggest_characters
+│       │   ├── autosuggest.js
+│       │   └── examples_api_autosuggest_characters.js
+│       ├── examples_api_autosuggest_cities
+│       │   ├── autosuggest.js
+│       │   └── examples_api_autosuggest_cities.js
+│       ├── examples_api_autosuggest_search_list
+│       │   ├── autosuggest.js
+│       │   └── examples_api_autosuggest_search_list.js
+│       ├── examples_api_cache_invalid_amp
+│       │   └── examples_api_cache_invalid_amp.js
+│       ├── examples_api_cache_not_found
+│       │   └── examples_api_cache_not_found.js
+│       ├── examples_api_cache_query
+│       │   └── examples_api_cache_query.js
+│       ├── examples_api_cache_redirect
+│       │   └── examples_api_cache_redirect.js
+│       ├── examples_api_cache_server_error
+│       │   └── examples_api_cache_server_error.js
+│       ├── examples_api_echo
+│       │   └── examples_api_echo.js
+│       ├── examples_api_hello
+│       │   └── examples_api_hello.js
+│       ├── examples_api_photo_stream
+│       │   └── examples_api_photo_stream.js
+│       ├── examples_api_products
+│       │   ├── examples_api_products.js
+│       │   └── related_products.json
+│       ├── examples_api_slow_response_slow_iframe
+│       │   └── examples_api_slow_response_slow_iframe.js
+│       ├── examples_api_slow_response_slow_json
+│       │   └── examples_api_slow_response_slow_json.js
+│       ├── examples_api_slow_response_slow_json_with_items
+│       │   ├── examples_api_slow_response_slow_json_with_items.js
+│       │   └── related_products.json
+│       ├── examples_api_slow_response_slow_text
+│       │   └── examples_api_slow_response_slow_text.js
+│       ├── examples_api_time
+│       │   └── examples_api_time.js
+│       ├── examples_interactivity-dynamic-content_article_bookmark_email_submit-form-bookmark
+│       │   └── examples_interactivity-dynamic-content_article_bookmark_email_submit-form-bookmark.js
+│       ├── examples_interactivity_dynamic_content_favorite_button
+│       │   └── examples_interactivity_dynamic_content_favorite_button.js
+│       ├── examples_interactivity_dynamic_content_favorite_button_with_count
+│       │   └── examples_interactivity_dynamic_content_favorite_button_with_count.js
+│       ├── examples_interactivity_dynamic_content_pages_list_search
+│       │   └── examples_interactivity_dynamic_content_pages_list_search.js
+│       ├── examples_interactivity_dynamic_content_star_rating
+│       │   └── examples_interactivity_dynamic_content_star_rating.js
+│       ├── examples_interactivity-dynamic-content_subscription_settings_subscription
+│       │   └── examples_interactivity-dynamic-content_subscription_settings_subscription.js
+│       ├── examples_source_news_publishing_amp-live-list_api
+│       │   ├── examples_source_news_publishing_amp-live-list_api.js
+│       │   └── Live_Blog.html
+│       ├── examples_static_samples_json_cart
+│       │   ├── cart.json
+│       │   └── examples_static_samples_json_cart.js
+│       ├── fetch
+│       │   ├── fetchError.js
+│       │   ├── fetch.js
+│       │   └── rateLimitedFetch.js
+│       ├── latest-query
+│       │   └── latest-query.js
+│       ├── search_autosuggest
+│       │   ├── AmpConstants.js
+│       │   ├── component-versions.json
+│       │   └── search_autosuggest.js
+│       └── search_do
+│           ├── credentials.js
+│           ├── googleSearch.js
+│           ├── log.js
+│           └── search_do.js
+├── .npmrc
+├── package.json
+├── package-lock.json
+├── packager
+│   ├── amppkg.toml
+│   ├── app.yaml
+│   ├── certs
+│   │   ├── .gitignore
+│   │   └── .gitkeep
+│   ├── Dockerfile
+│   └── README.md
+├── pages
+│   ├── content
+│   │   ├── amp-dev
+│   │   │   ├── 404.html
+│   │   │   ├── 500.html
+│   │   │   ├── about
+│   │   │   ├── _blueprint.yaml
+│   │   │   ├── community
+│   │   │   ├── documentation
+│   │   │   ├── events
+│   │   │   ├── index-2021.html
+│   │   │   ├── index.html
+│   │   │   ├── message.html
+│   │   │   ├── offline.html
+│   │   │   └── support
+│   │   ├── _blueprint.yaml
+│   │   ├── pixi
+│   │   │   ├── _blueprint.yaml
+│   │   │   ├── index@ar.md
+│   │   │   ├── index@de.md
+│   │   │   ├── index@es.md
+│   │   │   ├── index@fr.md
+│   │   │   ├── index@id.md
+│   │   │   ├── index@it.md
+│   │   │   ├── index@ja.md
+│   │   │   ├── index@ko.md
+│   │   │   ├── index.md
+│   │   │   ├── index@pl.md
+│   │   │   ├── index@pt_BR.md
+│   │   │   ├── index@ru.md
+│   │   │   ├── index@tr.md
+│   │   │   ├── index@vi.md
+│   │   │   ├── index@zh_CN.md
+│   │   │   ├── info-texts
+│   │   │   ├── no-field-data@ar.md
+│   │   │   ├── no-field-data@de.md
+│   │   │   ├── no-field-data@es.md
+│   │   │   ├── no-field-data@fr.md
+│   │   │   ├── no-field-data@id.md
+│   │   │   ├── no-field-data@it.md
+│   │   │   ├── no-field-data@ja.md
+│   │   │   ├── no-field-data@ko.md
+│   │   │   ├── no-field-data.md
+│   │   │   ├── no-field-data@pl.md
+│   │   │   ├── no-field-data@pt_BR.md
+│   │   │   ├── no-field-data@ru.md
+│   │   │   ├── no-field-data@tr.md
+│   │   │   ├── no-field-data@vi.md
+│   │   │   ├── no-field-data@zh_CN.md
+│   │   │   ├── recommendations
+│   │   │   └── status-banners
+│   │   ├── shared
+│   │   │   ├── _blueprint.yaml
+│   │   │   ├── copy-pixi-url.html
+│   │   │   ├── copy-script.html
+│   │   │   ├── experiments.html
+│   │   │   ├── footer.html
+│   │   │   └── header.html
+│   │   └── tests
+│   │       ├── _blueprint.yaml
+│   │       └── examples
+│   ├── css
+│   │   ├── base.css
+│   │   └── components
+│   │       ├── atoms
+│   │       ├── molecules
+│   │       ├── organisms
+│   │       └── templates
+│   ├── extensions
+│   │   ├── amp_dependencies
+│   │   │   ├── amp_dependencies.py
+│   │   │   ├── amp_dependencies_test.py
+│   │   │   ├── auto_dependency_injector.py
+│   │   │   ├── __init__.py
+│   │   │   └── readme.md
+│   │   ├── amp_dev
+│   │   │   ├── extension.py
+│   │   │   ├── __init__.py
+│   │   │   ├── markdown_extras
+│   │   │   └── post_processors
+│   │   ├── amp_example_preview
+│   │   │   ├── amp_example_preview.py
+│   │   │   ├── __init__.py
+│   │   │   ├── readme.md
+│   │   │   ├── standalone_example_validator.py
+│   │   │   └── util
+│   │   ├── extract_highlights_info
+│   │   │   ├── __init__.py
+│   │   │   ├── page_info_collector.py
+│   │   │   ├── page_info_collector_test.py
+│   │   │   └── readme.md
+│   │   ├── __init__.py
+│   │   ├── inline_text_assets
+│   │   │   ├── __init__.py
+│   │   │   └── inline_text_assets.py
+│   │   ├── internal_links
+│   │   │   ├── component_version_resolver.py
+│   │   │   ├── component_version_resolver_test.py
+│   │   │   ├── __init__.py
+│   │   │   ├── pod_internal_link_rewriter.py
+│   │   │   ├── pod_internal_link_rewriter_test.py
+│   │   │   └── readme.md
+│   │   ├── jinja2_optimized_codehilite
+│   │   │   ├── custom_html_formatter.py
+│   │   │   ├── custom_html_lexer.py
+│   │   │   ├── custom_js_lexer.py
+│   │   │   ├── __init__.py
+│   │   │   ├── jinja2_expression_unescape.py
+│   │   │   ├── jinja2_optimized_codehilite.py
+│   │   │   └── readme.md
+│   │   ├── log_beautifier
+│   │   │   ├── __init__.py
+│   │   │   └── log_beautifier.py
+│   │   ├── markdown_in_html
+│   │   │   ├── html_block_processor.py
+│   │   │   ├── html_block_processor_test.py
+│   │   │   ├── __init__.py
+│   │   │   └── readme.md
+│   │   ├── markdown_toc_patch
+│   │   │   ├── custom_toc_tree_processor.py
+│   │   │   ├── __init__.py
+│   │   │   ├── markdown_toc_patch.py
+│   │   │   └── readme.md
+│   │   └── url_beautifier
+│   │       ├── __init__.py
+│   │       └── url_beautifier.py
+│   ├── icons
+│   │   ├── airplane.svg
+│   │   ├── amp-ads.svg
+│   │   ├── amp-email.svg
+│   │   ├── amp-stories.svg
+│   │   ├── amp-websites.svg
+│   │   ├── angle-down-light.svg
+│   │   ├── angle-down-solid.svg
+│   │   ├── arrow-down.svg
+│   │   ├── bar-chart-money.svg
+│   │   ├── basket.svg
+│   │   ├── bitmap.svg
+│   │   ├── bolt-broken-outline.svg
+│   │   ├── bolt-broken-solid.svg
+│   │   ├── bolt-code-circle.svg
+│   │   ├── bolt-code.svg
+│   │   ├── bolt-double-shield.svg
+│   │   ├── bolt-outline.svg
+│   │   ├── bolt-solid.svg
+│   │   ├── bookmark.svg
+│   │   ├── browser.svg
+│   │   ├── build.svg
+│   │   ├── built-in.svg
+│   │   ├── camera.svg
+│   │   ├── categorymenu.svg
+│   │   ├── checkmark-component.svg
+│   │   ├── checkmark.svg
+│   │   ├── circle-arrows-money.svg
+│   │   ├── cities-map-pin.svg
+│   │   ├── cities-map.svg
+│   │   ├── clipboard.svg
+│   │   ├── close.svg
+│   │   ├── code-architecture.svg
+│   │   ├── code-examples.svg
+│   │   ├── code-small.svg
+│   │   ├── code.svg
+│   │   ├── community.svg
+│   │   ├── compass.svg
+│   │   ├── components-flyout.svg
+│   │   ├── components.svg
+│   │   ├── contentmenu.svg
+│   │   ├── content-modules.svg
+│   │   ├── content-modules-wide.svg
+│   │   ├── convert.svg
+│   │   ├── cors.svg
+│   │   ├── develop.svg
+│   │   ├── device-desktop.svg
+│   │   ├── device-mobile.svg
+│   │   ├── device-tablet.svg
+│   │   ├── discover.svg
+│   │   ├── discussion.svg
+│   │   ├── distribution.svg
+│   │   ├── documents.svg
+│   │   ├── dolly.svg
+│   │   ├── download.svg
+│   │   ├── edit.svg
+│   │   ├── example-default.svg
+│   │   ├── examples-flyout.svg
+│   │   ├── example.svg
+│   │   ├── exclamation.svg
+│   │   ├── experimental.svg
+│   │   ├── extended.svg
+│   │   ├── external.svg
+│   │   ├── fast-loading.svg
+│   │   ├── flask.svg
+│   │   ├── github-logo.svg
+│   │   ├── github.svg
+│   │   ├── glasses.svg
+│   │   ├── globe.svg
+│   │   ├── gradient-map.svg
+│   │   ├── guidelines.svg
+│   │   ├── guides-documents.svg
+│   │   ├── guide.svg
+│   │   ├── help-documentation.svg
+│   │   ├── highlight-stripes.svg
+│   │   ├── integration.svg
+│   │   ├── interaction.svg
+│   │   ├── internal.svg
+│   │   ├── japan.svg
+│   │   ├── layers.svg
+│   │   ├── learn.svg
+│   │   ├── lego.svg
+│   │   ├── list.svg
+│   │   ├── lock.svg
+│   │   ├── logo.svg
+│   │   ├── logo-transparent.svg
+│   │   ├── magazine.svg
+│   │   ├── magnifier.svg
+│   │   ├── map.svg
+│   │   ├── menu.svg
+│   │   ├── money.svg
+│   │   ├── news.svg
+│   │   ├── notepad.svg
+│   │   ├── optimize-board.svg
+│   │   ├── optimize.svg
+│   │   ├── orientation-toggle.svg
+│   │   ├── page-experience.svg
+│   │   ├── paperplane.svg
+│   │   ├── pie-chart-money.svg
+│   │   ├── pixi-stripes.svg
+│   │   ├── play.svg
+│   │   ├── priority.svg
+│   │   ├── questionmark-outline.svg
+│   │   ├── questionmark.svg
+│   │   ├── quote.svg
+│   │   ├── reload.svg
+│   │   ├── roadmap-header.svg
+│   │   ├── rocket.svg
+│   │   ├── secure-code.svg
+│   │   ├── share.svg
+│   │   ├── sidebar-toggle.svg
+│   │   ├── simple-modules.svg
+│   │   ├── slack-logo.svg
+│   │   ├── slack.svg
+│   │   ├── smile.svg
+│   │   ├── speech-bubble.svg
+│   │   ├── speedometer.svg
+│   │   ├── stackoverflow.svg
+│   │   ├── star.svg
+│   │   ├── start.svg
+│   │   ├── storytelling.svg
+│   │   ├── students.svg
+│   │   ├── suitcase.svg
+│   │   ├── survey.svg
+│   │   ├── teachers.svg
+│   │   ├── template.svg
+│   │   ├── time-measurement.svg
+│   │   ├── time-principle.svg
+│   │   ├── time.svg
+│   │   ├── tutorial-nav.svg
+│   │   ├── tutorial.svg
+│   │   ├── twitter.svg
+│   │   ├── user-shield.svg
+│   │   ├── user.svg
+│   │   ├── ux-improvement.svg
+│   │   ├── ux.svg
+│   │   ├── versions.svg
+│   │   ├── view.svg
+│   │   ├── vitals-header.svg
+│   │   ├── warning-sign.svg
+│   │   ├── warning.svg
+│   │   ├── web-page.svg
+│   │   ├── wordpress.svg
+│   │   ├── wrench.svg
+│   │   └── youtube.svg
+│   ├── layouts
+│   │   ├── blank.j2
+│   │   ├── default.j2
+│   │   ├── example-pages
+│   │   │   ├── amp-ads-page.j2
+│   │   │   ├── amp-email-page.j2
+│   │   │   ├── amp-stories-page.j2
+│   │   │   └── amp-websites-page.j2
+│   │   └── sitemap.xml
+│   ├── macros
+│   │   ├── atoms.j2
+│   │   └── image.j2
+│   ├── podspec.yaml
+│   ├── setup.cfg
+│   ├── shared
+│   │   ├── components-showcase
+│   │   │   ├── amp-accordion.html
+│   │   │   ├── amp-animation.html
+│   │   │   ├── amp-autocomplete.html
+│   │   │   └── amp-carousel.html
+│   │   └── data
+│   │       ├── amp-conf.yaml
+│   │       ├── amp-cs-2019.yaml
+│   │       ├── amp-fest.yaml
+│   │       ├── benefits.yaml
+│   │       ├── blog.yaml
+│   │       ├── cms.yaml
+│   │       ├── componentSamples.json
+│   │       ├── faq.yaml
+│   │       ├── hello-world.html
+│   │       ├── recent-guides.yaml
+│   │       ├── roadmap.json
+│   │       ├── roadshow.yaml
+│   │       └── tools.yaml
+│   ├── static
+│   │   ├── amp-app-banner-manifest.json
+│   │   ├── files
+│   │   │   ├── amp-ads-adobe-animate-plugin
+│   │   │   ├── brand-material
+│   │   │   ├── case-studies
+│   │   │   ├── log-messages-v011905140117570.json
+│   │   │   ├── off-cache-experiment.html
+│   │   │   ├── The_Total_Economic_Impact_Of_AMP.pdf
+│   │   │   ├── tutorials
+│   │   │   └── valid-optimized.amp.html
+│   │   ├── fonts
+│   │   │   ├── fira-mono-v7-latin-500.woff
+│   │   │   ├── fira-mono-v7-latin-500.woff2
+│   │   │   ├── noto-sans-v7-latin-700.woff
+│   │   │   ├── noto-sans-v7-latin-700.woff2
+│   │   │   ├── noto-sans-v7-latin-regular.woff
+│   │   │   ├── noto-sans-v7-latin-regular.woff2
+│   │   │   ├── poppins-v5-latin-700.woff
+│   │   │   └── poppins-v5-latin-700.woff2
+│   │   ├── googlefc2a7cf70933ae03.html
+│   │   ├── img
+│   │   │   ├── about
+│   │   │   ├── ad-comparison.jpg
+│   │   │   ├── ad.png
+│   │   │   ├── amp-ads-bottom.jpg
+│   │   │   ├── amp-ads-top.jpg
+│   │   │   ├── amp_ad_video_left.jpg
+│   │   │   ├── amp_ad_video_left.mp4
+│   │   │   ├── amp_ad_video_right.jpg
+│   │   │   ├── amp_ad_video_right.mp4
+│   │   │   ├── amp-article-01.jpg
+│   │   │   ├── amp-article-02.jpg
+│   │   │   ├── amp-article-03.jpg
+│   │   │   ├── amp-article-04.jpg
+│   │   │   ├── amp-article-05.jpg
+│   │   │   ├── amp-article-06.jpg
+│   │   │   ├── amp-article-07.jpg
+│   │   │   ├── amp-concert-01.jpg
+│   │   │   ├── amp-concert-02.jpg
+│   │   │   ├── amp-concert-03.jpg
+│   │   │   ├── amp-concert-04.jpg
+│   │   │   ├── amp-concert-05.jpg
+│   │   │   ├── amp-concert-06.jpg
+│   │   │   ├── amp-concert-07.jpg
+│   │   │   ├── amp-conf
+│   │   │   ├── amp-email-base.jpg
+│   │   │   ├── amp-email-top.jpg
+│   │   │   ├── amp-fest
+│   │   │   ├── amp-img-01.jpg
+│   │   │   ├── amp-img-02.jpg
+│   │   │   ├── amp-img-03.jpg
+│   │   │   ├── amp-stories-base.png
+│   │   │   ├── amp-stories-monde.jpg
+│   │   │   ├── background.jpg
+│   │   │   ├── beach.jpg
+│   │   │   ├── bitmap-dummy.png
+│   │   │   ├── browser-icons.png
+│   │   │   ├── browser-stories.png
+│   │   │   ├── browser-websites.png
+│   │   │   ├── case-band-bmw-desktop.png
+│   │   │   ├── case-band-bmw-mobile.jpg
+│   │   │   ├── case-band-cnn-2-mobile.png
+│   │   │   ├── case-band-cnn-mobile.png
+│   │   │   ├── case-band-globalnews-mobile.png
+│   │   │   ├── case-band-greenslips-desktop.png
+│   │   │   ├── case-band-greenslips-mobile.png
+│   │   │   ├── case-band-iene-desktop.jpg
+│   │   │   ├── case-band-iene-mobile.png
+│   │   │   ├── case-band-image-1.png
+│   │   │   ├── case-band-image-2.jpg
+│   │   │   ├── case-band-image-3.jpg
+│   │   │   ├── case-band-image-4.jpg
+│   │   │   ├── case-band-image-5.jpg
+│   │   │   ├── case-band-magebit-desktop.jpg
+│   │   │   ├── case-band-magebit-mobile.png
+│   │   │   ├── case-band-megabit-desktop.png
+│   │   │   ├── case-band-mic-mobile.png
+│   │   │   ├── case-band-post-mobile.jpg
+│   │   │   ├── case-band-readwhere-desktop.png
+│   │   │   ├── case-band-readwhere-mobile.png
+│   │   │   ├── case-band-renovationbrands-desktop.jpg
+│   │   │   ├── case-band-renovationbrands-mobile.png
+│   │   │   ├── case-band-tasty-desktop.png
+│   │   │   ├── case-band-tasty-mobile.jpg
+│   │   │   ├── case-band-vox-mobile.jpg
+│   │   │   ├── case-band-wired-desktop.png
+│   │   │   ├── case-band-wired-mobile.png
+│   │   │   ├── case-grid-band 2.jpg
+│   │   │   ├── case-grid-band.jpg
+│   │   │   ├── case-grid-choices 2.jpg
+│   │   │   ├── case-grid-choices.jpg
+│   │   │   ├── case-grid-data 2.jpg
+│   │   │   ├── case-grid-data.jpg
+│   │   │   ├── case-grid-education 2.jpg
+│   │   │   ├── case-grid-education.jpg
+│   │   │   ├── component-visual-nav.jpg
+│   │   │   ├── component-visual-site.jpg
+│   │   │   ├── courses
+│   │   │   ├── docs
+│   │   │   ├── documentation
+│   │   │   ├── dummy-collabo-image-1.png
+│   │   │   ├── dummy-collabo-image-2.png
+│   │   │   ├── dummy-news-1.png
+│   │   │   ├── dummy-news-2.png
+│   │   │   ├── dummy-use-cases-example-01-1.png
+│   │   │   ├── dummy-use-cases-example-01.png
+│   │   │   ├── dummy-use-cases-example-02-1.png
+│   │   │   ├── dummy-use-cases-example-02-2.png
+│   │   │   ├── dummy-use-cases-example-02.png
+│   │   │   ├── dummy-use-cases-example-03.png
+│   │   │   ├── dummy-use-cases-example-04.png
+│   │   │   ├── email-clients
+│   │   │   ├── e-mail.png
+│   │   │   ├── faq
+│   │   │   ├── favicon-local.png
+│   │   │   ├── favicon.png
+│   │   │   ├── frameworks.jpg
+│   │   │   ├── google-analytics-custom-dimensions-example.jpg
+│   │   │   ├── icons
+│   │   │   ├── login-button.jpg
+│   │   │   ├── logo-dummy-meredith.png
+│   │   │   ├── logo-dummy-mic.png
+│   │   │   ├── logo-dummy-teads.png
+│   │   │   ├── logo-dummy-time.png
+│   │   │   ├── logo-dummy-washingtonpost.png
+│   │   │   ├── logo-dummy-wired.png
+│   │   │   ├── logo-openjsf.svg
+│   │   │   ├── news
+│   │   │   ├── parcel.svg
+│   │   │   ├── platforms
+│   │   │   ├── plattform-logos.png
+│   │   │   ├── playground-teaser@2x.png
+│   │   │   ├── playground-teaser@3x.png
+│   │   │   ├── playground-teaser.png
+│   │   │   ├── return-parameter.jpg
+│   │   │   ├── samuelbaldwin.jpg
+│   │   │   ├── sharing
+│   │   │   ├── stage-image.png
+│   │   │   ├── stage_placeholder.png
+│   │   │   ├── stories
+│   │   │   ├── story.png
+│   │   │   ├── success-stories
+│   │   │   ├── teaser-dummy-1x1-1.jpg
+│   │   │   ├── teaser-dummy-1x1-2.jpg
+│   │   │   ├── teaser-dummy-1x1-3.jpg
+│   │   │   ├── teaser-dummy-4x5-1.jpg
+│   │   │   ├── teaser-dummy-4x5-2.jpg
+│   │   │   ├── teaser-dummy-4x5-3.jpg
+│   │   │   ├── teaser-dummy-5x3-1.jpg
+│   │   │   ├── teaser-dummy-5x3-2.jpg
+│   │   │   ├── teaser-dummy-5x7-1.jpg
+│   │   │   ├── teaser-placeholder-1x1.jpg
+│   │   │   ├── teaser-placeholder-4x5.jpg
+│   │   │   ├── teaser-placeholder-5x3.jpg
+│   │   │   ├── teaser-placeholder-5x7.jpg
+│   │   │   ├── templates
+│   │   │   ├── the-blog.jpg
+│   │   │   ├── the-blog.png
+│   │   │   ├── tools
+│   │   │   ├── use-cases
+│   │   │   ├── wired_logo.png
+│   │   │   ├── working-groups-top-desktop.png
+│   │   │   └── working-groups-top.png
+│   │   ├── manifest.json
+│   │   ├── robots
+│   │   │   ├── allow_all.txt
+│   │   │   ├── disallow_all.txt
+│   │   │   └── platform_prod.txt
+│   │   ├── serviceworker.html
+│   │   ├── serviceworker.js
+│   │   ├── sitemap
+│   │   │   ├── sitemap_ampbyexample.xml
+│   │   │   ├── sitemap_ampproject.xml
+│   │   │   ├── sitemap_ampstart.xml
+│   │   │   ├── sitemap_manual.xml
+│   │   │   └── sitemap.xml
+│   │   └── survey.js
+│   ├── translations
+│   │   ├── ar
+│   │   │   └── LC_MESSAGES
+│   │   ├── de
+│   │   │   └── LC_MESSAGES
+│   │   ├── en
+│   │   │   └── LC_MESSAGES
+│   │   ├── es
+│   │   │   └── LC_MESSAGES
+│   │   ├── fr
+│   │   │   └── LC_MESSAGES
+│   │   ├── id
+│   │   │   └── LC_MESSAGES
+│   │   ├── it
+│   │   │   └── LC_MESSAGES
+│   │   ├── ja
+│   │   │   └── LC_MESSAGES
+│   │   ├── ko
+│   │   │   └── LC_MESSAGES
+│   │   ├── messages.po
+│   │   ├── pl
+│   │   │   └── LC_MESSAGES
+│   │   ├── pt_BR
+│   │   │   └── LC_MESSAGES
+│   │   ├── ru
+│   │   │   └── LC_MESSAGES
+│   │   ├── tr
+│   │   │   └── LC_MESSAGES
+│   │   ├── vi
+│   │   │   └── LC_MESSAGES
+│   │   └── zh_CN
+│   │       └── LC_MESSAGES
+│   └── views
+│       ├── 2021
+│       │   ├── base.html
+│       │   ├── partials
+│       │   └── templates
+│       ├── custom.j2
+│       ├── default.j2
+│       ├── detail
+│       │   ├── component-detail.j2
+│       │   ├── docs-detail.j2
+│       │   ├── faq-detail.j2
+│       │   ├── guide-detail.j2
+│       │   ├── success-story-detail.j2
+│       │   ├── template-detail.j2
+│       │   ├── use-cases-detail.j2
+│       │   └── working-group-detail.j2
+│       ├── errors
+│       │   └── default.j2
+│       ├── examples
+│       │   ├── documentation.j2
+│       │   ├── embed-ads.j2
+│       │   └── preview.j2
+│       ├── meta.j2
+│       ├── overview
+│       │   ├── courses.j2
+│       │   ├── custom-content.j2
+│       │   ├── events.j2
+│       │   ├── guides.j2
+│       │   ├── support.j2
+│       │   ├── template-overview.j2
+│       │   ├── tools.j2
+│       │   └── what-is-amp.j2
+│       └── partials
+│           ├── accordion.j2
+│           ├── analytics.j2
+│           ├── author.j2
+│           ├── banner.j2
+│           ├── bevel.j2
+│           ├── breadcrumbs.j2
+│           ├── burger-menu.j2
+│           ├── card-grid.j2
+│           ├── case-band.j2
+│           ├── case-grid.j2
+│           ├── category-filter.j2
+│           ├── code-preview
+│           ├── component-headline.j2
+│           ├── component-intro.j2
+│           ├── component-sidebar.j2
+│           ├── component-visual-image.j2
+│           ├── consent.j2
+│           ├── content.j2
+│           ├── experiments
+│           ├── faq-visual.j2
+│           ├── filter-bubbles.j2
+│           ├── float-image.j2
+│           ├── footer.j2
+│           ├── format-filter-hint.j2
+│           ├── format-toggle.j2
+│           ├── format-visuals
+│           ├── fragment-slider-controls.j2
+│           ├── fragment-slider-images.j2
+│           ├── fragment-slider-texts.j2
+│           ├── header.j2
+│           ├── intro.j2
+│           ├── jumpto.j2
+│           ├── kpis.j2
+│           ├── level-toggle.j2
+│           ├── meta.j2
+│           ├── pixi
+│           ├── resources-grid.j2
+│           ├── rolling-formats.j2
+│           ├── search.j2
+│           ├── service-worker.j2
+│           ├── sidebar.j2
+│           ├── sidebar-toggle-button.j2
+│           ├── sidebar-toggle.j2
+│           ├── sidebar-toggle-observer.j2
+│           ├── structured-data.j2
+│           ├── survey.j2
+│           ├── teaser-grid.j2
+│           ├── teaser.j2
+│           ├── teaser-tags.j2
+│           ├── tip.j2
+│           ├── toc.j2
+│           ├── tools-teaser.j2
+│           ├── tools-visual.j2
+│           ├── tools-widget.j2
+│           ├── video-carousel.j2
+│           └── video.j2
+├── Pipfile
+├── pixi
+│   ├── .babelrc
+│   ├── backend
+│   │   ├── api.js
+│   │   ├── api.test.js
+│   │   ├── index.js
+│   │   └── mockApi.js
+│   ├── cloud-function
+│   │   ├── deploy.sh
+│   │   ├── .gcloudignore
+│   │   ├── index.js
+│   │   ├── index.test.js
+│   │   ├── package.json
+│   │   └── package-lock.json
+│   ├── config.js
+│   ├── demo.js
+│   ├── mocks
+│   │   ├── ampLinterCheck
+│   │   │   └── apiResponse.js
+│   │   ├── mobileFriendlinessCheck
+│   │   │   └── apiResponse.js
+│   │   ├── pageExperienceCheck
+│   │   │   ├── apiResponseErrors.json
+│   │   │   ├── apiResponse.json
+│   │   │   ├── apiResponseNoFieldData.json
+│   │   │   ├── apiResponseNoLoadingExperience.json
+│   │   │   ├── apiResponseOriginFieldData.json
+│   │   │   ├── reportDataErrors.json
+│   │   │   ├── reportData.json
+│   │   │   ├── reportDataNoFieldData.json
+│   │   │   ├── reportDataNoLoadingExperience.json
+│   │   │   ├── reportDataOriginFieldData.json
+│   │   │   └── reportDescriptions.json
+│   │   └── safeBrowsingCheck
+│   │       └── apiResponse.js
+│   ├── README.md
+│   ├── rollup.config.js
+│   ├── src
+│   │   ├── checks
+│   │   │   ├── AmpLinterCheck.js
+│   │   │   ├── AmpLinterCheck.test.js
+│   │   │   ├── constants.js
+│   │   │   ├── MobileFriendlinessCheck.js
+│   │   │   ├── MobileFriendlinessCheck.test.js
+│   │   │   ├── PageExperienceCacheCheck.js
+│   │   │   ├── PageExperienceCacheCheck.test.js
+│   │   │   ├── PageExperienceCheck.js
+│   │   │   └── PageExperienceCheck.test.js
+│   │   ├── Cli.js
+│   │   ├── ui
+│   │   │   ├── I18n.js
+│   │   │   ├── InputBar.js
+│   │   │   ├── page-experience.hbs
+│   │   │   ├── PageExperience.js
+│   │   │   ├── recommendations
+│   │   │   ├── report
+│   │   │   └── StatusIntroView.js
+│   │   └── utils
+│   │       ├── checkAggregation
+│   │       ├── checkCache.js
+│   │       ├── issueUrl.js
+│   │       ├── texts.js
+│   │       └── texts.test.js
+│   └── webpack.config.js
+├── platform
+│   ├── config
+│   │   ├── amp-dev-redirects.yaml
+│   │   ├── build-info.yaml
+│   │   ├── component-versions.json
+│   │   ├── environments
+│   │   │   ├── development.json
+│   │   │   ├── local.json
+│   │   │   ├── production.json
+│   │   │   ├── staging.json
+│   │   │   └── static-test.json
+│   │   ├── extensions -> ../../pages/extensions
+│   │   ├── go-links.yaml
+│   │   ├── imports
+│   │   │   ├── componentReference.json
+│   │   │   ├── roadmap.json
+│   │   │   └── spec.json
+│   │   ├── podspec.yaml
+│   │   ├── search-promoted-pages.json
+│   │   └── shared.json
+│   ├── lib
+│   │   ├── amp
+│   │   │   ├── formatHelper.js
+│   │   │   └── formatHelper.test.js
+│   │   ├── common
+│   │   │   ├── AmpConstants.js
+│   │   │   ├── cheerioOptions.js
+│   │   │   ├── growPageLoader.js
+│   │   │   ├── samples.js
+│   │   │   └── samples.test.js
+│   │   ├── config.js
+│   │   ├── config.test.js
+│   │   ├── format-transform
+│   │   │   ├── formats
+│   │   │   ├── index.js
+│   │   │   └── index.test.js
+│   │   ├── middleware
+│   │   │   ├── caching.js
+│   │   │   ├── csp.js
+│   │   │   ├── redirects.js
+│   │   │   ├── redirects.test.js
+│   │   │   ├── security.js
+│   │   │   └── subdomain.js
+│   │   ├── pipeline
+│   │   │   ├── componentReferenceDocument.js
+│   │   │   ├── componentReferenceDocument.test.js
+│   │   │   ├── componentReferenceImporter.js
+│   │   │   ├── ComponentVersionImporter.js
+│   │   │   ├── gitHubImporter.js
+│   │   │   ├── markdownDocument.js
+│   │   │   ├── markdownDocument.test.js
+│   │   │   ├── recentGuides.js
+│   │   │   └── specImporter.js
+│   │   ├── platform.js
+│   │   ├── routers
+│   │   │   ├── cspReport.js
+│   │   │   ├── example
+│   │   │   ├── go.js
+│   │   │   ├── go.test.js
+│   │   │   ├── growPages.js
+│   │   │   ├── growPages.test.js
+│   │   │   ├── growSharedPages.js
+│   │   │   ├── growXmls.js
+│   │   │   ├── healthCheck.js
+│   │   │   ├── inlineExamples.js
+│   │   │   ├── notFound.js
+│   │   │   ├── packager.js
+│   │   │   ├── resourceFallbackHandler.js
+│   │   │   ├── robots.js
+│   │   │   ├── runtimeLog.js
+│   │   │   ├── runtimeLog.test.js
+│   │   │   ├── search.js
+│   │   │   ├── search.test.js
+│   │   │   ├── static.js
+│   │   │   ├── surveyComponent.js
+│   │   │   ├── surveyComponent.test.js
+│   │   │   ├── templates.js
+│   │   │   ├── thumbor.js
+│   │   │   └── whoAmI.js
+│   │   ├── runtime-log
+│   │   │   ├── HtmlFormatter.js
+│   │   │   ├── HtmlFormatter.test.js
+│   │   │   ├── LogProvider.js
+│   │   │   └── LogProvider.test.js
+│   │   ├── samples
+│   │   │   ├── CodeSection.js
+│   │   │   ├── CodeSection.test.js
+│   │   │   ├── Document.js
+│   │   │   ├── DocumentParser.js
+│   │   │   ├── DocumentParser.test.js
+│   │   │   ├── Document.test.js
+│   │   │   ├── ElementSorting.js
+│   │   │   ├── ElementSorting.test.js
+│   │   │   ├── ExampleFile.js
+│   │   │   ├── ExampleFile.test.js
+│   │   │   ├── FileName.js
+│   │   │   ├── FileNameTestFiles
+│   │   │   ├── FileName.test.js
+│   │   │   └── index.js
+│   │   ├── templates
+│   │   │   ├── ImportBlogFilter.js
+│   │   │   ├── ImportYouTubeChannel.js
+│   │   │   ├── index.js
+│   │   │   ├── SupportedFormatsExtension.js
+│   │   │   └── SurveyFilter.js
+│   │   ├── tools
+│   │   │   ├── componentReferenceLinker.js
+│   │   │   ├── generalReferenceLinker.js
+│   │   │   ├── growReferenceChecker.js
+│   │   │   └── localizedDocumentsCleaner.js
+│   │   └── utils
+│   │       ├── ampOptimizer.js
+│   │       ├── cacheHelpers.js
+│   │       ├── cheerioHelper.js
+│   │       ├── credentials.js
+│   │       ├── cssTransformer.js
+│   │       ├── fetchError.js
+│   │       ├── git.js
+│   │       ├── googleSearch.js
+│   │       ├── grow.js
+│   │       ├── HeadDedupTransformer.js
+│   │       ├── HeadDedupTransformer.test.js
+│   │       ├── imageOptimizer.js
+│   │       ├── index.js
+│   │       ├── log.js
+│   │       ├── noop.js
+│   │       ├── pageCache.js
+│   │       ├── project.js
+│   │       ├── rateLimitedFetch.js
+│   │       ├── rateLimitedFetch.test.js
+│   │       ├── sh.js
+│   │       ├── slugGenerator.js
+│   │       ├── slugGenerator.test.js
+│   │       └── travis.js
+│   ├── platform
+│   │   └── config
+│   │       ├── component-versions.json
+│   │       └── search-promoted-pages.json
+│   └── serve.js
+├── playground
+│   ├── backend
+│   │   ├── api.js
+│   │   └── index.js
+│   ├── development.js
+│   ├── .eslintrc.json
+│   ├── .gitignore
+│   ├── README.md
+│   ├── src
+│   │   ├── analytics
+│   │   │   └── index.js
+│   │   ├── app.critical.scss
+│   │   ├── app.js
+│   │   ├── auto-importer
+│   │   │   └── auto-importer.js
+│   │   ├── button
+│   │   │   ├── button.hbs
+│   │   │   └── button.js
+│   │   ├── components-provider
+│   │   │   └── components-provider.js
+│   │   ├── csp-hash-calculator
+│   │   │   └── csp-hash-calculator.js
+│   │   ├── debounce
+│   │   │   └── debounce.js
+│   │   ├── dialog
+│   │   │   ├── base.js
+│   │   │   ├── dialog-container.html
+│   │   │   └── dialog.scss
+│   │   ├── document
+│   │   │   ├── controller.js
+│   │   │   └── document.js
+│   │   ├── editor
+│   │   │   ├── editor.js
+│   │   │   ├── editor.scss
+│   │   │   ├── icons
+│   │   │   └── monokai.scss
+│   │   ├── email-loader
+│   │   │   ├── email-loader.js
+│   │   │   └── email-loader.test.js
+│   │   ├── error-list
+│   │   │   ├── error-list.hbs
+│   │   │   ├── error-list-item.hbs
+│   │   │   ├── error-list-item.js
+│   │   │   ├── error-list.js
+│   │   │   ├── error-list.scss
+│   │   │   └── icons
+│   │   ├── event-listener-options
+│   │   │   └── base.js
+│   │   ├── events
+│   │   │   ├── events.js
+│   │   │   └── events.test.js
+│   │   ├── experiments
+│   │   │   ├── experiment-list-item.hbs
+│   │   │   ├── experiment-list-item.js
+│   │   │   ├── experiment-list-item.scss
+│   │   │   ├── experiments.hbs
+│   │   │   ├── experiments.js
+│   │   │   └── experiments.scss
+│   │   ├── fab
+│   │   │   ├── fab.js
+│   │   │   └── fab.scss
+│   │   ├── file-upload
+│   │   │   ├── file-upload.hbs
+│   │   │   ├── file-upload.js
+│   │   │   └── file-upload.scss
+│   │   ├── filter
+│   │   │   └── filter.js
+│   │   ├── fly-in
+│   │   │   ├── fly-in-background.js
+│   │   │   ├── fly-in-background.scss
+│   │   │   ├── fly-in.hbs
+│   │   │   ├── fly-in.js
+│   │   │   └── fly-in.scss
+│   │   ├── formatter
+│   │   │   └── index.js
+│   │   ├── importer
+│   │   │   ├── importer.hbs
+│   │   │   ├── importer.js
+│   │   │   └── importer.scss
+│   │   ├── import-url
+│   │   │   └── import-url.scss
+│   │   ├── index.hbs
+│   │   ├── input-bar
+│   │   │   ├── autocomplete-item.hbs
+│   │   │   ├── autocomplete-item.scss
+│   │   │   ├── input-bar.hbs
+│   │   │   ├── input-bar.js
+│   │   │   └── input-bar.scss
+│   │   ├── lazy-load
+│   │   │   └── base.js
+│   │   ├── loader
+│   │   │   ├── base.js
+│   │   │   ├── loader.critical.scss
+│   │   │   ├── loader.hbs
+│   │   │   └── loading-indicator.scss
+│   │   ├── menu
+│   │   │   ├── base.js
+│   │   │   └── menu.scss
+│   │   ├── modes
+│   │   │   ├── embed.critical.scss
+│   │   │   ├── index.js
+│   │   │   └── validator.critical.scss
+│   │   ├── navigation-warning
+│   │   │   └── navigation-warning.js
+│   │   ├── node
+│   │   │   └── base.js
+│   │   ├── params
+│   │   │   └── base.js
+│   │   ├── preview
+│   │   │   ├── dimensions
+│   │   │   ├── dimensions.json
+│   │   │   ├── preview.critical.scss
+│   │   │   └── preview.js
+│   │   ├── request-idle-callback
+│   │   │   └── base.js
+│   │   ├── runtime
+│   │   │   ├── detector.js
+│   │   │   ├── runtimes.js
+│   │   │   └── templates
+│   │   ├── selector
+│   │   │   └── selector.js
+│   │   ├── service-worker
+│   │   │   └── base.js
+│   │   ├── share-view
+│   │   │   ├── share-view.hbs
+│   │   │   ├── share-view.js
+│   │   │   └── share-view.scss
+│   │   ├── snackbar
+│   │   │   ├── base.js
+│   │   │   └── snackbar.scss
+│   │   ├── split-pane
+│   │   │   └── base.js
+│   │   ├── state-view
+│   │   │   ├── state-view.js
+│   │   │   └── state-view.scss
+│   │   ├── template-dialog
+│   │   │   ├── base.js
+│   │   │   ├── header.html
+│   │   │   └── template-dialog.scss
+│   │   ├── title-updater
+│   │   │   └── base.js
+│   │   ├── validation-result
+│   │   │   ├── validation-result.hbs
+│   │   │   ├── validation-result.js
+│   │   │   └── validation-result.scss
+│   │   └── validator
+│   │       └── validator.js
+│   ├── static
+│   │   ├── amphtml-hint.json
+│   │   ├── images
+│   │   │   ├── icons
+│   │   │   └── logo.svg
+│   │   └── manifest.json
+│   └── webpack.config.js
+├── .prettierrc
+├── .prod.key.json.enc
+├── README.md
+├── renovate.json
+├── scripts
+│   └── unbuffer.sh
+├── smoke-tests
+│   ├── pixi
+│   │   └── Run.e2e-test.js
+│   └── platform
+│       └── Routes.test.js
+├── .staging.key.json.enc
+├── templates
+│   ├── ads
+│   │   ├── app_install_ads
+│   │   │   ├── app-install-hero-blurred.jpg
+│   │   │   ├── app-install.html
+│   │   │   ├── app-install-logo-blurred.jpg
+│   │   │   └── README.txt
+│   │   ├── multi-image-ads
+│   │   │   ├── blue-blurred.jpg
+│   │   │   ├── multi-image.html
+│   │   │   ├── peach-blurred.jpg
+│   │   │   ├── purple-blurred.jpg
+│   │   │   ├── README.txt
+│   │   │   └── yellow-blurred.jpg
+│   │   ├── single-image-ads
+│   │   │   ├── cool-shirt-blurred.png
+│   │   │   ├── README.txt
+│   │   │   ├── single-image.html
+│   │   │   └── single-image-logo.png
+│   │   ├── single-video
+│   │   │   ├── README.txt
+│   │   │   └── single-video
+│   │   └── text
+│   │       ├── README.txt
+│   │       ├── text.html
+│   │       └── text_logo.png
+│   └── websites
+│       ├── article
+│       │   ├── css
+│       │   ├── img
+│       │   ├── LICENSE
+│       │   └── templates
+│       ├── blog
+│       │   ├── css
+│       │   ├── img
+│       │   ├── LICENSE
+│       │   └── templates
+│       ├── e-commerce
+│       │   ├── css
+│       │   ├── img
+│       │   ├── LICENSE
+│       │   └── templates
+│       ├── gallery
+│       │   ├── css
+│       │   ├── img
+│       │   ├── LICENSE
+│       │   └── templates
+│       ├── land-see
+│       │   ├── css
+│       │   ├── img
+│       │   ├── LICENSE
+│       │   └── templates
+│       ├── lune
+│       │   ├── css
+│       │   ├── img
+│       │   ├── LICENSE
+│       │   └── templates
+│       ├── themes_1
+│       │   ├── css
+│       │   ├── img
+│       │   ├── LICENSE
+│       │   └── templates
+│       ├── themes_2
+│       │   ├── css
+│       │   ├── img
+│       │   ├── LICENSE
+│       │   └── templates
+│       └── travel
+│           ├── css
+│           ├── img
+│           ├── LICENSE
+│           └── templates
+├── tests
+│   ├── grow
+│   │   └── examples
+│   │       └── default-settings.spec.js
+│   └── readme.md
+└── thumbor
+    ├── app.yaml
+    └── Dockerfile
+
+420 directories, 1333 files

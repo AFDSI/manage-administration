@@ -1,0 +1,374 @@
+﻿2025-07-16T17:53:56.9874294Z Current runner version: '2.326.0'
+2025-07-16T17:53:56.9898527Z ##[group]Runner Image Provisioner
+2025-07-16T17:53:56.9899343Z Hosted Compute Agent
+2025-07-16T17:53:56.9899960Z Version: 20250711.363
+2025-07-16T17:53:56.9900613Z Commit: 6785254374ce925a23743850c1cb91912ce5c14c
+2025-07-16T17:53:56.9901285Z Build Date: 2025-07-11T20:04:25Z
+2025-07-16T17:53:56.9901914Z ##[endgroup]
+2025-07-16T17:53:56.9902455Z ##[group]Operating System
+2025-07-16T17:53:56.9902974Z Ubuntu
+2025-07-16T17:53:56.9903487Z 24.04.2
+2025-07-16T17:53:56.9903930Z LTS
+2025-07-16T17:53:56.9904411Z ##[endgroup]
+2025-07-16T17:53:56.9905029Z ##[group]Runner Image
+2025-07-16T17:53:56.9905656Z Image: ubuntu-24.04
+2025-07-16T17:53:56.9906124Z Version: 20250710.1.0
+2025-07-16T17:53:56.9907096Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250710.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-07-16T17:53:56.9908706Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250710.1
+2025-07-16T17:53:56.9909708Z ##[endgroup]
+2025-07-16T17:53:56.9912091Z ##[group]GITHUB_TOKEN Permissions
+2025-07-16T17:53:56.9914055Z Actions: write
+2025-07-16T17:53:56.9914595Z Attestations: write
+2025-07-16T17:53:56.9915562Z Checks: write
+2025-07-16T17:53:56.9916020Z Contents: write
+2025-07-16T17:53:56.9916610Z Deployments: write
+2025-07-16T17:53:56.9917078Z Discussions: write
+2025-07-16T17:53:56.9917554Z Issues: write
+2025-07-16T17:53:56.9918099Z Metadata: read
+2025-07-16T17:53:56.9918577Z Models: read
+2025-07-16T17:53:56.9919048Z Packages: write
+2025-07-16T17:53:56.9919563Z Pages: write
+2025-07-16T17:53:56.9920054Z PullRequests: write
+2025-07-16T17:53:56.9920543Z RepositoryProjects: write
+2025-07-16T17:53:56.9921142Z SecurityEvents: write
+2025-07-16T17:53:56.9921798Z Statuses: write
+2025-07-16T17:53:56.9922255Z ##[endgroup]
+2025-07-16T17:53:56.9924555Z Secret source: Actions
+2025-07-16T17:53:56.9925573Z Prepare workflow directory
+2025-07-16T17:53:57.0254469Z Prepare all required actions
+2025-07-16T17:53:57.0293432Z Getting action download info
+2025-07-16T17:53:57.2999842Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-07-16T17:53:57.3000847Z Version: 4.2.2
+2025-07-16T17:53:57.3001786Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-07-16T17:53:57.3003041Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-07-16T17:53:57.3003766Z ##[endgroup]
+2025-07-16T17:53:57.3960586Z ##[group]Download immutable action package 'actions/setup-node@v4'
+2025-07-16T17:53:57.3961402Z Version: 4.4.0
+2025-07-16T17:53:57.3962195Z Digest: sha256:9427cefe82346e992fb5b949e3569b39d537ae41aa3086483b14eceebfc16bc1
+2025-07-16T17:53:57.3963114Z Source commit SHA: 49933ea5288caeca8642d1e84afbd3f7d6820020
+2025-07-16T17:53:57.3963799Z ##[endgroup]
+2025-07-16T17:53:57.5694299Z Complete job name: verify
+2025-07-16T17:53:57.6353205Z ##[group]Run actions/checkout@v4
+2025-07-16T17:53:57.6354021Z with:
+2025-07-16T17:53:57.6354405Z   repository: ampproject/amp.dev
+2025-07-16T17:53:57.6355209Z   token: ***
+2025-07-16T17:53:57.6355613Z   ssh-strict: true
+2025-07-16T17:53:57.6356006Z   ssh-user: git
+2025-07-16T17:53:57.6356394Z   persist-credentials: true
+2025-07-16T17:53:57.6356837Z   clean: true
+2025-07-16T17:53:57.6357231Z   sparse-checkout-cone-mode: true
+2025-07-16T17:53:57.6357692Z   fetch-depth: 1
+2025-07-16T17:53:57.6358169Z   fetch-tags: false
+2025-07-16T17:53:57.6358554Z   show-progress: true
+2025-07-16T17:53:57.6358973Z   lfs: false
+2025-07-16T17:53:57.6359372Z   submodules: false
+2025-07-16T17:53:57.6359811Z   set-safe-directory: true
+2025-07-16T17:53:57.6360527Z ##[endgroup]
+2025-07-16T17:53:57.7409120Z Syncing repository: ampproject/amp.dev
+2025-07-16T17:53:57.7410943Z ##[group]Getting Git version info
+2025-07-16T17:53:57.7411598Z Working directory is '/home/runner/work/amp.dev/amp.dev'
+2025-07-16T17:53:57.7412675Z [command]/usr/bin/git version
+2025-07-16T17:53:57.7452269Z git version 2.50.1
+2025-07-16T17:53:57.7477679Z ##[endgroup]
+2025-07-16T17:53:57.7491404Z Temporarily overriding HOME='/home/runner/work/_temp/9aeeeb97-3d61-4a6b-8eb5-7c57054a2648' before making global git config changes
+2025-07-16T17:53:57.7492993Z Adding repository directory to the temporary git global config as a safe directory
+2025-07-16T17:53:57.7502765Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/amp.dev/amp.dev
+2025-07-16T17:53:57.7534513Z Deleting the contents of '/home/runner/work/amp.dev/amp.dev'
+2025-07-16T17:53:57.7538279Z ##[group]Initializing the repository
+2025-07-16T17:53:57.7541932Z [command]/usr/bin/git init /home/runner/work/amp.dev/amp.dev
+2025-07-16T17:53:57.7603570Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-07-16T17:53:57.7605327Z hint: is subject to change. To configure the initial branch name to use in all
+2025-07-16T17:53:57.7606833Z hint: of your new repositories, which will suppress this warning, call:
+2025-07-16T17:53:57.7607804Z hint:
+2025-07-16T17:53:57.7608274Z hint: 	git config --global init.defaultBranch <name>
+2025-07-16T17:53:57.7608833Z hint:
+2025-07-16T17:53:57.7609363Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-07-16T17:53:57.7610210Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-07-16T17:53:57.7610924Z hint:
+2025-07-16T17:53:57.7611436Z hint: 	git branch -m <name>
+2025-07-16T17:53:57.7612113Z hint:
+2025-07-16T17:53:57.7612781Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-07-16T17:53:57.7613687Z Initialized empty Git repository in /home/runner/work/amp.dev/amp.dev/.git/
+2025-07-16T17:53:57.7617297Z [command]/usr/bin/git remote add origin https://github.com/ampproject/amp.dev
+2025-07-16T17:53:57.7646828Z ##[endgroup]
+2025-07-16T17:53:57.7647542Z ##[group]Disabling automatic garbage collection
+2025-07-16T17:53:57.7650676Z [command]/usr/bin/git config --local gc.auto 0
+2025-07-16T17:53:57.7678129Z ##[endgroup]
+2025-07-16T17:53:57.7678785Z ##[group]Setting up auth
+2025-07-16T17:53:57.7684617Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-07-16T17:53:57.7713834Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-07-16T17:53:57.7975675Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-07-16T17:53:57.8004640Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-07-16T17:53:57.8224543Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-07-16T17:53:57.8259241Z ##[endgroup]
+2025-07-16T17:53:57.8260372Z ##[group]Fetching the repository
+2025-07-16T17:53:57.8268059Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +020570571cba405f267e7e79d599eb85052a5cd5:refs/remotes/origin/main
+2025-07-16T17:54:06.0115914Z From https://github.com/ampproject/amp.dev
+2025-07-16T17:54:06.0116949Z  * [new ref]         020570571cba405f267e7e79d599eb85052a5cd5 -> origin/main
+2025-07-16T17:54:06.0150059Z ##[endgroup]
+2025-07-16T17:54:06.0152959Z ##[group]Determining the checkout info
+2025-07-16T17:54:06.0154324Z ##[endgroup]
+2025-07-16T17:54:06.0158886Z [command]/usr/bin/git sparse-checkout disable
+2025-07-16T17:54:06.0199002Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-07-16T17:54:06.0229132Z ##[group]Checking out the ref
+2025-07-16T17:54:06.0231212Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-07-16T17:54:07.0615953Z Updating files:  80% (5132/6407)
+2025-07-16T17:54:07.1321362Z Updating files:  81% (5190/6407)
+2025-07-16T17:54:07.1953526Z Updating files:  82% (5254/6407)
+2025-07-16T17:54:07.2072467Z Updating files:  83% (5318/6407)
+2025-07-16T17:54:07.2373341Z Updating files:  84% (5382/6407)
+2025-07-16T17:54:07.2555295Z Updating files:  85% (5446/6407)
+2025-07-16T17:54:07.2856745Z Updating files:  86% (5511/6407)
+2025-07-16T17:54:07.3009298Z Updating files:  87% (5575/6407)
+2025-07-16T17:54:07.3255642Z Updating files:  88% (5639/6407)
+2025-07-16T17:54:07.3509326Z Updating files:  89% (5703/6407)
+2025-07-16T17:54:07.3621143Z Updating files:  90% (5767/6407)
+2025-07-16T17:54:07.3653260Z Updating files:  91% (5831/6407)
+2025-07-16T17:54:07.3684438Z Updating files:  92% (5895/6407)
+2025-07-16T17:54:07.3717831Z Updating files:  93% (5959/6407)
+2025-07-16T17:54:07.3870722Z Updating files:  94% (6023/6407)
+2025-07-16T17:54:07.4029426Z Updating files:  95% (6087/6407)
+2025-07-16T17:54:07.4159955Z Updating files:  96% (6151/6407)
+2025-07-16T17:54:07.4483918Z Updating files:  97% (6215/6407)
+2025-07-16T17:54:07.4632565Z Updating files:  98% (6279/6407)
+2025-07-16T17:54:07.4849600Z Updating files:  99% (6343/6407)
+2025-07-16T17:54:07.4850428Z Updating files: 100% (6407/6407)
+2025-07-16T17:54:07.4850979Z Updating files: 100% (6407/6407), done.
+2025-07-16T17:54:07.4922388Z Switched to a new branch 'main'
+2025-07-16T17:54:07.4925654Z branch 'main' set up to track 'origin/main'.
+2025-07-16T17:54:07.5065848Z ##[endgroup]
+2025-07-16T17:54:07.5114574Z [command]/usr/bin/git log -1 --format=%H
+2025-07-16T17:54:07.5139599Z 020570571cba405f267e7e79d599eb85052a5cd5
+2025-07-16T17:54:07.5362889Z ##[group]Run actions/setup-node@v4
+2025-07-16T17:54:07.5363210Z with:
+2025-07-16T17:54:07.5363434Z   node-version: 22
+2025-07-16T17:54:07.5363650Z   cache: npm
+2025-07-16T17:54:07.5363866Z   always-auth: false
+2025-07-16T17:54:07.5364098Z   check-latest: false
+2025-07-16T17:54:07.5364459Z   token: ***
+2025-07-16T17:54:07.5364684Z ##[endgroup]
+2025-07-16T17:54:07.7356304Z Found in cache @ /opt/hostedtoolcache/node/22.17.0/x64
+2025-07-16T17:54:07.7363727Z ##[group]Environment details
+2025-07-16T17:54:10.5280996Z node: v22.17.0
+2025-07-16T17:54:10.5281474Z npm: 10.9.2
+2025-07-16T17:54:10.5281897Z yarn: 1.22.22
+2025-07-16T17:54:10.5285177Z ##[endgroup]
+2025-07-16T17:54:10.5308075Z [command]/opt/hostedtoolcache/node/22.17.0/x64/bin/npm config get cache
+2025-07-16T17:54:10.9460001Z /home/runner/.npm
+2025-07-16T17:54:11.0920750Z Cache hit for: node-cache-Linux-x64-npm-935f2560067dcc96b20b34797a3b5ad7154195b83fb52881e5bf823cfa6f856f
+2025-07-16T17:54:11.7900040Z Received 112517721 of 112517721 (100.0%), 166.6 MBs/sec
+2025-07-16T17:54:11.7902157Z Cache Size: ~107 MB (112517721 B)
+2025-07-16T17:54:11.8016742Z [command]/usr/bin/tar -xf /home/runner/work/_temp/58c469e5-6b6b-4089-98c8-29beb22dec16/cache.tzst -P -C /home/runner/work/amp.dev/amp.dev --use-compress-program unzstd
+2025-07-16T17:54:12.3371950Z Cache restored successfully
+2025-07-16T17:54:12.3599419Z Cache restored from key: node-cache-Linux-x64-npm-935f2560067dcc96b20b34797a3b5ad7154195b83fb52881e5bf823cfa6f856f
+2025-07-16T17:54:12.3741502Z ##[group]Run npm ci
+2025-07-16T17:54:12.3741794Z [36;1mnpm ci[0m
+2025-07-16T17:54:12.3778118Z shell: /usr/bin/bash -e {0}
+2025-07-16T17:54:12.3778413Z ##[endgroup]
+2025-07-16T17:54:22.4559855Z npm warn deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+2025-07-16T17:54:22.6916089Z npm warn deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+2025-07-16T17:54:22.7606396Z npm warn deprecated har-validator@5.1.5: this library is no longer supported
+2025-07-16T17:54:22.8717207Z npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+2025-07-16T17:54:22.9923024Z npm warn deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+2025-07-16T17:54:23.1129307Z npm warn deprecated glob@8.1.0: Glob versions prior to v9 are no longer supported
+2025-07-16T17:54:23.1222302Z npm warn deprecated glob@8.1.0: Glob versions prior to v9 are no longer supported
+2025-07-16T17:54:23.1330538Z npm warn deprecated glob@8.1.0: Glob versions prior to v9 are no longer supported
+2025-07-16T17:54:23.1385972Z npm warn deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+2025-07-16T17:54:23.1412245Z npm warn deprecated querystring@0.2.1: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+2025-07-16T17:54:23.3015649Z npm warn deprecated formidable@1.2.6: Please upgrade to latest, formidable@v2 or formidable@v3! Check these notes: https://bit.ly/2ZEqIau
+2025-07-16T17:54:23.3042436Z npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+2025-07-16T17:54:23.5442180Z npm warn deprecated chokidar@2.1.8: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+2025-07-16T17:54:23.5506611Z npm warn deprecated url-search-params@1.1.0: now available as @ungap/url-search-params
+2025-07-16T17:54:23.8088561Z npm warn deprecated mkdirp@0.3.0: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+2025-07-16T17:54:23.8334176Z npm warn deprecated mkdirp@0.3.5: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+2025-07-16T17:54:23.9293385Z npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+2025-07-16T17:54:24.3928546Z npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+2025-07-16T17:54:24.8656408Z npm warn deprecated coffee-script@1.8.0: CoffeeScript on NPM has moved to "coffeescript" (no hyphen)
+2025-07-16T17:54:29.1243699Z npm warn deprecated core-js@2.6.12: core-js@<3.4 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+2025-07-16T17:54:40.7398529Z 
+2025-07-16T17:54:40.7399082Z > amp-dev@1.0.5 postinstall
+2025-07-16T17:54:40.7399687Z > gulp downloadTestResources && husky install
+2025-07-16T17:54:40.7400037Z 
+2025-07-16T17:54:41.1559645Z [5:54:41 PM] › ℹ  info      Config: environment=development test=false
+2025-07-16T17:54:42.1300770Z Browserslist: caniuse-lite is outdated. Please run:
+2025-07-16T17:54:42.1301348Z npx browserslist@latest --update-db
+2025-07-16T17:54:42.1301591Z 
+2025-07-16T17:54:42.1301786Z Why you should do it regularly:
+2025-07-16T17:54:42.1302372Z https://github.com/browserslist/browserslist#browsers-data-updating
+2025-07-16T17:54:42.2128363Z [17:54:42] Using gulpfile ~/work/amp.dev/amp.dev/gulpfile.js
+2025-07-16T17:54:42.2132035Z [17:54:42] Starting 'downloadTestResources'...
+2025-07-16T17:54:42.9850203Z [17:54:42] Finished 'downloadTestResources' after 771 ms
+2025-07-16T17:54:43.0703455Z husky - Git hooks installed
+2025-07-16T17:54:43.1068191Z 
+2025-07-16T17:54:43.1069352Z added 3185 packages, and audited 3188 packages in 31s
+2025-07-16T17:54:43.1070159Z 
+2025-07-16T17:54:43.1076871Z 379 packages are looking for funding
+2025-07-16T17:54:43.1077388Z   run `npm fund` for details
+2025-07-16T17:54:43.1915662Z 
+2025-07-16T17:54:43.1916448Z 66 vulnerabilities (8 low, 29 moderate, 27 high, 2 critical)
+2025-07-16T17:54:43.1916880Z 
+2025-07-16T17:54:43.1917181Z To address issues that do not require attention, run:
+2025-07-16T17:54:43.1917660Z   npm audit fix
+2025-07-16T17:54:43.1917873Z 
+2025-07-16T17:54:43.1918251Z To address all issues possible (including breaking changes), run:
+2025-07-16T17:54:43.1918796Z   npm audit fix --force
+2025-07-16T17:54:43.1919009Z 
+2025-07-16T17:54:43.1919293Z Some issues need review, and may require choosing
+2025-07-16T17:54:43.1919755Z a different dependency.
+2025-07-16T17:54:43.1919974Z 
+2025-07-16T17:54:43.1920186Z Run `npm audit` for details.
+2025-07-16T17:54:43.3168694Z ##[group]Run npx gulp updateTestResources
+2025-07-16T17:54:43.3169225Z [36;1mnpx gulp updateTestResources[0m
+2025-07-16T17:54:43.3169498Z [36;1mnpx gulp lintNode[0m
+2025-07-16T17:54:43.3169717Z [36;1mnpx gulp lintYaml[0m
+2025-07-16T17:54:43.3169941Z [36;1mnpm run test:platform[0m
+2025-07-16T17:54:43.3170171Z [36;1mnpm run test:playground[0m
+2025-07-16T17:54:43.3199430Z shell: /usr/bin/bash -e {0}
+2025-07-16T17:54:43.3199669Z ##[endgroup]
+2025-07-16T17:54:43.8762224Z [5:54:43 PM] › ℹ  info      Config: environment=development test=false
+2025-07-16T17:54:44.8144415Z Browserslist: caniuse-lite is outdated. Please run:
+2025-07-16T17:54:44.8145450Z npx browserslist@latest --update-db
+2025-07-16T17:54:44.8145698Z 
+2025-07-16T17:54:44.8145884Z Why you should do it regularly:
+2025-07-16T17:54:44.8146453Z https://github.com/browserslist/browserslist#browsers-data-updating
+2025-07-16T17:54:44.8818136Z [17:54:44] Using gulpfile ~/work/amp.dev/amp.dev/gulpfile.js
+2025-07-16T17:54:44.8822154Z [17:54:44] Starting 'updateTestResources'...
+2025-07-16T17:54:45.7267703Z [17:54:45] Finished 'updateTestResources' after 844 ms
+2025-07-16T17:54:46.2975179Z [5:54:46 PM] › ℹ  info      Config: environment=development test=false
+2025-07-16T17:54:47.2339487Z Browserslist: caniuse-lite is outdated. Please run:
+2025-07-16T17:54:47.2340253Z npx browserslist@latest --update-db
+2025-07-16T17:54:47.2340586Z 
+2025-07-16T17:54:47.2340823Z Why you should do it regularly:
+2025-07-16T17:54:47.2341581Z https://github.com/browserslist/browserslist#browsers-data-updating
+2025-07-16T17:54:47.3035990Z [17:54:47] Using gulpfile ~/work/amp.dev/amp.dev/gulpfile.js
+2025-07-16T17:54:47.3040167Z [17:54:47] Starting 'lintNode'...
+2025-07-16T17:54:47.3056253Z $ npm run lint:node
+2025-07-16T17:54:48.1389635Z 
+2025-07-16T17:54:48.1390167Z > amp-dev@1.0.5 lint:node
+2025-07-16T17:54:48.1390678Z > eslint "**/*.js"
+2025-07-16T17:54:48.1390919Z 
+2025-07-16T17:54:48.1390931Z 
+2025-07-16T17:54:51.6703199Z Browserslist: caniuse-lite is outdated. Please run:
+2025-07-16T17:54:51.6703914Z   npx update-browserslist-db@latest
+2025-07-16T17:54:51.6704723Z   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2025-07-16T17:54:51.6705530Z 
+2025-07-16T17:54:52.5960200Z 
+2025-07-16T17:54:52.5966478Z [17:54:52] Finished 'lintNode' after 5.29 s
+2025-07-16T17:54:53.1635253Z [5:54:53 PM] › ℹ  info      Config: environment=development test=false
+2025-07-16T17:54:54.1146463Z Browserslist: caniuse-lite is outdated. Please run:
+2025-07-16T17:54:54.1147004Z npx browserslist@latest --update-db
+2025-07-16T17:54:54.1147243Z 
+2025-07-16T17:54:54.1147410Z Why you should do it regularly:
+2025-07-16T17:54:54.1147951Z https://github.com/browserslist/browserslist#browsers-data-updating
+2025-07-16T17:54:54.1819697Z [17:54:54] Using gulpfile ~/work/amp.dev/amp.dev/gulpfile.js
+2025-07-16T17:54:54.1823470Z [17:54:54] Starting 'lintYaml'...
+2025-07-16T17:54:58.4785911Z [17:54:58] Finished 'lintYaml' after 4.3 s
+2025-07-16T17:54:58.6515863Z 
+2025-07-16T17:54:58.6516393Z > amp-dev@1.0.5 test:platform
+2025-07-16T17:54:58.6517259Z > APP_ENV=test jest --runInBand --detectOpenHandles --forceExit --testPathPattern platform --testPathIgnorePatterns smoke-tests
+2025-07-16T17:54:58.6517724Z 
+2025-07-16T17:54:59.4192103Z Browserslist: caniuse-lite is outdated. Please run:
+2025-07-16T17:54:59.4192776Z   npx update-browserslist-db@latest
+2025-07-16T17:54:59.4193338Z   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2025-07-16T17:55:00.5534339Z PASS platform/lib/routers/search.test.js
+2025-07-16T17:55:00.9181243Z PASS platform/lib/samples/DocumentParser.test.js
+2025-07-16T17:55:01.0497245Z PASS platform/lib/samples/CodeSection.test.js
+2025-07-16T17:55:01.1733183Z PASS platform/lib/samples/Document.test.js
+2025-07-16T17:55:01.2784276Z PASS platform/lib/pipeline/markdownDocument.test.js
+2025-07-16T17:55:02.2466465Z PASS platform/lib/format-transform/index.test.js
+2025-07-16T17:55:02.3153394Z PASS platform/lib/common/samples.test.js
+2025-07-16T17:55:02.4264527Z PASS platform/lib/utils/rateLimitedFetch.test.js
+2025-07-16T17:55:02.5057855Z PASS platform/lib/samples/ElementSorting.test.js
+2025-07-16T17:55:02.5960078Z PASS platform/lib/samples/ExampleFile.test.js
+2025-07-16T17:55:02.7811292Z PASS platform/lib/middleware/redirects.test.js
+2025-07-16T17:55:02.8788581Z PASS platform/lib/runtime-log/LogProvider.test.js
+2025-07-16T17:55:02.9271358Z PASS platform/lib/samples/FileName.test.js
+2025-07-16T17:55:02.9761577Z PASS platform/lib/config.test.js
+2025-07-16T17:55:03.1863943Z PASS platform/lib/routers/surveyComponent.test.js
+2025-07-16T17:55:03.2830564Z PASS platform/lib/runtime-log/HtmlFormatter.test.js
+2025-07-16T17:55:04.1504180Z PASS platform/lib/routers/growPages.test.js
+2025-07-16T17:55:04.1642395Z   ● Console
+2025-07-16T17:55:04.1642623Z 
+2025-07-16T17:55:04.1642802Z     console.warn
+2025-07-16T17:55:04.1643314Z       Browserslist: caniuse-lite is outdated. Please run:
+2025-07-16T17:55:04.1643953Z       npx browserslist@latest --update-db
+2025-07-16T17:55:04.1644385Z       
+2025-07-16T17:55:04.1644740Z       Why you should do it regularly:
+2025-07-16T17:55:04.1645698Z       https://github.com/browserslist/browserslist#browsers-data-updating
+2025-07-16T17:55:04.1646200Z 
+2025-07-16T17:55:04.1646553Z     [0m [90m 33 |[39m }[33m;[39m
+2025-07-16T17:55:04.1647049Z      [90m 34 |[39m
+2025-07-16T17:55:04.1648177Z     [31m[1m>[22m[39m[90m 35 |[39m [36mconst[39m optimizer [33m=[39m [33mAmpOptimizer[39m[33m.[39mcreate(optimizerConfig)[33m;[39m
+2025-07-16T17:55:04.1649257Z      [90m    |[39m                                [31m[1m^[22m[39m
+2025-07-16T17:55:04.1649761Z      [90m 36 |[39m
+2025-07-16T17:55:04.1650183Z      [90m 37 |[39m [90m/**[39m
+2025-07-16T17:55:04.1650963Z      [90m 38 |[39m [90m * Takes a arbitrary HTML string (a rendered template in[39m[0m
+2025-07-16T17:55:04.1651432Z 
+2025-07-16T17:55:04.1651928Z       at Object.oldDataWarning (node_modules/cssnano-preset-simple/dist/index.js:1:26160)
+2025-07-16T17:55:04.1652870Z       at browserslist (node_modules/cssnano-preset-simple/dist/index.js:1:8028)
+2025-07-16T17:55:04.1653792Z       at cleanBrowsersList (node_modules/cssnano-preset-simple/dist/index.js:1:28984)
+2025-07-16T17:55:04.1654738Z       at setBrowserScope (node_modules/cssnano-preset-simple/dist/index.js:1:26933)
+2025-07-16T17:55:04.1655878Z       at Object.8390 (node_modules/cssnano-preset-simple/dist/index.js:1:27914)
+2025-07-16T17:55:04.1656816Z       at __nccwpck_require__ (node_modules/cssnano-preset-simple/dist/index.js:1:376525)
+2025-07-16T17:55:04.1657719Z       at Object.5512 (node_modules/cssnano-preset-simple/dist/index.js:1:254359)
+2025-07-16T17:55:04.1658606Z       at __nccwpck_require__ (node_modules/cssnano-preset-simple/dist/index.js:1:376525)
+2025-07-16T17:55:04.1659510Z       at Object.4524 (node_modules/cssnano-preset-simple/dist/index.js:1:64191)
+2025-07-16T17:55:04.1660409Z       at __nccwpck_require__ (node_modules/cssnano-preset-simple/dist/index.js:1:376525)
+2025-07-16T17:55:04.1661314Z       at Object.4351 (node_modules/cssnano-preset-simple/dist/index.js:1:338802)
+2025-07-16T17:55:04.1662213Z       at __nccwpck_require__ (node_modules/cssnano-preset-simple/dist/index.js:1:376525)
+2025-07-16T17:55:04.1663052Z       at node_modules/cssnano-preset-simple/dist/index.js:1:377151
+2025-07-16T17:55:04.1663923Z       at Object.<anonymous> (node_modules/cssnano-preset-simple/dist/index.js:1:377178)
+2025-07-16T17:55:04.1664983Z       at Object.<anonymous> (node_modules/cssnano-simple/src/index.js:2:28)
+2025-07-16T17:55:04.1666109Z       at Object.<anonymous> (node_modules/@ampproject/toolbox-optimizer/lib/transformers/SeparateKeyframes.js:22:17)
+2025-07-16T17:55:04.1667243Z       at node_modules/@ampproject/toolbox-optimizer/lib/DomTransformer.js:248:23
+2025-07-16T17:55:04.1667936Z           at Array.map (<anonymous>)
+2025-07-16T17:55:04.1668923Z       at DomTransformer.initTransformers_ (node_modules/@ampproject/toolbox-optimizer/lib/DomTransformer.js:246:49)
+2025-07-16T17:55:04.1670686Z       at DomTransformer.setConfig (node_modules/@ampproject/toolbox-optimizer/lib/DomTransformer.js:239:10)
+2025-07-16T17:55:04.1672149Z       at new DomTransformer (node_modules/@ampproject/toolbox-optimizer/lib/DomTransformer.js:178:10)
+2025-07-16T17:55:04.1673165Z       at Object.create (node_modules/@ampproject/toolbox-optimizer/index.js:28:40)
+2025-07-16T17:55:04.1673999Z       at Object.create (platform/lib/utils/ampOptimizer.js:35:32)
+2025-07-16T17:55:04.1674752Z       at Object.require (platform/lib/routers/growPages.js:24:20)
+2025-07-16T17:55:04.1675737Z       at Object.require (platform/lib/routers/growPages.test.js:7:16)
+2025-07-16T17:55:04.1676184Z 
+2025-07-16T17:55:04.3761071Z PASS platform/lib/routers/runtimeLog.test.js
+2025-07-16T17:55:04.4130559Z PASS platform/lib/utils/slugGenerator.test.js
+2025-07-16T17:55:04.5433404Z PASS platform/lib/routers/go.test.js
+2025-07-16T17:55:04.5825760Z PASS platform/lib/amp/formatHelper.test.js
+2025-07-16T17:55:04.8670139Z PASS platform/lib/utils/HeadDedupTransformer.test.js
+2025-07-16T17:55:04.9322706Z PASS platform/lib/pipeline/componentReferenceDocument.test.js
+2025-07-16T17:55:04.9335774Z 
+2025-07-16T17:55:04.9346070Z Test Suites: 23 passed, 23 total
+2025-07-16T17:55:04.9346579Z Tests:       205 passed, 205 total
+2025-07-16T17:55:04.9346858Z Snapshots:   0 total
+2025-07-16T17:55:04.9347104Z Time:        5.744 s
+2025-07-16T17:55:04.9347386Z Ran all test suites matching /platform/i.
+2025-07-16T17:55:05.1734341Z 
+2025-07-16T17:55:05.1735109Z > amp-dev@1.0.5 test:playground
+2025-07-16T17:55:05.1735731Z > APP_ENV=test jest --runInBand --detectOpenHandles --forceExit --testPathPattern playground
+2025-07-16T17:55:05.1736082Z 
+2025-07-16T17:55:06.1027507Z Browserslist: caniuse-lite is outdated. Please run:
+2025-07-16T17:55:06.1028109Z   npx update-browserslist-db@latest
+2025-07-16T17:55:06.1028757Z   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2025-07-16T17:55:06.4905754Z PASS playground/src/email-loader/email-loader.test.js
+2025-07-16T17:55:06.5703083Z PASS playground/src/events/events.test.js
+2025-07-16T17:55:06.5717424Z 
+2025-07-16T17:55:06.5727667Z Test Suites: 2 passed, 2 total
+2025-07-16T17:55:06.5728087Z Tests:       6 passed, 6 total
+2025-07-16T17:55:06.5728335Z Snapshots:   0 total
+2025-07-16T17:55:06.5728563Z Time:        0.994 s
+2025-07-16T17:55:06.5728842Z Ran all test suites matching /playground/i.
+2025-07-16T17:55:06.6993412Z Post job cleanup.
+2025-07-16T17:55:06.8498817Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-935f2560067dcc96b20b34797a3b5ad7154195b83fb52881e5bf823cfa6f856f, not saving cache.
+2025-07-16T17:55:06.8613999Z Post job cleanup.
+2025-07-16T17:55:06.9533607Z [command]/usr/bin/git version
+2025-07-16T17:55:06.9568937Z git version 2.50.1
+2025-07-16T17:55:06.9612691Z Temporarily overriding HOME='/home/runner/work/_temp/d3002f0c-6931-4a4c-89ed-9dc8cd6c99ce' before making global git config changes
+2025-07-16T17:55:06.9614135Z Adding repository directory to the temporary git global config as a safe directory
+2025-07-16T17:55:06.9619216Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/amp.dev/amp.dev
+2025-07-16T17:55:06.9659377Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-07-16T17:55:06.9691631Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-07-16T17:55:06.9919969Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-07-16T17:55:06.9939715Z http.https://github.com/.extraheader
+2025-07-16T17:55:06.9954290Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-07-16T17:55:06.9988612Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-07-16T17:55:07.0343167Z Cleaning up orphan processes

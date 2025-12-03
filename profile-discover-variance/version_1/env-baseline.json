@@ -1,0 +1,81 @@
+{
+  "surface": "windows_native",
+  "owner_id": "gigster",
+  "dev_home": "E:\\users\\gigster\\workspace",
+  "paths": {
+    "dev_bin": "E:\\users\\gigster\\workspace\\dev\\bin",
+    "dev_node_symlink": "E:\\users\\gigster\\workspace\\dev\\tools\\nodejs",
+    "dev_tools": "E:\\users\\gigster\\workspace\\dev\\tools"
+  },
+  "path_check": {
+    "has_dev_tools": true,
+    "has_node_symlink": true,
+    "duplicates": [
+      "c:\\program files\\amazon\\awscliv2\\",
+      "c:\\program files\\dotnet\\",
+      "c:\\program files\\git\\cmd",
+      "c:\\program files\\powershell\\7"
+    ],
+    "has_dev_bin": false
+  },
+  "tools": {
+    "netlify": {
+      "version": "",
+      "present": false,
+      "where": null
+    },
+    "python": {
+      "version": "",
+      "uv_present": true,
+      "uv_path": "E:\\users\\gigster\\workspace\\dev\\tools\\uv.exe",
+      "where": "",
+      "manager": "uv",
+      "present": false
+    },
+    "git": {
+      "version": "",
+      "present": false,
+      "where": null
+    },
+    "awscli": {
+      "version": "",
+      "present": true,
+      "where": "C:\\Program Files\\Amazon\\AWSCLIV2\\aws.exe"
+    },
+    "node": {
+      "version": "",
+      "nvm_home": "E:\\users\\gigster\\workspace\\dev\\tools\\nvm",
+      "nvm_symlink": "E:\\users\\gigster\\workspace\\dev\\tools\\nodejs",
+      "where": "E:\\users\\gigster\\workspace\\dev\\tools\\nodejs\\node.exe",
+      "nvm_settings": [
+        "root: E:\\users\\gigster\\workspace\\dev\\tools\\nvm",
+        "path: E:\\users\\gigster\\workspace\\dev\\tools\\nodejs"
+      ],
+      "manager": "nvm-windows",
+      "present": true
+    }
+  },
+  "wsl": {
+    "Mounts": [
+      {
+        "path": "/mnt/e",
+        "flags": [
+          "metadata"
+        ],
+        "present": false
+      }
+    ],
+    "Distros": [],
+    "Default": ""
+  },
+  "secrets": {
+    "path": "C:\\Users\\Owner\\.env.secrets",
+    "present": true
+  },
+  "meta": {
+    "host": "GIGSTER",
+    "user": "gigster",
+    "time_utc": "2025-09-27T10:35:57.9439577Z",
+    "shell": "Core 7.5.3"
+  }
+}

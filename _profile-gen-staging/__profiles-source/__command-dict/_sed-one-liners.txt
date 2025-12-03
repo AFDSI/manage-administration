@@ -1,0 +1,64 @@
+Replace/substitute only the first occurence of each line
+	sed 's/<replaceThis>/<withThis>/' <file>
+Replace/substitute the N first occurences of each line
+	sed 's/<replaceThis>/<withThis>/<N>' <file>
+replace/substitute all occurrences
+	sed 's/<replaceThis>/<withThis>/g' <file>
+replace/substitute only if the line contains
+	sed '/<IfLineWithThis>/s/<replaceThis>/<withThis>/g' <file>
+replace/substitute only if the line doesn't contain
+	sed '/<IfLineWithoutThis>/!s/<replaceThis>/<withThis>/g' <file>
+Create a group and make backreference to the value (for instance deleting everything before and after the group)
+	sed ''/<before>\(.*\)<after>/\1/d''
+Emulate non-greedy behaviour (not supported by sed) by excluding unwanted character from the match
+	sed 's/.*href="/\([^"]*\).*/\1/g'
+delete/remove lines that contain
+	sed '/<deleteLinesWithThis>/d'
+delete/remove lines that don't contain
+	sed '/<deleteLinesWithoutThis>/!d'
+insert/add a blank line between each line
+	sed G <file>
+insert/add a blank line above every matching lines
+	sed '/<BlankLineAboveThis>/{x;p;x;}' <file>
+insert/add a blank line below every matching lines
+	sed '/<BlankLineBelowThis>/G' <file>
+insert/add a blank line above and below every matching lines
+	sed '/<BlankLineAbove&BelowThis>/{x;p;x;G;}' <file>
+remove/delete empty lines
+	sed '/^$/d' <file>
+remove/delete blank lines (which contains only spaces or tabs)
+	sed '/^[ \t]*$/d' <file>
+remove/delete all blank lines at top of file
+	sed '/./,$!d' <file>
+remove/delete all blank lines at end of file
+	sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' <file>
+number each line like "1) line"
+	sed = <file> | sed 'N;s/\n/) /'
+number only non blank lines
+	sed '/./=' <file> | sed '/./N; s/\n/) /'
+remove/delete leading whitespaces (tabs,spaces) from each line and align to left
+	sed 's/^[ \t]*//' <file>
+remove/delete trailing whitespaces (tabs,spaces) from each line
+	sed 's/[ \t]*$//' <file>
+remove/delete leading and trailing whitespaces from each line
+	sed 's/^[ \t]*//;s/[ \t]*$//' <file>
+if line ends with \, remove/delete \ and append next line to it
+	sed -e :a -e '/\\$/N; s/\\\n//; ta' <file>
+if line ends with _, remove/delete _ and append next line to it
+	sed -e :a -e '/_$/N; s/_\n//; ta' <file>
+remove/delete comments at end of lines (comments start with #)
+	sed 's/\#.*$//' <file>
+remove/delete comments at end of lines (comments start with //)
+	sed 's/\/\/.*$//' <file>
+remove/delete lines that are just comments (comments start with #)
+	sed '/^[ \t]*\#/d' <file>
+remove/delete comments at end of lines AND remote/delete lines that are just comments (comments start with #)
+	sed '/^[ \t]*\#/d;s/\#.*$//' <file>
+print only lines numbered X to Y (included)
+	sed -n '<X>,<Y>p' <file>
+print only from this to this
+	sed -n '/<PrintfromThis>/,/<toThis>/p' <file>
+print lines that contain
+	sed -n '/<pattern>/p'
+print lines that don't contain
+	sed -n '/<pattern>/!p'

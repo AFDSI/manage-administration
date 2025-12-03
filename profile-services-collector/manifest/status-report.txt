@@ -1,0 +1,48 @@
+
+# playground dev server listening on 8083
+http://127.0.0.1:8083/
+success
+
+
+# preview dev server listening on 8084
+http://127.0.0.1:8084/
+Error: ENOENT: no such file or directory, open '/home/gig/projects/web/amp/amp.dev.2/dist/inline-examples/'
+
+# command
+$ git rev-parse --abbrev-ref HEAD && git rev-parse --short HEAD
+main
+020570571
+
+
+# command
+$ lsb_release -a || cat /etc/os-release
+No LSB modules are available.
+Distributor ID: Debian
+Description:    Debian GNU/Linux 12 (bookworm)
+Release:        12
+Codename:       bookworm
+
+# command
+$ node -v && npm -v
+v22.18.0
+10.9.3
+
+# command
+$ python --version && grow --version
+Python 3.9.18
+/home/gig/.pyenv/versions/3.9.18/lib/python3.9/site-packages/grow/server/main.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+grow, version 2.2.3
+
+# command
+$ echo "$PATH" | cut -c1-200
+/home/gig/.pyenv/shims:/usr/bin:/usr/local/bin:/home/gig/.local/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/system32/wbem:/mnt/c/windows/system32/windowspowershell/v1.0/:/mnt/c/program f
+
+# hosts/ports used by each service (Node 8080, pages 8081, platform 8082).
+[2:43:58 AM] › ℹ  info      playground dev server listening on 8083
+[2:43:58 AM] › ℹ  info      go dev server listening on 8086
+[2:43:58 AM] › ℹ  info      log dev server listening on 8087
+[2:43:58 AM] › ℹ  info      preview dev server listening on 8084
+[2:43:58 AM] [Platform] › ✔  success   server listening on 8080!
+
+

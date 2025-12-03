@@ -1,0 +1,5 @@
+For analyzing repository files, we need to create relevant repository subsets and package target files in zip format.
+Attached is `collector.sh` and a sample subset `collector.list`.
+Please verify that the combination will generate compressed files that can be open and read when analyzing repository files.
+Please propose process improvements where appropriate.
+

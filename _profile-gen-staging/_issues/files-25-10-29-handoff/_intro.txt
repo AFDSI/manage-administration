@@ -1,0 +1,14 @@
+
+2025/10/30
+
+implemented 2025/10/29
+
+in the dialog labelled `profile-configuration-12` we were discussing building a refernce document to guide new projects and insure existing projects stay on course.
+The topic of that document is Architecture Decision Record. The document is ADR-001-Data-Driven-Architecture.md.
+This dialog is labelled `profile-configuration-13`.
+The handoff from `profile-configuration-12` is HANDOFF-2025-10-27.md and HANDOFF-TO-13.md - attached.
+Also attached is lessons-learned-powershell.md which is used to refresh knowledge about previously resolved PowerShell issues.
+When loaded, it reminds Claude of previous decisions about and correction to PowerSHell code.
+Similarly, ADR-001-Data-Driven-Architecture.md will establish principles for new projects and remind Claude of previous decisions about and correction to application design.
+
+Please implement your offer: "Let me create a formal ADR for you:"

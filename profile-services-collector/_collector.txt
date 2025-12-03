@@ -1,0 +1,22 @@
+# --- PLATFORM ---
+ampdev_platform.tgz
+
+platform/serve.js
+platform/lib/platform.js
+platform/lib/config.js
+platform/config/podspec.yaml
+platform/lib
+
+# --- GROW (under pages/)
+ampdev_grow.tgz
+
+pages/content/_blueprint.yaml
+pages/content/amp-dev
+pages/views
+pages/extensions
+
+# --- BUILD METADATA ---
+ampdev_build.tgz
+
+package.json
+gulpfile.js

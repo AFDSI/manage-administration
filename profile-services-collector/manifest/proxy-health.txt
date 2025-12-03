@@ -1,0 +1,6 @@
+8081 /               -> 000
+8081 /index.html     -> 000
+8081 /documentation/ -> 000
+8081 /community/     -> 000
+8082 / -> 000
+8080 example -> 000

@@ -1,0 +1,709 @@
+﻿2025-07-16T18:16:48.2058608Z Current runner version: '2.326.0'
+2025-07-16T18:16:48.2090897Z ##[group]Runner Image Provisioner
+2025-07-16T18:16:48.2092511Z Hosted Compute Agent
+2025-07-16T18:16:48.2093424Z Version: 20250711.363
+2025-07-16T18:16:48.2094289Z Commit: 6785254374ce925a23743850c1cb91912ce5c14c
+2025-07-16T18:16:48.2095527Z Build Date: 2025-07-11T20:04:25Z
+2025-07-16T18:16:48.2096505Z ##[endgroup]
+2025-07-16T18:16:48.2097265Z ##[group]Operating System
+2025-07-16T18:16:48.2098258Z Ubuntu
+2025-07-16T18:16:48.2098990Z 24.04.2
+2025-07-16T18:16:48.2099799Z LTS
+2025-07-16T18:16:48.2100627Z ##[endgroup]
+2025-07-16T18:16:48.2101538Z ##[group]Runner Image
+2025-07-16T18:16:48.2102457Z Image: ubuntu-24.04
+2025-07-16T18:16:48.2103365Z Version: 20250710.1.0
+2025-07-16T18:16:48.2105003Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250710.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-07-16T18:16:48.2107750Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250710.1
+2025-07-16T18:16:48.2109383Z ##[endgroup]
+2025-07-16T18:16:48.2113690Z ##[group]GITHUB_TOKEN Permissions
+2025-07-16T18:16:48.2116271Z Actions: write
+2025-07-16T18:16:48.2117255Z Attestations: write
+2025-07-16T18:16:48.2118110Z Checks: write
+2025-07-16T18:16:48.2118910Z Contents: write
+2025-07-16T18:16:48.2119767Z Deployments: write
+2025-07-16T18:16:48.2120592Z Discussions: write
+2025-07-16T18:16:48.2121622Z Issues: write
+2025-07-16T18:16:48.2122531Z Metadata: read
+2025-07-16T18:16:48.2123297Z Models: read
+2025-07-16T18:16:48.2124142Z Packages: write
+2025-07-16T18:16:48.2124978Z Pages: write
+2025-07-16T18:16:48.2125784Z PullRequests: write
+2025-07-16T18:16:48.2126626Z RepositoryProjects: write
+2025-07-16T18:16:48.2127653Z SecurityEvents: write
+2025-07-16T18:16:48.2128658Z Statuses: write
+2025-07-16T18:16:48.2129439Z ##[endgroup]
+2025-07-16T18:16:48.2132744Z Secret source: Actions
+2025-07-16T18:16:48.2133839Z Prepare workflow directory
+2025-07-16T18:16:48.2848280Z Prepare all required actions
+2025-07-16T18:16:48.2902662Z Getting action download info
+2025-07-16T18:16:48.5556568Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-07-16T18:16:48.5557704Z Version: 4.2.2
+2025-07-16T18:16:48.5558679Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-07-16T18:16:48.5560155Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-07-16T18:16:48.5561014Z ##[endgroup]
+2025-07-16T18:16:48.6636865Z ##[group]Download immutable action package 'actions/setup-node@v4'
+2025-07-16T18:16:48.6637757Z Version: 4.4.0
+2025-07-16T18:16:48.6638499Z Digest: sha256:9427cefe82346e992fb5b949e3569b39d537ae41aa3086483b14eceebfc16bc1
+2025-07-16T18:16:48.6639476Z Source commit SHA: 49933ea5288caeca8642d1e84afbd3f7d6820020
+2025-07-16T18:16:48.6640229Z ##[endgroup]
+2025-07-16T18:16:48.7592132Z ##[group]Download immutable action package 'actions/download-artifact@v4'
+2025-07-16T18:16:48.7592972Z Version: 4.3.0
+2025-07-16T18:16:48.7593726Z Digest: sha256:552a5b9ad918f62ec0c2e8f42f3c694d4ebd1b4036b18c39b14168fcdfc0e4f2
+2025-07-16T18:16:48.7594771Z Source commit SHA: d3f86a106a0bac45b974a628896c90dbdf5c8093
+2025-07-16T18:16:48.7595448Z ##[endgroup]
+2025-07-16T18:16:49.0656523Z Complete job name: deploy
+2025-07-16T18:16:49.1258054Z ##[group]Run actions/checkout@v4
+2025-07-16T18:16:49.1258876Z with:
+2025-07-16T18:16:49.1259272Z   repository: ampproject/amp.dev
+2025-07-16T18:16:49.1259905Z   token: ***
+2025-07-16T18:16:49.1260279Z   ssh-strict: true
+2025-07-16T18:16:49.1260665Z   ssh-user: git
+2025-07-16T18:16:49.1261062Z   persist-credentials: true
+2025-07-16T18:16:49.1261719Z   clean: true
+2025-07-16T18:16:49.1262123Z   sparse-checkout-cone-mode: true
+2025-07-16T18:16:49.1262602Z   fetch-depth: 1
+2025-07-16T18:16:49.1262978Z   fetch-tags: false
+2025-07-16T18:16:49.1263375Z   show-progress: true
+2025-07-16T18:16:49.1263760Z   lfs: false
+2025-07-16T18:16:49.1264126Z   submodules: false
+2025-07-16T18:16:49.1264623Z   set-safe-directory: true
+2025-07-16T18:16:49.1265334Z env:
+2025-07-16T18:16:49.1265701Z   APP_ENV: production
+2025-07-16T18:16:49.1266583Z   NETLIFY_DEPLOY_TOKEN: ***
+2025-07-16T18:16:49.1267009Z ##[endgroup]
+2025-07-16T18:16:49.2375413Z Syncing repository: ampproject/amp.dev
+2025-07-16T18:16:49.2378066Z ##[group]Getting Git version info
+2025-07-16T18:16:49.2379169Z Working directory is '/home/runner/work/amp.dev/amp.dev'
+2025-07-16T18:16:49.2380926Z [command]/usr/bin/git version
+2025-07-16T18:16:49.2500338Z git version 2.50.1
+2025-07-16T18:16:49.2541526Z ##[endgroup]
+2025-07-16T18:16:49.2559402Z Temporarily overriding HOME='/home/runner/work/_temp/77853c70-c885-40b9-89a4-b8314040d9c8' before making global git config changes
+2025-07-16T18:16:49.2560827Z Adding repository directory to the temporary git global config as a safe directory
+2025-07-16T18:16:49.2575857Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/amp.dev/amp.dev
+2025-07-16T18:16:49.2617617Z Deleting the contents of '/home/runner/work/amp.dev/amp.dev'
+2025-07-16T18:16:49.2622509Z ##[group]Initializing the repository
+2025-07-16T18:16:49.2628365Z [command]/usr/bin/git init /home/runner/work/amp.dev/amp.dev
+2025-07-16T18:16:49.2715178Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-07-16T18:16:49.2716935Z hint: is subject to change. To configure the initial branch name to use in all
+2025-07-16T18:16:49.2717852Z hint: of your new repositories, which will suppress this warning, call:
+2025-07-16T18:16:49.2718503Z hint:
+2025-07-16T18:16:49.2719218Z hint: 	git config --global init.defaultBranch <name>
+2025-07-16T18:16:49.2720244Z hint:
+2025-07-16T18:16:49.2720931Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-07-16T18:16:49.2722449Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-07-16T18:16:49.2723730Z hint:
+2025-07-16T18:16:49.2724461Z hint: 	git branch -m <name>
+2025-07-16T18:16:49.2725271Z hint:
+2025-07-16T18:16:49.2726339Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-07-16T18:16:49.2728457Z Initialized empty Git repository in /home/runner/work/amp.dev/amp.dev/.git/
+2025-07-16T18:16:49.2735022Z [command]/usr/bin/git remote add origin https://github.com/ampproject/amp.dev
+2025-07-16T18:16:49.2775237Z ##[endgroup]
+2025-07-16T18:16:49.2776485Z ##[group]Disabling automatic garbage collection
+2025-07-16T18:16:49.2779003Z [command]/usr/bin/git config --local gc.auto 0
+2025-07-16T18:16:49.2809274Z ##[endgroup]
+2025-07-16T18:16:49.2809925Z ##[group]Setting up auth
+2025-07-16T18:16:49.2816034Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-07-16T18:16:49.2846830Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-07-16T18:16:49.3178817Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-07-16T18:16:49.3209239Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-07-16T18:16:49.3425850Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-07-16T18:16:49.3460630Z ##[endgroup]
+2025-07-16T18:16:49.3461968Z ##[group]Fetching the repository
+2025-07-16T18:16:49.3477798Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +020570571cba405f267e7e79d599eb85052a5cd5:refs/remotes/origin/main
+2025-07-16T18:16:57.3946744Z From https://github.com/ampproject/amp.dev
+2025-07-16T18:16:57.3948324Z  * [new ref]         020570571cba405f267e7e79d599eb85052a5cd5 -> origin/main
+2025-07-16T18:16:57.3981706Z ##[endgroup]
+2025-07-16T18:16:57.3982810Z ##[group]Determining the checkout info
+2025-07-16T18:16:57.3984696Z ##[endgroup]
+2025-07-16T18:16:57.3990121Z [command]/usr/bin/git sparse-checkout disable
+2025-07-16T18:16:57.4034460Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-07-16T18:16:57.4065397Z ##[group]Checking out the ref
+2025-07-16T18:16:57.4069817Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-07-16T18:16:58.4366283Z Updating files:  80% (5161/6407)
+2025-07-16T18:16:58.5077105Z Updating files:  81% (5190/6407)
+2025-07-16T18:16:58.5728747Z Updating files:  82% (5254/6407)
+2025-07-16T18:16:58.5848635Z Updating files:  83% (5318/6407)
+2025-07-16T18:16:58.6145949Z Updating files:  84% (5382/6407)
+2025-07-16T18:16:58.6329373Z Updating files:  85% (5446/6407)
+2025-07-16T18:16:58.6625890Z Updating files:  86% (5511/6407)
+2025-07-16T18:16:58.6795219Z Updating files:  87% (5575/6407)
+2025-07-16T18:16:58.7045227Z Updating files:  88% (5639/6407)
+2025-07-16T18:16:58.7296722Z Updating files:  89% (5703/6407)
+2025-07-16T18:16:58.7408000Z Updating files:  90% (5767/6407)
+2025-07-16T18:16:58.7440496Z Updating files:  91% (5831/6407)
+2025-07-16T18:16:58.7472076Z Updating files:  92% (5895/6407)
+2025-07-16T18:16:58.7504977Z Updating files:  93% (5959/6407)
+2025-07-16T18:16:58.7657786Z Updating files:  94% (6023/6407)
+2025-07-16T18:16:58.7824410Z Updating files:  95% (6087/6407)
+2025-07-16T18:16:58.7995655Z Updating files:  96% (6151/6407)
+2025-07-16T18:16:58.8323362Z Updating files:  97% (6215/6407)
+2025-07-16T18:16:58.8475267Z Updating files:  98% (6279/6407)
+2025-07-16T18:16:58.8709037Z Updating files:  99% (6343/6407)
+2025-07-16T18:16:58.8709574Z Updating files: 100% (6407/6407)
+2025-07-16T18:16:58.8710051Z Updating files: 100% (6407/6407), done.
+2025-07-16T18:16:58.8780611Z Switched to a new branch 'main'
+2025-07-16T18:16:58.8784455Z branch 'main' set up to track 'origin/main'.
+2025-07-16T18:16:58.8955136Z ##[endgroup]
+2025-07-16T18:16:58.8960091Z [command]/usr/bin/git log -1 --format=%H
+2025-07-16T18:16:58.8984016Z 020570571cba405f267e7e79d599eb85052a5cd5
+2025-07-16T18:16:58.9187016Z ##[group]Run actions/setup-node@v4
+2025-07-16T18:16:58.9187303Z with:
+2025-07-16T18:16:58.9187511Z   node-version: 22
+2025-07-16T18:16:58.9187707Z   cache: npm
+2025-07-16T18:16:58.9187888Z   always-auth: false
+2025-07-16T18:16:58.9188087Z   check-latest: false
+2025-07-16T18:16:58.9188414Z   token: ***
+2025-07-16T18:16:58.9188583Z env:
+2025-07-16T18:16:58.9188759Z   APP_ENV: production
+2025-07-16T18:16:58.9189083Z   NETLIFY_DEPLOY_TOKEN: ***
+2025-07-16T18:16:58.9189290Z ##[endgroup]
+2025-07-16T18:16:59.1054053Z Found in cache @ /opt/hostedtoolcache/node/22.17.0/x64
+2025-07-16T18:16:59.1060267Z ##[group]Environment details
+2025-07-16T18:17:00.8994097Z node: v22.17.0
+2025-07-16T18:17:00.8994392Z npm: 10.9.2
+2025-07-16T18:17:00.8994688Z yarn: 1.22.22
+2025-07-16T18:17:00.8996009Z ##[endgroup]
+2025-07-16T18:17:00.9018312Z [command]/opt/hostedtoolcache/node/22.17.0/x64/bin/npm config get cache
+2025-07-16T18:17:01.1437507Z /home/runner/.npm
+2025-07-16T18:17:01.3311984Z Cache hit for: node-cache-Linux-x64-npm-935f2560067dcc96b20b34797a3b5ad7154195b83fb52881e5bf823cfa6f856f
+2025-07-16T18:17:01.9634757Z Received 112517721 of 112517721 (100.0%), 181.0 MBs/sec
+2025-07-16T18:17:01.9637528Z Cache Size: ~107 MB (112517721 B)
+2025-07-16T18:17:01.9670404Z [command]/usr/bin/tar -xf /home/runner/work/_temp/35848e11-13a2-45d3-9df0-557ffbfa93e3/cache.tzst -P -C /home/runner/work/amp.dev/amp.dev --use-compress-program unzstd
+2025-07-16T18:17:02.4944419Z Cache restored successfully
+2025-07-16T18:17:02.5170411Z Cache restored from key: node-cache-Linux-x64-npm-935f2560067dcc96b20b34797a3b5ad7154195b83fb52881e5bf823cfa6f856f
+2025-07-16T18:17:02.5343196Z ##[group]Run npm ci
+2025-07-16T18:17:02.5343478Z [36;1mnpm ci[0m
+2025-07-16T18:17:02.5378977Z shell: /usr/bin/bash -e {0}
+2025-07-16T18:17:02.5379225Z env:
+2025-07-16T18:17:02.5379405Z   APP_ENV: production
+2025-07-16T18:17:02.5379811Z   NETLIFY_DEPLOY_TOKEN: ***
+2025-07-16T18:17:02.5380039Z ##[endgroup]
+2025-07-16T18:17:12.0485651Z npm warn deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+2025-07-16T18:17:12.2905940Z npm warn deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+2025-07-16T18:17:12.3400185Z npm warn deprecated har-validator@5.1.5: this library is no longer supported
+2025-07-16T18:17:12.4408048Z npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+2025-07-16T18:17:12.5594634Z npm warn deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+2025-07-16T18:17:12.7421618Z npm warn deprecated glob@8.1.0: Glob versions prior to v9 are no longer supported
+2025-07-16T18:17:12.7483737Z npm warn deprecated glob@8.1.0: Glob versions prior to v9 are no longer supported
+2025-07-16T18:17:12.7609427Z npm warn deprecated glob@8.1.0: Glob versions prior to v9 are no longer supported
+2025-07-16T18:17:12.7639055Z npm warn deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+2025-07-16T18:17:12.7661735Z npm warn deprecated querystring@0.2.1: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+2025-07-16T18:17:12.9002696Z npm warn deprecated formidable@1.2.6: Please upgrade to latest, formidable@v2 or formidable@v3! Check these notes: https://bit.ly/2ZEqIau
+2025-07-16T18:17:12.9014391Z npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+2025-07-16T18:17:13.3380820Z npm warn deprecated chokidar@2.1.8: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+2025-07-16T18:17:13.3573857Z npm warn deprecated url-search-params@1.1.0: now available as @ungap/url-search-params
+2025-07-16T18:17:13.5450245Z npm warn deprecated mkdirp@0.3.0: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+2025-07-16T18:17:13.5658317Z npm warn deprecated mkdirp@0.3.5: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+2025-07-16T18:17:13.6572856Z npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+2025-07-16T18:17:14.0367900Z npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+2025-07-16T18:17:14.4809311Z npm warn deprecated coffee-script@1.8.0: CoffeeScript on NPM has moved to "coffeescript" (no hyphen)
+2025-07-16T18:17:18.6536728Z npm warn deprecated core-js@2.6.12: core-js@<3.4 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+2025-07-16T18:17:28.8366629Z 
+2025-07-16T18:17:28.8367044Z > amp-dev@1.0.5 postinstall
+2025-07-16T18:17:28.8367477Z > gulp downloadTestResources && husky install
+2025-07-16T18:17:28.8367779Z 
+2025-07-16T18:17:29.2478328Z [6:17:29 PM] › ℹ  info      Config: environment=production test=false
+2025-07-16T18:17:30.2072144Z Browserslist: caniuse-lite is outdated. Please run:
+2025-07-16T18:17:30.2072879Z npx browserslist@latest --update-db
+2025-07-16T18:17:30.2074398Z 
+2025-07-16T18:17:30.2075012Z Why you should do it regularly:
+2025-07-16T18:17:30.2075830Z https://github.com/browserslist/browserslist#browsers-data-updating
+2025-07-16T18:17:30.2748529Z [18:17:30] Using gulpfile ~/work/amp.dev/amp.dev/gulpfile.js
+2025-07-16T18:17:30.2752791Z [18:17:30] Starting 'downloadTestResources'...
+2025-07-16T18:17:31.0804477Z [18:17:31] Finished 'downloadTestResources' after 805 ms
+2025-07-16T18:17:31.1337981Z husky - Git hooks installed
+2025-07-16T18:17:31.1690666Z 
+2025-07-16T18:17:31.1691641Z added 3185 packages, and audited 3188 packages in 29s
+2025-07-16T18:17:31.1692291Z 
+2025-07-16T18:17:31.1692879Z 379 packages are looking for funding
+2025-07-16T18:17:31.1693390Z   run `npm fund` for details
+2025-07-16T18:17:31.2536528Z 
+2025-07-16T18:17:31.2537473Z 66 vulnerabilities (8 low, 29 moderate, 27 high, 2 critical)
+2025-07-16T18:17:31.2538047Z 
+2025-07-16T18:17:31.2538351Z To address issues that do not require attention, run:
+2025-07-16T18:17:31.2538804Z   npm audit fix
+2025-07-16T18:17:31.2538963Z 
+2025-07-16T18:17:31.2539317Z To address all issues possible (including breaking changes), run:
+2025-07-16T18:17:31.2539814Z   npm audit fix --force
+2025-07-16T18:17:31.2540008Z 
+2025-07-16T18:17:31.2540292Z Some issues need review, and may require choosing
+2025-07-16T18:17:31.2540728Z a different dependency.
+2025-07-16T18:17:31.2540914Z 
+2025-07-16T18:17:31.2541062Z Run `npm audit` for details.
+2025-07-16T18:17:31.3893115Z ##[group]Run actions/download-artifact@v4
+2025-07-16T18:17:31.3893404Z with:
+2025-07-16T18:17:31.3893573Z   path: artifacts
+2025-07-16T18:17:31.3893785Z   merge-multiple: false
+2025-07-16T18:17:31.3894007Z   repository: ampproject/amp.dev
+2025-07-16T18:17:31.3894250Z   run-id: 16326677552
+2025-07-16T18:17:31.3894426Z env:
+2025-07-16T18:17:31.3894593Z   APP_ENV: production
+2025-07-16T18:17:31.3894994Z   NETLIFY_DEPLOY_TOKEN: ***
+2025-07-16T18:17:31.3895209Z ##[endgroup]
+2025-07-16T18:17:31.7044773Z Found 16 artifact(s)
+2025-07-16T18:17:31.7046313Z No input name, artifact-ids or pattern filtered specified, downloading all artifacts
+2025-07-16T18:17:31.7047473Z An extra directory with the artifact name will be created for each download
+2025-07-16T18:17:31.7048371Z Preparing to download the following artifacts:
+2025-07-16T18:17:31.7050008Z - pages-16326677552-zh_CN (ID: 3548049033, Size: 448738446, Expected Digest: sha256:5521c12c28b31a5f86e7d4365bd047fda590da79d5aad58a0a774e70f8b20d1f)
+2025-07-16T18:17:31.7052291Z - pages-16326677552-vi (ID: 3548048305, Size: 449152475, Expected Digest: sha256:e376c0a4f729a9da1d7688933ed1378ddc3cf658fb5e758688b22914d090b714)
+2025-07-16T18:17:31.7054358Z - pages-16326677552-en (ID: 3548048032, Size: 483881800, Expected Digest: sha256:be86bc93f43b6a4e14759980e7825dec88f975ac9bc3724b9c89347bf1e1d10a)
+2025-07-16T18:17:31.7056432Z - pages-16326677552-tr (ID: 3548046752, Size: 449328053, Expected Digest: sha256:e215b8c86fde87530f900582a49cacbfaca25df1008810ab635531f7674600a6)
+2025-07-16T18:17:31.7058586Z - pages-16326677552-de (ID: 3548046556, Size: 449431979, Expected Digest: sha256:3f30d00b0f397d120cc4416bf820287140c6cbca3a69882d2d72e21d75eafda8)
+2025-07-16T18:17:31.7059870Z - pages-16326677552-ja (ID: 3548045463, Size: 448983234, Expected Digest: sha256:23ac0752bdfa9dcae91e8b1583fd1126acd48a99f490a8dd3af37bc36eccebe5)
+2025-07-16T18:17:31.7061077Z - pages-16326677552-es (ID: 3548044454, Size: 449343831, Expected Digest: sha256:6cbee3fa426838f285de739b5a6c8f23efac1f6aaa9a44a4b94bf748fccfd2b1)
+2025-07-16T18:17:31.7062438Z - pages-16326677552-ko (ID: 3548042781, Size: 448800955, Expected Digest: sha256:0d0478563b1335a598ae811b13451adc045fc139b07b1edeecd959102565c391)
+2025-07-16T18:17:31.7063669Z - pages-16326677552-ru (ID: 3548042397, Size: 449659192, Expected Digest: sha256:8a2236d84d89ae06e0984adc03f9e2071d8fb88944d221ba3219dc53f7627fd7)
+2025-07-16T18:17:31.7064756Z - pages-16326677552-fr (ID: 3548042245, Size: 449452930, Expected Digest: sha256:d5e726eb25d3e34c125fd6dbd149bc1b32e9ee48604ef8ee670cce21fb4d1687)
+2025-07-16T18:17:31.7065985Z - pages-16326677552-pt_BR (ID: 3548041447, Size: 449245244, Expected Digest: sha256:34b536c05e69c85a3bb9e4f08e0354a88f6be8534e6a3142a754914ff7a34768)
+2025-07-16T18:17:31.7067292Z - pages-16326677552-id (ID: 3548040424, Size: 448984046, Expected Digest: sha256:a6a0f62095fb82da36f4b796924d8dbd11804d5edc2e0b0f8b49ffe2ee6d1b81)
+2025-07-16T18:17:31.7068501Z - pages-16326677552-pl (ID: 3548039797, Size: 449515370, Expected Digest: sha256:6fd01c795abaf9e023393d0c689f834894b2f0ee0aba91c35c4082d815e3511e)
+2025-07-16T18:17:31.7069763Z - pages-16326677552-ar (ID: 3548038010, Size: 449225004, Expected Digest: sha256:009dedf8eb7b6d9d2bb0f20a7d43861d7b939bf8f0c70d1f3cd53a7796f15a95)
+2025-07-16T18:17:31.7070811Z - pages-16326677552-it (ID: 3548037433, Size: 449075443, Expected Digest: sha256:c49a4c92c9892a1c16096842e09de4706225628aada51129deb74a39214a2fce)
+2025-07-16T18:17:31.7072430Z - build-setup (ID: 3547896086, Size: 239893909, Expected Digest: sha256:cf458e374ee4c597392294106314ac327e6d14d43cd6f499dfb0ba2d71c7a8b4)
+2025-07-16T18:17:31.7858053Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-9f232b46-0a87-5da3-8f37-461c14523ee0/artifacts/89f59441e8cb2196c684716b093324163b774d4e2c18abe4d31b93ff3bdf94b1.zip
+2025-07-16T18:17:31.7859782Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-zh_CN
+2025-07-16T18:17:31.8212568Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-e6e201a1-1d61-50ef-9b6d-f01e999e35fe/artifacts/d021569197a905ad1abb7ece3e8bed5a843428f96abf9e7e2d9a51c701b615b8.zip
+2025-07-16T18:17:31.8214273Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-pt_BR
+2025-07-16T18:17:31.8232093Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-96afd2e1-93c6-5390-8168-4754cdec5e18/artifacts/0346702b0498450d6f9185d91df6c5edb871c347ea3d3e13fcf1b9cd6d40860c.zip
+2025-07-16T18:17:31.8233811Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/build-setup
+2025-07-16T18:17:31.8247390Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-94126c04-6e75-53ac-9af8-1df6467b1693/artifacts/4973ea6d746142273347e02f57700327651bda458cc79c0ac169ec78bc5cad08.zip
+2025-07-16T18:17:31.8249011Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-en
+2025-07-16T18:17:31.8277241Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-50639e45-b875-54a1-b30d-5fa0f7bf1f51/artifacts/dcb58d2a6dae739ca9bf6860a530d3db42003a7698331c3d1ef6f4ae7bd02c56.zip
+2025-07-16T18:17:31.8278819Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-it
+2025-07-16T18:17:31.8293825Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-f44422f3-2cd6-55eb-8d15-96f120d1d376/artifacts/12071c58715b70669553f6c61b87a581da82e01d8b75dfcf6ce2573ba8184ba9.zip
+2025-07-16T18:17:31.8295284Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ko
+2025-07-16T18:17:31.8317023Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-65b1c3ae-a9e8-55c5-b20a-31deed72c64a/artifacts/bef754ffcf1741287ca8ad0e173210f96366b87aa6025861bbfabf945aabf77b.zip
+2025-07-16T18:17:31.8318986Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-id
+2025-07-16T18:17:31.8329239Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-e9e6ad16-22ca-5e4f-bbf2-7f299383c9b7/artifacts/6c6a27ba785058531feaec062e9bc60a7977aa7d376b212504a103cfa32e2b89.zip
+2025-07-16T18:17:31.8331198Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-es
+2025-07-16T18:17:31.8342890Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-d253e271-90bc-51a7-a0f9-609415264dbb/artifacts/35e54d9dd61f6246a81dc3821ce899ebade637ddb5d657432087ecad16ffca59.zip
+2025-07-16T18:17:31.8344436Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-vi
+2025-07-16T18:17:31.8406921Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-7790317d-0e26-51ea-b68e-7bf85d805ed5/artifacts/008ef3a401c887169bbf07169c1667786b2dceb15c5acf698e33c9afd9e892e5.zip
+2025-07-16T18:17:31.8408752Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-de
+2025-07-16T18:17:31.8457197Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-37a62bd2-543e-51f7-bcc7-ce65e1c0207e/artifacts/fbeac9f7429bcf9ed0b05f15a7909130fb10e111264d3ca3a15357744d7485ae.zip
+2025-07-16T18:17:31.8458785Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ru
+2025-07-16T18:17:31.8489666Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-a0a0962e-ffff-5109-a02b-6e3c5e8aa271/artifacts/97a32368180e559b542e661f8810ee23485a42ae108409838264b24f02a9e46e.zip
+2025-07-16T18:17:31.8491220Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ja
+2025-07-16T18:17:31.8505350Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-8eac404f-6399-5b86-9b33-30413f8269ed/artifacts/e95edb332245bceeb6263d78006e53bbef42786545847dd066b7d5cfb4f09918.zip
+2025-07-16T18:17:31.8506952Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-tr
+2025-07-16T18:17:31.8563128Z (node:2303) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2025-07-16T18:17:31.8564219Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-07-16T18:17:31.8647828Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-07775690-dff8-5037-a4a2-28a1849c41d2/artifacts/05750c16923b9db7dbfb3dd6016f985d24d13f158259df092ce20e350c1fdfec.zip
+2025-07-16T18:17:31.8649724Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-fr
+2025-07-16T18:17:31.8816370Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-b678c2c7-3ba2-5818-b1ba-b5143ea3eeae/artifacts/b77f28bfd7a2638b7b215b49cb01bf5627ac1172bed8b42115b3e81a14fdcba3.zip
+2025-07-16T18:17:31.8818252Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-pl
+2025-07-16T18:17:31.8872928Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/0a960691-5115-4f4f-ad50-ff24e4f77e61/workflow-job-run-e91c33d4-03dc-5b8c-b983-31aaab27782a/artifacts/66b6b8c39e34c363e455ebcf59d15678c9af64dfa9308569a960e7ea8dd06a9c.zip
+2025-07-16T18:17:31.8874704Z Starting download of artifact to: /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ar
+2025-07-16T18:18:01.7149078Z SHA256 digest of downloaded artifact is cf458e374ee4c597392294106314ac327e6d14d43cd6f499dfb0ba2d71c7a8b4
+2025-07-16T18:18:01.7150238Z Artifact download completed successfully.
+2025-07-16T18:18:28.0025906Z SHA256 digest of downloaded artifact is 5521c12c28b31a5f86e7d4365bd047fda590da79d5aad58a0a774e70f8b20d1f
+2025-07-16T18:18:28.0026872Z Artifact download completed successfully.
+2025-07-16T18:18:28.0433833Z SHA256 digest of downloaded artifact is 0d0478563b1335a598ae811b13451adc045fc139b07b1edeecd959102565c391
+2025-07-16T18:18:28.0434557Z Artifact download completed successfully.
+2025-07-16T18:18:28.0705191Z SHA256 digest of downloaded artifact is a6a0f62095fb82da36f4b796924d8dbd11804d5edc2e0b0f8b49ffe2ee6d1b81
+2025-07-16T18:18:28.0706796Z Artifact download completed successfully.
+2025-07-16T18:18:28.0949382Z SHA256 digest of downloaded artifact is e376c0a4f729a9da1d7688933ed1378ddc3cf658fb5e758688b22914d090b714
+2025-07-16T18:18:28.0950487Z Artifact download completed successfully.
+2025-07-16T18:18:28.1054033Z SHA256 digest of downloaded artifact is 23ac0752bdfa9dcae91e8b1583fd1126acd48a99f490a8dd3af37bc36eccebe5
+2025-07-16T18:18:28.1054866Z Artifact download completed successfully.
+2025-07-16T18:18:28.1065888Z SHA256 digest of downloaded artifact is 009dedf8eb7b6d9d2bb0f20a7d43861d7b939bf8f0c70d1f3cd53a7796f15a95
+2025-07-16T18:18:28.1066939Z Artifact download completed successfully.
+2025-07-16T18:18:28.1116590Z SHA256 digest of downloaded artifact is 3f30d00b0f397d120cc4416bf820287140c6cbca3a69882d2d72e21d75eafda8
+2025-07-16T18:18:28.1117824Z Artifact download completed successfully.
+2025-07-16T18:18:28.1147142Z SHA256 digest of downloaded artifact is e215b8c86fde87530f900582a49cacbfaca25df1008810ab635531f7674600a6
+2025-07-16T18:18:28.1148310Z Artifact download completed successfully.
+2025-07-16T18:18:28.1193848Z SHA256 digest of downloaded artifact is 34b536c05e69c85a3bb9e4f08e0354a88f6be8534e6a3142a754914ff7a34768
+2025-07-16T18:18:28.1195014Z Artifact download completed successfully.
+2025-07-16T18:18:28.1293003Z SHA256 digest of downloaded artifact is c49a4c92c9892a1c16096842e09de4706225628aada51129deb74a39214a2fce
+2025-07-16T18:18:28.1295798Z Artifact download completed successfully.
+2025-07-16T18:18:28.1297457Z SHA256 digest of downloaded artifact is 6fd01c795abaf9e023393d0c689f834894b2f0ee0aba91c35c4082d815e3511e
+2025-07-16T18:18:28.1298768Z Artifact download completed successfully.
+2025-07-16T18:18:28.1340840Z SHA256 digest of downloaded artifact is d5e726eb25d3e34c125fd6dbd149bc1b32e9ee48604ef8ee670cce21fb4d1687
+2025-07-16T18:18:28.1342269Z Artifact download completed successfully.
+2025-07-16T18:18:28.1362361Z SHA256 digest of downloaded artifact is 8a2236d84d89ae06e0984adc03f9e2071d8fb88944d221ba3219dc53f7627fd7
+2025-07-16T18:18:28.1363609Z Artifact download completed successfully.
+2025-07-16T18:18:28.1389957Z SHA256 digest of downloaded artifact is 6cbee3fa426838f285de739b5a6c8f23efac1f6aaa9a44a4b94bf748fccfd2b1
+2025-07-16T18:18:28.1391251Z Artifact download completed successfully.
+2025-07-16T18:18:28.4822939Z SHA256 digest of downloaded artifact is be86bc93f43b6a4e14759980e7825dec88f975ac9bc3724b9c89347bf1e1d10a
+2025-07-16T18:18:28.4823787Z Artifact download completed successfully.
+2025-07-16T18:18:28.4824243Z Total of 16 artifact(s) downloaded
+2025-07-16T18:18:28.4830015Z Download artifact has finished successfully
+2025-07-16T18:18:28.4951031Z ##[group]Run npx gulp unpackArtifacts
+2025-07-16T18:18:28.4951730Z [36;1mnpx gulp unpackArtifacts[0m
+2025-07-16T18:18:28.4980812Z shell: /usr/bin/bash -e {0}
+2025-07-16T18:18:28.4981143Z env:
+2025-07-16T18:18:28.4981639Z   APP_ENV: production
+2025-07-16T18:18:28.4982181Z   NETLIFY_DEPLOY_TOKEN: ***
+2025-07-16T18:18:28.4982502Z ##[endgroup]
+2025-07-16T18:18:29.0502040Z [6:18:29 PM] › ℹ  info      Config: environment=production test=false
+2025-07-16T18:18:29.9788223Z Browserslist: caniuse-lite is outdated. Please run:
+2025-07-16T18:18:29.9793800Z npx browserslist@latest --update-db
+2025-07-16T18:18:29.9803221Z 
+2025-07-16T18:18:29.9803773Z Why you should do it regularly:
+2025-07-16T18:18:29.9807269Z https://github.com/browserslist/browserslist#browsers-data-updating
+2025-07-16T18:18:30.0507723Z [18:18:30] Using gulpfile ~/work/amp.dev/amp.dev/gulpfile.js
+2025-07-16T18:18:30.0511266Z [18:18:30] Starting 'unpackArtifacts'...
+2025-07-16T18:18:30.0751015Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/build-setup/setup.tar.gz ...
+2025-07-16T18:18:30.0754431Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/build-setup/setup.tar.gz
+2025-07-16T18:18:45.5323612Z 
+2025-07-16T18:18:45.5325318Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/build-setup/setup.tar.gz
+2025-07-16T18:18:45.5959812Z 
+2025-07-16T18:18:45.5966750Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ar/pages-16326677552.tar.gz ...
+2025-07-16T18:18:45.5968408Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ar/pages-16326677552.tar.gz
+2025-07-16T18:19:19.1859003Z 
+2025-07-16T18:19:19.1860378Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ar/pages-16326677552.tar.gz
+2025-07-16T18:19:19.2819580Z 
+2025-07-16T18:19:19.2822674Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-de/pages-16326677552.tar.gz ...
+2025-07-16T18:19:19.2824525Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-de/pages-16326677552.tar.gz
+2025-07-16T18:19:52.5005070Z 
+2025-07-16T18:19:52.5006679Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-de/pages-16326677552.tar.gz
+2025-07-16T18:19:52.5962531Z 
+2025-07-16T18:19:52.5963889Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-en/pages-16326677552.tar.gz ...
+2025-07-16T18:19:52.5964867Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-en/pages-16326677552.tar.gz
+2025-07-16T18:20:28.3745181Z 
+2025-07-16T18:20:28.3747837Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-en/pages-16326677552.tar.gz
+2025-07-16T18:20:28.4779312Z 
+2025-07-16T18:20:28.4781235Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-es/pages-16326677552.tar.gz ...
+2025-07-16T18:20:28.4782475Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-es/pages-16326677552.tar.gz
+2025-07-16T18:21:01.8501238Z 
+2025-07-16T18:21:01.8502793Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-es/pages-16326677552.tar.gz
+2025-07-16T18:21:01.9475083Z 
+2025-07-16T18:21:01.9476506Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-fr/pages-16326677552.tar.gz ...
+2025-07-16T18:21:01.9477832Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-fr/pages-16326677552.tar.gz
+2025-07-16T18:21:35.2079952Z 
+2025-07-16T18:21:35.2080875Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-fr/pages-16326677552.tar.gz
+2025-07-16T18:21:35.3045605Z 
+2025-07-16T18:21:35.3047519Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-id/pages-16326677552.tar.gz ...
+2025-07-16T18:21:35.3049073Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-id/pages-16326677552.tar.gz
+2025-07-16T18:22:08.7747086Z 
+2025-07-16T18:22:08.7748202Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-id/pages-16326677552.tar.gz
+2025-07-16T18:22:08.8713475Z 
+2025-07-16T18:22:08.8715388Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-it/pages-16326677552.tar.gz ...
+2025-07-16T18:22:08.8717141Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-it/pages-16326677552.tar.gz
+2025-07-16T18:22:42.1875904Z 
+2025-07-16T18:22:42.1877156Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-it/pages-16326677552.tar.gz
+2025-07-16T18:22:42.2858446Z 
+2025-07-16T18:22:42.2859809Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ja/pages-16326677552.tar.gz ...
+2025-07-16T18:22:42.2860765Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ja/pages-16326677552.tar.gz
+2025-07-16T18:23:15.2926708Z 
+2025-07-16T18:23:15.2927874Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ja/pages-16326677552.tar.gz
+2025-07-16T18:23:15.3915779Z 
+2025-07-16T18:23:15.3918758Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ko/pages-16326677552.tar.gz ...
+2025-07-16T18:23:15.3920198Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ko/pages-16326677552.tar.gz
+2025-07-16T18:23:48.4826728Z 
+2025-07-16T18:23:48.4828788Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ko/pages-16326677552.tar.gz
+2025-07-16T18:23:48.5818479Z 
+2025-07-16T18:23:48.5821059Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-pl/pages-16326677552.tar.gz ...
+2025-07-16T18:23:48.5823683Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-pl/pages-16326677552.tar.gz
+2025-07-16T18:24:22.1369664Z 
+2025-07-16T18:24:22.1372395Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-pl/pages-16326677552.tar.gz
+2025-07-16T18:24:22.2359443Z 
+2025-07-16T18:24:22.2360811Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-pt_BR/pages-16326677552.tar.gz ...
+2025-07-16T18:24:22.2362131Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-pt_BR/pages-16326677552.tar.gz
+2025-07-16T18:24:55.6365886Z 
+2025-07-16T18:24:55.6368833Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-pt_BR/pages-16326677552.tar.gz
+2025-07-16T18:24:55.7353024Z 
+2025-07-16T18:24:55.7354445Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ru/pages-16326677552.tar.gz ...
+2025-07-16T18:24:55.7356074Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ru/pages-16326677552.tar.gz
+2025-07-16T18:25:29.2571111Z 
+2025-07-16T18:25:29.2573789Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-ru/pages-16326677552.tar.gz
+2025-07-16T18:25:29.3634740Z 
+2025-07-16T18:25:29.3636140Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-tr/pages-16326677552.tar.gz ...
+2025-07-16T18:25:29.3637747Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-tr/pages-16326677552.tar.gz
+2025-07-16T18:26:02.5542360Z 
+2025-07-16T18:26:02.5544983Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-tr/pages-16326677552.tar.gz
+2025-07-16T18:26:02.6525017Z 
+2025-07-16T18:26:02.6526402Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-vi/pages-16326677552.tar.gz ...
+2025-07-16T18:26:02.6528289Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-vi/pages-16326677552.tar.gz
+2025-07-16T18:26:35.9640508Z 
+2025-07-16T18:26:35.9641753Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-vi/pages-16326677552.tar.gz
+2025-07-16T18:26:36.0618038Z 
+2025-07-16T18:26:36.0619272Z Unpacking /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-zh_CN/pages-16326677552.tar.gz ...
+2025-07-16T18:26:36.0620306Z $ tar xf /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-zh_CN/pages-16326677552.tar.gz
+2025-07-16T18:27:09.0579662Z 
+2025-07-16T18:27:09.0582568Z $ rm /home/runner/work/amp.dev/amp.dev/artifacts/pages-16326677552-zh_CN/pages-16326677552.tar.gz
+2025-07-16T18:27:09.1530089Z 
+2025-07-16T18:27:09.1544940Z [18:27:09] Finished 'unpackArtifacts' after 8.65 min
+2025-07-16T18:27:09.1796940Z ##[group]Run npx gulp buildFinalize
+2025-07-16T18:27:09.1797368Z [36;1mnpx gulp buildFinalize[0m
+2025-07-16T18:27:09.1825785Z shell: /usr/bin/bash -e {0}
+2025-07-16T18:27:09.1826113Z env:
+2025-07-16T18:27:09.1826373Z   APP_ENV: production
+2025-07-16T18:27:09.1826899Z   NETLIFY_DEPLOY_TOKEN: ***
+2025-07-16T18:27:09.1827210Z ##[endgroup]
+2025-07-16T18:27:09.7239652Z [6:27:09 PM] › ℹ  info      Config: environment=production test=false
+2025-07-16T18:27:10.6582331Z Browserslist: caniuse-lite is outdated. Please run:
+2025-07-16T18:27:10.6583007Z npx browserslist@latest --update-db
+2025-07-16T18:27:10.6583324Z 
+2025-07-16T18:27:10.6583549Z Why you should do it regularly:
+2025-07-16T18:27:10.6584237Z https://github.com/browserslist/browserslist#browsers-data-updating
+2025-07-16T18:27:10.7296527Z [18:27:10] Using gulpfile ~/work/amp.dev/amp.dev/gulpfile.js
+2025-07-16T18:27:10.7300978Z [18:27:10] Starting 'buildFinalize'...
+2025-07-16T18:27:10.7316289Z [18:27:10] Starting 'collectStatics'...
+2025-07-16T18:27:10.7319376Z [18:27:10] Starting 'persistBuildInfo'...
+2025-07-16T18:27:10.7798910Z [18:27:10] Finished 'persistBuildInfo' after 48 ms
+2025-07-16T18:27:12.7699975Z [6:27:12 PM] › …  awaiting  Writing ZIPs ...
+2025-07-16T18:27:12.7762013Z [6:27:12 PM] › …  awaiting  Finished collecting static files!
+2025-07-16T18:27:12.7769360Z [18:27:12] Finished 'collectStatics' after 2.04 s
+2025-07-16T18:27:12.7772186Z [18:27:12] Starting 'thumborImageIndex'...
+2025-07-16T18:27:15.9201154Z [18:27:15] Finished 'thumborImageIndex' after 3.14 s
+2025-07-16T18:27:15.9202510Z [18:27:15] Finished 'buildFinalize' after 5.19 s
+2025-07-16T18:27:15.9690557Z ##[group]Run npx gulp staticDeploy
+2025-07-16T18:27:15.9690968Z [36;1mnpx gulp staticDeploy[0m
+2025-07-16T18:27:15.9718561Z shell: /usr/bin/bash -e {0}
+2025-07-16T18:27:15.9718884Z env:
+2025-07-16T18:27:15.9719144Z   APP_ENV: production
+2025-07-16T18:27:15.9719657Z   NETLIFY_DEPLOY_TOKEN: ***
+2025-07-16T18:27:15.9719990Z   DEPLOY_ENVIRONMENT: Production
+2025-07-16T18:27:15.9720316Z ##[endgroup]
+2025-07-16T18:27:16.5119114Z [6:27:16 PM] › ℹ  info      Config: environment=production test=false
+2025-07-16T18:27:17.4437211Z Browserslist: caniuse-lite is outdated. Please run:
+2025-07-16T18:27:17.4437907Z npx browserslist@latest --update-db
+2025-07-16T18:27:17.4438229Z 
+2025-07-16T18:27:17.4438460Z Why you should do it regularly:
+2025-07-16T18:27:17.4439147Z https://github.com/browserslist/browserslist#browsers-data-updating
+2025-07-16T18:27:17.5119478Z [18:27:17] Using gulpfile ~/work/amp.dev/amp.dev/gulpfile.js
+2025-07-16T18:27:17.5125116Z [18:27:17] Starting 'staticDeploy'...
+2025-07-16T18:27:17.5137895Z Deploying [36m/home/runner/work/amp.dev/amp.dev/dist/pages[39m to [36mamp.dev[39m
+2025-07-16T18:27:17.5143017Z $ npx netlify deploy --prod --auth *** --dir /home/runner/work/amp.dev/amp.dev/dist/pages --site e571c70e-d23f-4cbf-ac4e-802bb08e5261
+2025-07-16T18:27:22.0387999Z Deploy path:        /home/runner/work/amp.dev/amp.dev/dist/pages
+2025-07-16T18:27:22.0406480Z Functions path:     /home/runner/work/amp.dev/amp.dev/netlify/functions
+2025-07-16T18:27:22.0407829Z Configuration path: /home/runner/work/amp.dev/amp.dev/dist/pages/netlify.toml
+2025-07-16T18:27:22.0408525Z 
+2025-07-16T18:27:22.1814730Z Deploying to main site URL...
+2025-07-16T18:27:22.1816049Z 
+2025-07-16T18:27:22.2658522Z - Uploading blobs to deploy store...
+2025-07-16T18:27:22.2659037Z 
+2025-07-16T18:27:22.2659056Z 
+2025-07-16T18:27:22.2672259Z ​
+2025-07-16T18:27:22.2673060Z Netlify Build                                                 
+2025-07-16T18:27:22.2674267Z ────────────────────────────────────────────────────────────────
+2025-07-16T18:27:22.2674791Z 
+2025-07-16T18:27:22.2675068Z ​
+2025-07-16T18:27:22.2675587Z ❯ Version
+2025-07-16T18:27:22.2675874Z 
+2025-07-16T18:27:22.2676099Z   @netlify/build 29.51.4
+2025-07-16T18:27:22.2676422Z 
+2025-07-16T18:27:22.2684474Z ​
+2025-07-16T18:27:22.2685013Z ❯ Flags
+2025-07-16T18:27:22.2685276Z 
+2025-07-16T18:27:22.2703200Z   auth: ***
+2025-07-16T18:27:22.2703809Z   deployId: 6877ef0a8061f08f31089782
+2025-07-16T18:27:22.2704572Z   dir: /home/runner/work/amp.dev/amp.dev/dist/pages
+2025-07-16T18:27:22.2705259Z   open: false
+2025-07-16T18:27:22.2705754Z   prod: true
+2025-07-16T18:27:22.2706274Z   prodIfUnlocked: false
+2025-07-16T18:27:22.2706933Z   site: e571c70e-d23f-4cbf-ac4e-802bb08e5261
+2025-07-16T18:27:22.2707609Z   skipFunctionsCache: false
+2025-07-16T18:27:22.2707976Z 
+2025-07-16T18:27:22.2714663Z ​
+2025-07-16T18:27:22.2715348Z ❯ Current directory
+2025-07-16T18:27:22.2715687Z 
+2025-07-16T18:27:22.2716041Z   /home/runner/work/amp.dev/amp.dev/dist/pages
+2025-07-16T18:27:22.2716533Z 
+2025-07-16T18:27:22.2716824Z ​
+2025-07-16T18:27:22.2717376Z ❯ Config file
+2025-07-16T18:27:22.2718167Z   /home/runner/work/amp.dev/amp.dev/dist/pages/netlify.toml
+2025-07-16T18:27:22.2718863Z 
+2025-07-16T18:27:22.2719291Z ​
+2025-07-16T18:27:22.2720368Z ❯ Context
+2025-07-16T18:27:22.2720796Z 
+2025-07-16T18:27:22.2721105Z   dev
+2025-07-16T18:27:22.2722063Z 
+2025-07-16T18:27:22.2814951Z ✔ Finished uploading blobs to deploy store
+2025-07-16T18:27:22.2815633Z 
+2025-07-16T18:27:22.2824415Z - Hashing files...
+2025-07-16T18:27:22.2824986Z 
+2025-07-16T18:27:22.2853017Z - Looking for a functions cache...
+2025-07-16T18:27:22.2853762Z 
+2025-07-16T18:27:22.2868174Z ✔ No cached functions were found
+2025-07-16T18:27:22.2868638Z 
+2025-07-16T18:27:37.3015094Z ✔ Finished hashing 51549 files and 44 functions
+2025-07-16T18:27:37.3015775Z 
+2025-07-16T18:27:37.3016669Z - CDN diffing files...
+2025-07-16T18:27:37.3016943Z 
+2025-07-16T18:27:43.4762798Z ✔ CDN requesting 27114 files and 44 functions
+2025-07-16T18:27:43.4763258Z 
+2025-07-16T18:27:43.4885423Z - Uploading 33874 files
+2025-07-16T18:27:43.4885848Z 
+2025-07-16T18:42:44.0550668Z ✔ Finished uploading 33874 assets
+2025-07-16T18:42:44.0551181Z 
+2025-07-16T18:42:44.0555273Z - Waiting for deploy to go live...
+2025-07-16T18:42:44.0555718Z 
+2025-07-16T18:42:51.6249590Z ✔ Deploy is live!
+2025-07-16T18:42:51.6249933Z 
+2025-07-16T18:42:51.6297772Z 
+2025-07-16T18:42:51.6297890Z 
+2025-07-16T18:42:51.6304855Z Build logs:        https://app.netlify.com/projects/amp-dev-static/deploys/6877ef0a8061f08f31089782
+2025-07-16T18:42:51.6306276Z Function logs:     https://app.netlify.com/projects/amp-dev-static/functions
+2025-07-16T18:42:51.6307611Z Unique deploy URL: https://6877ef0a8061f08f31089782--amp-dev-static.netlify.app
+2025-07-16T18:42:51.6308555Z Website URL:       https://amp.dev
+2025-07-16T18:42:51.6308808Z 
+2025-07-16T18:42:51.6675276Z 
+2025-07-16T18:42:51.6676689Z Deploying [36m/home/runner/work/amp.dev/amp.dev/dist/playground[39m to [36mplayground.amp.dev[39m
+2025-07-16T18:42:51.6678656Z $ npx netlify deploy --prod --auth *** --dir /home/runner/work/amp.dev/amp.dev/dist/playground --site acead270-9404-4dde-81e4-aec0e6884869
+2025-07-16T18:42:55.2414911Z Deploy path:        /home/runner/work/amp.dev/amp.dev/dist/playground
+2025-07-16T18:42:55.2416070Z Functions path:     /home/runner/work/amp.dev/amp.dev/netlify/functions
+2025-07-16T18:42:55.2417322Z Configuration path: /home/runner/work/amp.dev/amp.dev/dist/playground/netlify.toml
+2025-07-16T18:42:55.2417982Z 
+2025-07-16T18:42:55.3743592Z Deploying to main site URL...
+2025-07-16T18:42:55.3743990Z 
+2025-07-16T18:42:55.4950166Z - Uploading blobs to deploy store...
+2025-07-16T18:42:55.4950964Z 
+2025-07-16T18:42:55.4951152Z 
+2025-07-16T18:42:55.4964050Z ​
+2025-07-16T18:42:55.4964850Z Netlify Build                                                 
+2025-07-16T18:42:55.4966086Z ────────────────────────────────────────────────────────────────
+2025-07-16T18:42:55.4966598Z 
+2025-07-16T18:42:55.4966907Z ​
+2025-07-16T18:42:55.4967428Z ❯ Version
+2025-07-16T18:42:55.4967720Z 
+2025-07-16T18:42:55.4968038Z   @netlify/build 29.51.4
+2025-07-16T18:42:55.4968373Z 
+2025-07-16T18:42:55.4976265Z ​
+2025-07-16T18:42:55.4976875Z ❯ Flags
+2025-07-16T18:42:55.4977148Z 
+2025-07-16T18:42:55.4995487Z   auth: ***
+2025-07-16T18:42:55.4996095Z   deployId: 6877f2afb0ab0b9bd26d540f
+2025-07-16T18:42:55.4996915Z   dir: /home/runner/work/amp.dev/amp.dev/dist/playground
+2025-07-16T18:42:55.4997639Z   open: false
+2025-07-16T18:42:55.4998129Z   prod: true
+2025-07-16T18:42:55.4998640Z   prodIfUnlocked: false
+2025-07-16T18:42:55.4999327Z   site: acead270-9404-4dde-81e4-aec0e6884869
+2025-07-16T18:42:55.5000081Z   skipFunctionsCache: false
+2025-07-16T18:42:55.5000452Z 
+2025-07-16T18:42:55.5007711Z ​
+2025-07-16T18:42:55.5008332Z ❯ Current directory
+2025-07-16T18:42:55.5008679Z 
+2025-07-16T18:42:55.5009057Z   /home/runner/work/amp.dev/amp.dev/dist/playground
+2025-07-16T18:42:55.5009600Z 
+2025-07-16T18:42:55.5010014Z ​
+2025-07-16T18:42:55.5010543Z ❯ Config file
+2025-07-16T18:42:55.5011570Z   /home/runner/work/amp.dev/amp.dev/dist/playground/netlify.toml
+2025-07-16T18:42:55.5012209Z 
+2025-07-16T18:42:55.5012555Z ​
+2025-07-16T18:42:55.5013068Z ❯ Context
+2025-07-16T18:42:55.5013532Z   dev
+2025-07-16T18:42:55.5013712Z 
+2025-07-16T18:42:55.5104721Z ✔ Finished uploading blobs to deploy store
+2025-07-16T18:42:55.5105180Z 
+2025-07-16T18:42:55.5113484Z - Hashing files...
+2025-07-16T18:42:55.5113816Z 
+2025-07-16T18:42:55.5143743Z - Looking for a functions cache...
+2025-07-16T18:42:55.5144204Z 
+2025-07-16T18:42:55.5145240Z ✔ No cached functions were found
+2025-07-16T18:42:55.5145610Z 
+2025-07-16T18:42:58.5928547Z ✔ Finished hashing 1016 files and 44 functions
+2025-07-16T18:42:58.5929148Z 
+2025-07-16T18:42:58.5929354Z - CDN diffing files...
+2025-07-16T18:42:58.5929607Z 
+2025-07-16T18:43:00.2697458Z ✔ CDN requesting 0 files and 44 functions
+2025-07-16T18:43:00.2700457Z 
+2025-07-16T18:43:00.2700751Z - Uploading 44 files
+2025-07-16T18:43:00.2700996Z 
+2025-07-16T18:44:00.2021699Z ✔ Finished uploading 44 assets
+2025-07-16T18:44:00.2022354Z 
+2025-07-16T18:44:00.2022770Z - Waiting for deploy to go live...
+2025-07-16T18:44:00.2023214Z 
+2025-07-16T18:44:01.3901307Z ✔ Deploy is live!
+2025-07-16T18:44:01.3901903Z 
+2025-07-16T18:44:01.3943465Z 
+2025-07-16T18:44:01.3943513Z 
+2025-07-16T18:44:01.3945598Z Build logs:        https://app.netlify.com/projects/playground-amp-dev/deploys/6877f2afb0ab0b9bd26d540f
+2025-07-16T18:44:01.3946604Z Function logs:     https://app.netlify.com/projects/playground-amp-dev/functions
+2025-07-16T18:44:01.3947590Z Unique deploy URL: https://6877f2afb0ab0b9bd26d540f--playground-amp-dev.netlify.app
+2025-07-16T18:44:01.3948529Z Website URL:       https://playground.amp.dev
+2025-07-16T18:44:01.3948927Z 
+2025-07-16T18:44:01.4352379Z 
+2025-07-16T18:44:01.4353975Z Deploying [36m/home/runner/work/amp.dev/amp.dev/dist/examples[39m to [36mpreview.amp.dev[39m
+2025-07-16T18:44:01.4355853Z $ npx netlify deploy --prod --auth *** --dir /home/runner/work/amp.dev/amp.dev/dist/examples --site caf28d42-024a-4efb-b266-b00cf10847a3
+2025-07-16T18:44:04.8968836Z Deploy path:        /home/runner/work/amp.dev/amp.dev/dist/examples
+2025-07-16T18:44:04.8969959Z Functions path:     /home/runner/work/amp.dev/amp.dev/netlify/functions
+2025-07-16T18:44:04.8971144Z Configuration path: /home/runner/work/amp.dev/amp.dev/dist/examples/netlify.toml
+2025-07-16T18:44:04.8972034Z 
+2025-07-16T18:44:05.0278619Z Deploying to main site URL...
+2025-07-16T18:44:05.0279115Z 
+2025-07-16T18:44:05.1154397Z - Uploading blobs to deploy store...
+2025-07-16T18:44:05.1154934Z 
+2025-07-16T18:44:05.1154944Z 
+2025-07-16T18:44:05.1167895Z ​
+2025-07-16T18:44:05.1168585Z Netlify Build                                                 
+2025-07-16T18:44:05.1169639Z ────────────────────────────────────────────────────────────────
+2025-07-16T18:44:05.1170093Z 
+2025-07-16T18:44:05.1173243Z ​
+2025-07-16T18:44:05.1173749Z ❯ Version
+2025-07-16T18:44:05.1174219Z   @netlify/build 29.51.4
+2025-07-16T18:44:05.1174534Z 
+2025-07-16T18:44:05.1180492Z ​
+2025-07-16T18:44:05.1180992Z ❯ Flags
+2025-07-16T18:44:05.1181230Z 
+2025-07-16T18:44:05.1199789Z   auth: ***
+2025-07-16T18:44:05.1200308Z   deployId: 6877f2f53707ee9f5dce0b2b
+2025-07-16T18:44:05.1200798Z   dir: /home/runner/work/amp.dev/amp.dev/dist/examples
+2025-07-16T18:44:05.1201231Z   open: false
+2025-07-16T18:44:05.1201731Z   prod: true
+2025-07-16T18:44:05.1202040Z   prodIfUnlocked: false
+2025-07-16T18:44:05.1202431Z   site: caf28d42-024a-4efb-b266-b00cf10847a3
+2025-07-16T18:44:05.1202852Z   skipFunctionsCache: false
+2025-07-16T18:44:05.1203075Z 
+2025-07-16T18:44:05.1209760Z ​
+2025-07-16T18:44:05.1210286Z ❯ Current directory
+2025-07-16T18:44:05.1210579Z 
+2025-07-16T18:44:05.1210942Z   /home/runner/work/amp.dev/amp.dev/dist/examples
+2025-07-16T18:44:05.1211531Z 
+2025-07-16T18:44:05.1212308Z ​
+2025-07-16T18:44:05.1212774Z ❯ Config file
+2025-07-16T18:44:05.1213484Z   /home/runner/work/amp.dev/amp.dev/dist/examples/netlify.toml
+2025-07-16T18:44:05.1214008Z 
+2025-07-16T18:44:05.1215364Z ​
+2025-07-16T18:44:05.1215854Z ❯ Context
+2025-07-16T18:44:05.1216104Z 
+2025-07-16T18:44:05.1216296Z   dev
+2025-07-16T18:44:05.1216539Z 
+2025-07-16T18:44:05.1310215Z ✔ Finished uploading blobs to deploy store
+2025-07-16T18:44:05.1310767Z 
+2025-07-16T18:44:05.1318650Z - Hashing files...
+2025-07-16T18:44:05.1318955Z 
+2025-07-16T18:44:05.1347772Z - Looking for a functions cache...
+2025-07-16T18:44:05.1348263Z 
+2025-07-16T18:44:05.1349172Z ✔ No cached functions were found
+2025-07-16T18:44:05.1349627Z 
+2025-07-16T18:44:08.0431307Z ✔ Finished hashing 580 files and 44 functions
+2025-07-16T18:44:08.0432061Z 
+2025-07-16T18:44:08.0432398Z - CDN diffing files...
+2025-07-16T18:44:08.0432746Z 
+2025-07-16T18:44:09.8507542Z ✔ CDN requesting 0 files and 44 functions
+2025-07-16T18:44:09.8508062Z 
+2025-07-16T18:44:09.8508966Z - Uploading 44 files
+2025-07-16T18:44:09.8509266Z 
+2025-07-16T18:45:09.8112709Z ✔ Finished uploading 44 assets
+2025-07-16T18:45:09.8114062Z 
+2025-07-16T18:45:09.8114778Z - Waiting for deploy to go live...
+2025-07-16T18:45:09.8115205Z 
+2025-07-16T18:45:10.9932119Z ✔ Deploy is live!
+2025-07-16T18:45:10.9932444Z 
+2025-07-16T18:45:10.9975704Z 
+2025-07-16T18:45:10.9975717Z 
+2025-07-16T18:45:10.9977803Z Build logs:        https://app.netlify.com/projects/preview-amp-dev/deploys/6877f2f53707ee9f5dce0b2b
+2025-07-16T18:45:10.9979222Z Function logs:     https://app.netlify.com/projects/preview-amp-dev/functions
+2025-07-16T18:45:10.9980255Z Unique deploy URL: https://6877f2f53707ee9f5dce0b2b--preview-amp-dev.netlify.app
+2025-07-16T18:45:10.9980854Z Website URL:       https://preview.amp.dev
+2025-07-16T18:45:10.9981119Z 
+2025-07-16T18:45:11.0309774Z 
+2025-07-16T18:45:11.0317142Z [18:45:11] Finished 'staticDeploy' after 18 min
+2025-07-16T18:45:11.0635654Z Post job cleanup.
+2025-07-16T18:45:11.2161088Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-935f2560067dcc96b20b34797a3b5ad7154195b83fb52881e5bf823cfa6f856f, not saving cache.
+2025-07-16T18:45:11.2270813Z Post job cleanup.
+2025-07-16T18:45:11.3232272Z [command]/usr/bin/git version
+2025-07-16T18:45:11.3274080Z git version 2.50.1
+2025-07-16T18:45:11.3319029Z Temporarily overriding HOME='/home/runner/work/_temp/e4ab5a40-0a3f-464d-8ba6-183ee6988bb5' before making global git config changes
+2025-07-16T18:45:11.3320730Z Adding repository directory to the temporary git global config as a safe directory
+2025-07-16T18:45:11.3325973Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/amp.dev/amp.dev
+2025-07-16T18:45:11.3370746Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-07-16T18:45:11.3405805Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-07-16T18:45:11.3663878Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-07-16T18:45:11.3688565Z http.https://github.com/.extraheader
+2025-07-16T18:45:11.3700401Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-07-16T18:45:11.3734256Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-07-16T18:45:11.4107231Z Cleaning up orphan processes

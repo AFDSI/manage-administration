@@ -1,0 +1,57 @@
+﻿2025-07-16T17:53:57.8462023Z Current runner version: '2.326.0'
+2025-07-16T17:53:57.8484497Z ##[group]Runner Image Provisioner
+2025-07-16T17:53:57.8485444Z Hosted Compute Agent
+2025-07-16T17:53:57.8485996Z Version: 20250711.363
+2025-07-16T17:53:57.8486539Z Commit: 6785254374ce925a23743850c1cb91912ce5c14c
+2025-07-16T17:53:57.8487309Z Build Date: 2025-07-11T20:04:25Z
+2025-07-16T17:53:57.8487873Z ##[endgroup]
+2025-07-16T17:53:57.8488421Z ##[group]Operating System
+2025-07-16T17:53:57.8489019Z Ubuntu
+2025-07-16T17:53:57.8489503Z 24.04.2
+2025-07-16T17:53:57.8489942Z LTS
+2025-07-16T17:53:57.8490455Z ##[endgroup]
+2025-07-16T17:53:57.8491248Z ##[group]Runner Image
+2025-07-16T17:53:57.8491794Z Image: ubuntu-24.04
+2025-07-16T17:53:57.8492363Z Version: 20250710.1.0
+2025-07-16T17:53:57.8493337Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250710.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-07-16T17:53:57.8494901Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250710.1
+2025-07-16T17:53:57.8495888Z ##[endgroup]
+2025-07-16T17:53:57.8498305Z ##[group]GITHUB_TOKEN Permissions
+2025-07-16T17:53:57.8500211Z Actions: write
+2025-07-16T17:53:57.8500930Z Attestations: write
+2025-07-16T17:53:57.8501490Z Checks: write
+2025-07-16T17:53:57.8502008Z Contents: write
+2025-07-16T17:53:57.8502514Z Deployments: write
+2025-07-16T17:53:57.8503058Z Discussions: write
+2025-07-16T17:53:57.8503544Z Issues: write
+2025-07-16T17:53:57.8504039Z Metadata: read
+2025-07-16T17:53:57.8504474Z Models: read
+2025-07-16T17:53:57.8505039Z Packages: write
+2025-07-16T17:53:57.8505545Z Pages: write
+2025-07-16T17:53:57.8506033Z PullRequests: write
+2025-07-16T17:53:57.8506629Z RepositoryProjects: write
+2025-07-16T17:53:57.8507166Z SecurityEvents: write
+2025-07-16T17:53:57.8507763Z Statuses: write
+2025-07-16T17:53:57.8508300Z ##[endgroup]
+2025-07-16T17:53:57.8510280Z Secret source: Actions
+2025-07-16T17:53:57.8511140Z Prepare workflow directory
+2025-07-16T17:53:57.8831169Z Prepare all required actions
+2025-07-16T17:53:57.8881737Z Getting action download info
+2025-07-16T17:53:58.2779635Z Download action repository 'fkirc/skip-duplicate-actions@master' (SHA:04a1aebece824b56e6ad6a401d015479cd1c50b3)
+2025-07-16T17:53:58.8514244Z Complete job name: queue
+2025-07-16T17:53:58.9225051Z ##[group]Run fkirc/skip-duplicate-actions@master
+2025-07-16T17:53:58.9225933Z with:
+2025-07-16T17:53:58.9226322Z   concurrent_skipping: outdated_runs
+2025-07-16T17:53:58.9226810Z   cancel_others: true
+2025-07-16T17:53:58.9227252Z   skip_after_successful_duplicate: true
+2025-07-16T17:53:58.9227794Z   paths_ignore: ["**/README.md", "**/docs/**"]
+2025-07-16T17:53:58.9228360Z   do_not_skip: ["workflow_dispatch", "schedule"]
+2025-07-16T17:53:58.9229074Z   github_token: ***
+2025-07-16T17:53:58.9229480Z   paths: []
+2025-07-16T17:53:58.9229848Z   skip_summary: false
+2025-07-16T17:53:58.9230444Z ##[endgroup]
+2025-07-16T17:54:00.4884802Z Did not find other workflow runs to be cancelled
+2025-07-16T17:54:00.4885534Z Do not skip execution because the workflow was triggered with 'workflow_dispatch'
+2025-07-16T17:54:00.5047601Z Evaluate and set job outputs
+2025-07-16T17:54:00.5055155Z Set output 'should_skip'
+2025-07-16T17:54:00.5057247Z Cleaning up orphan processes

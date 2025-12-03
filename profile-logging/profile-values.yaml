@@ -1,0 +1,286 @@
+# ======================================================================
+# Profile Generator Configuration
+# Version: 16.0 (Claude Refactor) - Block Style for Parser Compatibility
+# ======================================================================
+
+identity:
+  owner_id: gigster
+
+# Platform-specific home directories
+dev_home:
+  win: "E:\\users\\${identity.owner_id}\\workspace"
+  wsl: "/mnt/e/users/${identity.owner_id}/workspace"
+  mac: "/Users/${identity.owner_id}/workspace"
+
+# Secrets management configuration
+secrets_management:
+  script_path: "${dev_home.win}\\.secrets\\secrets-build.ps1"
+  source_dir: "${dev_home.win}\\.secrets"
+  output_file_nix: "${dev_home.win}\\.env.secrets.nix"
+  output_file_ps: "${dev_home.win}\\.env.secrets.ps1"
+
+# Required environment variables for validation
+secure_env:
+  required:
+    - name: "AMP_DOC_TOKEN"
+    - name: "OPENAI_API_KEY"
+    - name: "GEMINI_API_KEY"
+    - name: "ANTHROPIC_API_KEY"
+    - name: "AWS_ACCESS_KEY_ID"
+    - name: "AWS_SECRET_ACCESS_KEY"
+
+# UV/Python and node configuration
+toolchains:
+  python:
+    uv_cache_dir: "${dev_home.win}\\.uv\\cache"
+    uv_tool_dir: "${dev_home.win}\\.uv\\tools"
+    uv_python_dir: "${dev_home.win}\\.uv\\python"
+    python_bin_dir: "${dev_home.win}\\dev\\tools\\python-bin"
+    # Contractors can override these paths as needed
+  
+  node:
+    install_dir_win: "${dev_home.win}\\dev\\tools\\nodejs"
+    install_dir_wsl: "${dev_home.wsl}/dev/tools/nodejs"
+    version: "v22.19.0"
+
+
+# Navigation shortcuts
+navigation:
+  wsl:
+    home: "${dev_home.wsl}"
+    amp: "${dev_home.wsl}/repos/amp"
+    projects: "${dev_home.wsl}/project"
+  win:
+    home: "${dev_home.win}"
+    amp: "${dev_home.win}\\repos\\amp"
+    projects: "${dev_home.win}\\project"
+
+# PATH configuration for Windows
+paths:
+  win:
+    prepend:
+      - "${dev_home.win}\\dev\\bin"
+      - "${dev_home.win}\\dev\\components"
+      - "${toolchains.node.install_dir_win}"
+      - "${toolchains.python.python_bin_dir}"
+  
+  # WSL uses native Linux tool managers - no Windows executables
+  # - Node.js: managed by nvm (initialized in profile)
+  # - Python: managed by pyenv (initialized in profile)
+  # - No PATH manipulation needed - tool managers handle this
+
+# Environment variables
+env:
+  NODE_OPTIONS: "--max-old-space-size=4096"
+  USERNAME: "${identity.owner_id}"
+  AMP_DEV_PROJECT: "${dev_home.wsl}/repos/amp.dev"
+  # UV Configuration
+  UV_CACHE_DIR: "${toolchains.python.uv_cache_dir}"
+  UV_TOOL_DIR: "${toolchains.python.uv_tool_dir}"
+  UV_PYTHON_INSTALL_DIR: "${toolchains.python.uv_python_dir}"
+  platform_overrides:
+    windows: {}
+
+# Output paths for generated profiles
+profiles:
+  windows:
+    ps_out: "${dev_home.win}\\dev\\profiles\\ps\\profile.generated.ps1"
+  wsl:
+    bash_out: "${dev_home.wsl}/dev/profiles/bash/.bashrc.generated"
+    zsh_out: "${dev_home.wsl}/dev/profiles/zsh/.zshrc.generated"
+
+# Interface configuration
+interface:
+  # Command aliases - Block style
+  aliases:
+    - name: "show_commands"
+      definition: "Show-QuickReference"
+    - name: "sc"
+      definition: "Show-QuickReference"
+    - name: "show_examples"
+      definition: "Show-Examples"
+    - name: "se"
+      definition: "Show-Examples"
+    - name: "check_env"
+      definition: "Initialize-DevEnvironment"
+  
+  # Command prompt style
+  prompt_style: "$ "
+
+  # Startup message
+  startup_footer: |
+    Run 'check_versions' to verify tool setup or 'check_env' to refresh.
+    Run 'show_commands' for platform-specific commands.
+    Run 'show_examples' for command examples.
+
+  # Command reference documentation
+  command_reference:
+    default:
+      title: "PowerShell Quick Reference"
+      sections:
+        - heading: "CDE Management"
+          commands:
+            - name: "check_env"
+              description: "Reload this environment"
+            - name: "show_env"
+              description: "Display CDE status and variables"
+            - name: "check_versions"
+              description: "Verify installed tools and env vars"
+    
+    modes:
+      AWS:
+        title: "AWS Quick Reference"
+        sections:
+          - heading: "AWS Environment"
+            commands:
+              - name: "Initialize-AWSEnvironment"
+                description: "Load AWS credentials into the session"
+              - name: "Get-S3Object"
+                description: "Retrieve objects from S3 buckets"
+      
+      Debian:
+        title: "Debian Quick Reference"
+        sections:
+          - heading: "Navigation"
+            commands:
+              - name: "home"
+                description: "Navigate to the user's home directory"
+              - name: "amp"
+                description: "Navigate to the AMP project directory"
+              - name: "projects"
+                description: "Navigate to the main projects directory"
+          - heading: "System"
+            commands:
+              - name: "check_versions"
+                description: "Verify installed tools"
+              - name: "check_env"
+                description: "Reload environment configuration"
+      
+      Zsh:
+        title: "Z Shell Quick Reference"
+        sections:
+          - heading: "Navigation"
+            commands:
+              - name: "home"
+                description: "Navigate to the user's home directory"
+              - name: "amp"
+                description: "Navigate to the AMP project directory"
+              - name: "workspace"
+                description: "Navigate to the main workspace"
+          - heading: "System"
+            commands:
+              - name: "check_versions"
+                description: "Verify installed tools"
+              - name: "check_env"
+                description: "Reload environment configuration"
+
+  # Examples reference documentation
+  examples_reference:
+    default:
+      title: "PowerShell Usage Examples"
+      sections:
+        - heading: "File System"
+          examples:
+            - title: "Find all files named 'config.yaml'"
+              snippet: "Get-ChildItem -Recurse -Filter config.yaml"
+            - title: "Search file contents"
+              snippet: "Select-String -Path *.ps1 -Pattern 'function'"
+        - heading: "Environment"
+          examples:
+            - title: "View all environment variables"
+              snippet: "Get-ChildItem env:"
+            - title: "Set environment variable"
+              snippet: "$env:MY_VAR = 'value'"
+    
+    modes:
+      AWS:
+        title: "PowerShell AWS Usage Examples"
+        sections:
+          - heading: "Detailed Command: Get-S3Object"
+            command: "Get-S3Object"
+            description: "Retrieves objects from an S3 bucket."
+            parameters:
+              - flag: "-BucketName <name>"
+                desc: "The name of the bucket to access"
+              - flag: "-Key <key>"
+                desc: "(Optional) The key of a specific object to retrieve"
+              - flag: "-Recurse"
+                desc: "(Switch) If present, recursively gets objects"
+          - heading: "S3 Examples"
+            examples:
+              - title: "List all buckets"
+                snippet: "Get-S3Bucket"
+              - title: "List bucket contents"
+                snippet: "Get-S3Object -BucketName my-bucket"
+#              - title: "Download file"
+#                snippet: "Read-S3Object -BucketName my-bucket -Key file.txt -File ./local.txt"
+          - heading: "Download"
+            command: "Read-S3Object"
+            description: "Downloads file from an S3 bucket."
+            parameters:
+              - flag: "-BucketName my-bucket"
+                desc: "specify target bucket"
+              - flag: "-Key file.txt"
+                desc: "specify target type"
+              - flag: "-File ./local.txt"
+                desc: "specify target file"
+          - heading: "Listing"
+            command: "aws s3 ls <flag> s3://BucketName/DirectoryName/"
+            description: "List directories"
+            parameters:
+              - flag: "--recursive"
+                desc: "recursively list directories"
+              - flag: "--acl public-read"
+                desc: "make objects public at upload/sync time"
+              - flag: "--content-type image/png"
+                desc: "set MIME type"
+              - flag: "--exclude"
+                desc: "pattern filtering"
+              - flag: "--include"
+                desc: "pattern filtering"
+              - flag: "--delete"
+                desc: "with sync, removes objects on dest not in source"
+              - flag: "--dryrun"
+                desc: "preview changes (use before destructive rm or wide sync)"
+              - flag: "--cache-control public,max-age=31536000,immutable"
+                desc: "long-cache static assets"
+      
+      Debian:
+        title: "Debian Usage Examples"
+        sections:
+          - heading: "Git Tasks"
+            examples:
+              - title: "Amend the last commit"
+                snippet: "git commit --amend --no-edit"
+              - title: "View commit history"
+                snippet: "git log --oneline --graph --all"
+              - title: "Create and checkout branch"
+                snippet: "git checkout -b feature/new-feature"
+          - heading: "File Operations"
+            examples:
+              - title: "Find files by name"
+                snippet: "find . -name '*.yaml'"
+              - title: "Search file contents"
+                snippet: "grep -r 'pattern' ."
+              - title: "Count lines in files"
+                snippet: "wc -l *.sh"
+      
+      Zsh:
+        title: "Z Shell Usage Examples"
+        sections:
+          - heading: "File System"
+            examples:
+              - title: "Find all 'config.yaml' files"
+                snippet: "find . -name config.yaml"
+              - title: "List files by size"
+                snippet: "ls -lhS"
+              - title: "Disk usage summary"
+                snippet: "du -sh *"
+          - heading: "Process Management"
+            examples:
+              - title: "Find process by name"
+                snippet: "ps aux | grep node"
+              - title: "Kill process by name"
+                snippet: "pkill -f 'node server.js'"
+              - title: "Monitor processes"
+                snippet: "top"
