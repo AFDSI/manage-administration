@@ -1,0 +1,158 @@
+################################################################################
+# GLOBAL SENSITIVE INFORMATION PROTECTION
+################################################################################
+
+# Never commit secrets of any kind
+*.secret
+*.secrets
+*.key
+*.pem
+*.p12
+*.crt
+*.cer
+*.der
+*.pub        # exception: public keys—uncomment if needed
+*.gpg
+*.asc
+
+# dotenv / environment configs
+.env
+.env.*
+.env.secrets
+.env.secrets.*
+.env.local
+.env.production
+.env.development
+
+# PowerShell / shell secrets
+*.ps1.secrets
+*.sh.secrets
+
+# Token / credential spill files
+*token*
+*credential*
+*private*
+*secret*
+*password*
+*apikey*
+*api_key*
+*auth*
+*vault*
+*jwt*
+
+# JSON/YAML secrets
+secrets*.json
+secrets*.yaml
+*-secrets.json
+*-secrets.yaml
+secrets.local.json
+secrets.local.yaml
+secrets.template.json
+secrets.template.yaml
+
+################################################################################
+# ONTOMATICA PROFILE GENERATOR PROTECTION
+################################################################################
+
+# Staging directories used during profile-generator builds
+tmp/
+temp/
+
+# Generated files from profile-generator
+profile.generated.*
+.profile.generated.*
+*.generated.ps1
+*.generated.sh
+*.generated.bash
+*.generated.zsh
+*.generated.json
+*.generated.yaml
+
+################################################################################
+# PLATFORM/FRAMEWORK SENSITIVE FILES
+################################################################################
+
+# Node / NPM / Netlify
+.npmrc
+.netlify/state.json
+functions/.netlify/
+netlify.toml.local
+
+# AWS CLI / credentials
+.aws/
+*.aws.json
+*.aws.yaml
+
+# Python / pyenv / virtualenv
+*.pyc
+__pycache__/
+python.env
+venv/
+env/
+.envrc
+
+################################################################################
+# OPERATING SYSTEM / EDITOR / TOOLING NOISE
+################################################################################
+
+# VSCode
+.vscode/*
+!.vscode/settings.json          # allow controlled settings
+!.vscode/*.json
+!.vscode/*.code-workspace
+.vscode-server/
+
+# Logs
+*.log
+logs/
+*.trace
+*.tmp
+
+# System-specific
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# JetBrains
+.idea/
+*.iml
+
+# Windows
+ehthumbs.db
+
+# WSL / Linux
+*.swp
+*.swo
+
+################################################################################
+# BUILD OUTPUT — never commit
+################################################################################
+
+dist/
+build/
+cache/
+node_modules/
+pip-wheel-metadata/
+__build__/
+
+examples/sources/
+playground/
+platform/cache/
+
+################################################################################
+# SAFETY BLOCKERS (custom)
+################################################################################
+
+# Prevent committing raw PowerShell or bash scripts with unreviewed secrets
+*_secret.ps1
+*_secret.sh
+
+# Prevent accidentally committing PAT staging files
+*gh-pat*
+*github-pat*
+*_gh-pat-*
+
+
+################################################################################
+# END
+################################################################################

@@ -1,0 +1,120 @@
+Title: Basics
+Description: text
+pwd, cd, ls, ls -la, tree, mkdir -p, rm -rf, mv, touch, cat
+
+Title: Service management
+Description: text
+systemctl
+
+Title: Process list
+Description: text
+ps aux
+
+Title: Disk usage
+Description: text
+df -h
+
+Title: Cleanup (Python caches)
+Description: text
+find . -type d -name '__pycache__' -exec rm -rf {} +
+
+Title: Optimize
+Description: text
+node amp-optimize.js /mnt/e/directory/file-source.html /mnt/e/directory/file-target.html
+
+Title: Shell & Profile Hygiene
+Description: Lint & load generated profile
+bash -n ~/.bashrc.generated && echo "Syntax OK"
+source ~/.bashrc.generated
+
+Title: Validate syntax then load generated config.
+Description: Ensure sourcing order (keep last in .bashrc)
+sed -i '/\[ -f ~/.bashrc\.generated \] && source ~/.bashrc\.generated/d' ~/.bashrc
+printf '\n[ -f ~/.bashrc.generated ] && source ~/.bashrc.generated\n' >> ~/.bashrc
+
+Title: Guarantee generator wins over Debian defaults.
+Description: Normalize line endings
+sed -i 's/\r$//' ~/.bashrc ~/.bashrc.generated
+
+Title: Fixes CRLF→LF problems when copying from Windows.
+Description: Reset prompt (if broken)
+unset PS1; unset PROMPT_COMMAND; exec bash -l
+
+Title: Search
+Description: text
+grep -n 'pattern' file
+grep -R pattern dir/
+
+Title: Text Editing
+Description: remove CRLF
+sed -i 's/\r$//' file
+ 
+Title: Text Editing
+Description: Delete lines
+sed -i '/regex/d' file
+
+Title: Environment & Secrets
+Description: Inspect
+printenv, echo $VAR, command -v pyenv, type -a python
+
+Title: Packages update & upgrade
+Description: Update & upgrade
+sudo apt update && sudo apt upgrade -y
+
+Title: Packages update & upgrade
+Description: Base set (Debian/WSL)
+sudo apt-get install -y build-essential zip tree jq net-tools lsof psmisc locales dos2unix
+
+Title: Networking & Health Checks
+Description: Networking ports
+ss -lntp | grep -E ':8080|:8081|:8082'  
+
+Title: Networking & Health Checks
+Description: Curl probe
+curl -I http://127.0.0.1:8080/__health-check
+curl -I http://127.0.0.1:8080/documentation/examples/components/amp-list/
+
+Title: Processes & Diagnostics
+Description: Top/system stats
+top -b -n1 | head -20, vmstat 2 5, iostat -xz 2 5  
+
+Title: Processes & Diagnostics
+Description: Kill processes
+pkill -f "grow run", pkill -f "platform.js"
+
+Title: Compression & Archiving
+Description: Tarball
+tar -czf out.tgz <files>  
+
+Title: Compression & Archiving
+Description: Zip
+zip -r archive.zip dir/  
+
+Title: Compression & Archiving
+Description: Verify
+gzip -t out.tgz
+
+Title: Cleaning & Repair Scripts
+Description: Remove duplicate/corrupt files
+find . -name "*2.*" -delete
+
+Title: Prevents sync conflicts causing build failuresw
+Description: Automated quote/alias fixer
+bash ~/fix_bashrc_quotes.sh
+
+Title: Inspect
+Description: text
+printenv
+echo $VAR
+command -v pyenv
+type -a python
+
+Title: Git
+Description: Config
+git config --global user.name YourName
+git config --global user.email your.email@example.com
+git config --global init.defaultBranch main
+
+Title: Git
+Description: Common
+git clone, git add, git commit -m, git status -s, git rev-parse --short HEAD

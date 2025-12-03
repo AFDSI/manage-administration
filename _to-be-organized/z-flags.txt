@@ -1,0 +1,9 @@
+
+-Profile "development"          # Profile name (default: "development")
+-ConfigPath "path/to/config"    # Path to YAML config (default: "profile-value.yaml")
+-ValidateOnly                   # Only validate config, don't generate files
+-Force                          # Force overwrite existing files
+-ShowDebug                      # Show debug output
+-GenerateWSL                    # Also generate WSL configuration
+-GenerateAll                    # Generate all platform configurations
+-Platform "auto"                # Platform override (default: "auto")

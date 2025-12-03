@@ -1,0 +1,33 @@
+
+See effective policies
+Get-ExecutionPolicy -List
+
+
+Unblock the script (and any siblings):
+Unblock-File "E:\dev\secrets-ssh\_project\secrets-maint.ps1"
+# or whole folder:
+Get-ChildItem "E:\dev\secrets-ssh\_project" -Recurse -Include *.ps1,*.psm1,*.psd1 | Unblock-File
+
+Ensure pwsh 7 policy is set
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
+
+Quick health checks
+# The production file exists:
+Test-Path "$HOME\.env.secrets"
+
+# It includes your keys (just show the variable names)
+Select-String -Path "$HOME\.env.secrets" -Pattern '^(export\s+)?(AMP_DOC_TOKEN|OPENAI_API_KEY|GEMINI_API_KEY|NETLIFY_DEPLOY_TOKEN)='
+
+sanity check your module version
+Get-Module powershell-yaml -ListAvailable | Select Name,Version,Path
+
+2025/10/03
+issues
+
+Test-Path "$HOME\.env.secrets"
+False
+Select-String -Path "$HOME\.env.secrets" -Pattern '^(export\s+)?(AMP_DOC_TOKEN|OPENAI_API_KEY|GEMINI_API_KEY|NETLIFY_DEPLOY_TOKEN)='
+Select-String: Cannot find path 'C:\Users\Owner\.env.secrets' because it does not exist.
+
+
+
