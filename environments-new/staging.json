@@ -1,0 +1,48 @@
+{
+	"name": "staging",
+	"hosts": {
+		"pages": {
+			"scheme": "https",
+			"host": "",
+			"port": ""
+		},
+		"api": {
+			"scheme": "https",
+			"host": "",
+			"port": ""
+		},
+		"platform": {
+			"scheme": "https",
+			"host": "",
+			"port": ""
+    },
+		"websocket": {
+			"scheme": "wss",
+			"host": "",
+			"port": ""
+    },
+    "playground": {
+      "scheme": "https",
+      "subdomain": "",
+      "host": "",
+      "port": ""
+    },
+    "preview": {
+      "scheme": "https",
+      "subdomain": "",
+      "host": "",
+      "port": ""
+    },
+    "go": {
+      "scheme": "https",
+      "subdomain": "",
+      "host": "",
+      "port": ""
+    },
+    "log": {
+      "scheme": "https",
+      "subdomain": "",
+      "host": "",
+      "port": ""
+    }
+}

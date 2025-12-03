@@ -1,0 +1,38 @@
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote:
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote:
+remote:     - Push cannot contain secrets
+remote:
+remote:
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push
+remote:
+remote:      (?) This repository does not have Secret Scanning enabled, but is eligible. Enable Secret Scanning to view and manage detected secrets.
+remote:      Visit the repository settings page, https://github.com/AFDSI/manage-administration/settings/security_analysis
+remote:
+remote:
+remote:       —— GitHub Personal Access Token ——————————————————————
+remote:        locations:
+remote:          - commit: 244f16d271f1a50dc98e57eed4900150d55290d1
+remote:            path: _profile-gen-staging/_gh-pat-netlify-deploy.txt:6
+remote:
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/AFDSI/manage-administration/security/secret-scanning/unblock-secret/36LMN0y3m20NzWQKFbtCRFMuLK2
+remote:
+remote:
+remote:       —— GitHub Personal Access Token ——————————————————————
+remote:        locations:
+remote:          - commit: 244f16d271f1a50dc98e57eed4900150d55290d1
+remote:            path: _profile-gen-staging/_gh-pat-netlify-deploy.txt:22
+remote:
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/AFDSI/manage-administration/security/secret-scanning/unblock-secret/36LMN5ELvHJn5vQyJNHVaG1CaIY
+remote:
+remote:
+remote:
+To github.com:AFDSI/manage-administration.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'github.com:AFDSI/manage-administration.git'

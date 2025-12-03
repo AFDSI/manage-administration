@@ -1,0 +1,54 @@
+{
+	"name": "production",
+	"hosts": {
+		"pages": {
+			"scheme": "https",
+			"host": "",
+			"port": ""
+		},
+		"api": {
+			"scheme": "https",
+			"host": "",
+			"port": ""
+		},
+		"platform": {
+			"scheme": "https",
+			"host": "",
+			"port": ""
+		},
+		"websocket": {
+			"scheme": "wss",
+			"host": "",
+			"port": ""
+		},
+		"playground": {
+			"scheme": "https",
+			"subdomain": "playground",
+			"host": "",
+			"port": ""
+		},
+		"preview": {
+			"scheme": "https",
+			"subdomain": "preview",
+			"host": "",
+			"port": ""
+		},
+		"go": {
+			"scheme": "https",
+			"subdomain": "go",
+			"host": "",
+			"port": ""
+		},
+		"log": {
+			"scheme": "https",
+			"subdomain": "log",
+			"host": "",
+			"port": ""
+		},
+		"thumbor": {
+			"scheme": "http",
+			"host": "",
+			"port": "8080"
+		}
+	}
+}

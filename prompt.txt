@@ -1,0 +1,110 @@
+Please help me improve this Claude project specification.
+Please identify missing or incomplete information needed to implement the project.
+
+---
+
+Our strategic objective is to refactor `amp.dev` to be portable and reusable for similar web site development projects.
+Portable means that all fixed variables ("hard wired" variables) are identified and can be reconfigured for new companies and new domains.
+Reuseable means that fixed workflows can be easily reconfigured to support new develop teams creating new content for new companies and their domains.
+
+Attached are Google specific `amp.dev` files.
+By design, they are for a specific site - `https://amp.dev` - and for a specific business objectives.
+
+For our objectives, the files must be generalized.
+
+The first collection specify platforms on which amp.dev build versions run
+
+\upload-tmp\environments-google
+```
+development.json
+local.json
+production.json
+staging.json
+static-test.json
+```
+
+The second collection are files that specify the workflow.
+The main file is `deploy.yaml`.
+The only significant variable is NETLIFY_DEPLOY_TOKEN which is specific to a repo - `amp.dev`.
+In contrast, our objective is to support six sites, each using a unique NETLIFY_DEPLOY_TOKEN.
+ 
+\upload-tmp\workflows-google
+```
+deploy.yaml
+lint.yaml
+sync-doc.yaml
+test-platform.yaml
+test-playground.yaml
+```
+
+Attached are "empty" templates Claude should complete based on requirements and values.
+
+\upload-tmp\environments-new
+```
+development.json
+local.json
+production.json
+staging.json
+static-test.json
+```
+
+\upload-tmp\workflows-new
+```
+deploy.yaml
+lint.yaml
+sync-doc.yaml
+test-platform.yaml
+test-playground.yaml
+```
+
+Inititially we will skip working on `production.json`.
+Reason: we have not yet specied a new busines domain.
+Currently, our domains are managed by AWS.
+Our plan it to transfer one domain - `benetta.io` - from AWS to Netlify.
+Then we can specify `production.json`.
+In addition we can aliign the following Google services with `benetta.io`
+* Google Programmable Search (GPS) key
+* Google site verification ID
+* Google Analytics key
+* Google Knowledge Graph key
+* Google Maps key
+Only then can we test, for example, GPS as the key is specific to `benetta.io`.
+It is too difficult to register Netlify domains with Google services.
+
+Short term, we will use `staging.json` where different GitHub branches will be test.
+Staging is for unit testing and integration testing (but not for systems testing, which is performed for `benetta.io`)
+Here is an active Netlify instance:
+Site: https://ngfalls.netlify.app/
+Project: https://app.netlify.com/projects/ngfalls/overview
+GitHub repo: https://github.com/AFDSI/jay.dev
+NETLIFY_DEPLOY_TOKEN: 7235a350-a231-4df3-9ed8-a1d7157ad331
+
+For `amp.dev.20` we will use:
+Project: https://app.netlify.com/projects/lighthearted-genie/overview
+GitHub repo: https://github.com/AFDSI/amp.dev.20
+NETLIFY_DEPLOY_TOKEN: 99d1e49c-fad5-472c-8b58-006bfb9c6941
+
+Optional:
+Use `static-test.json`
+A specific Google programmer used `static-test.json`
+We might consider using `static-test.json` as a method to isolate a specific content developer (contractor) deploying test pages for preview and acceptance.
+The `static-test.json` method might enable developer partitioning.
+However, it may add complexity to a build process without significantly improving content management.
+Claude should develop and express an opinion here.
+
+Finally, attached is draft documentation.
+
+\upload-tmp\documentation
+```
+_commands-gh-initialize-remote-repo.md
+_commands-git-branch-strategy-for-netlify.md
+_commands-git-push-local-to-remote.md
+_commands-netlify-management-messages.md
+```
+
+It is irregular and incomplete.
+Documentation should be improved to integrate GitHub and Netlify management.
+It should document a deplyment process from beginning to end.
+Beginning is initiating, from a CLI, a new GitHub repo.
+Ending should be commands to deploy a repo on a Netlify server for preview and acceptance.
+

@@ -1,0 +1,54 @@
+{
+	"name": "production",
+	"hosts": {
+		"pages": {
+			"scheme": "https",
+			"host": "abc-dev-static-test.patrickkettner.com",
+			"port": ""
+		},
+		"api": {
+			"scheme": "https",
+			"host": "",
+			"port": ""
+		},
+		"platform": {
+			"scheme": "https",
+			"host": "abc-dev-static-test.patrickkettner.com",
+			"port": ""
+		},
+		"websocket": {
+			"scheme": "wss",
+			"host": "abc-dev-static-test.patrickkettner.com",
+			"port": ""
+		},
+		"playground": {
+			"scheme": "https",
+			"subdomain": "playground",
+			"host": "abc-dev-static-test.patrickkettner.com",
+			"port": ""
+		},
+		"preview": {
+			"scheme": "https",
+			"subdomain": "preview",
+			"host": "abc-dev-static-test.patrickkettner.com",
+			"port": ""
+		},
+		"go": {
+			"scheme": "https",
+			"subdomain": "go",
+			"host": "abc-dev-static-test.patrickkettner.com",
+			"port": ""
+		},
+		"log": {
+			"scheme": "https",
+			"subdomain": "log",
+			"host": "abc-dev-static-test.patrickkettner.com",
+			"port": ""
+		},
+		"thumbor": {
+			"scheme": "http",
+			"host": "",
+			"port": "8080"
+		}
+	}
+}
