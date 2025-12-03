@@ -1,0 +1,69 @@
+{
+  "Meta": {
+    "host": "GIGSTER",
+    "user": "gigster",
+    "time_utc": "2025-09-27T10:35:57.9439577Z",
+    "shell": "Core 7.5.3"
+  },
+  "Findings": {
+    "InvalidNames": [],
+    "SecretsInEnv": []
+  },
+  "Path": {
+    "Issues": null,
+    "Duplicates": null,
+    "MissingToPrepend": []
+  },
+  "Node": {
+    "NodeFound": false,
+    "NpmFound": false,
+    "NpmPrefix": null,
+    "PrefixOnPath": false,
+    "KnownDirs": null
+  },
+  "Env": {
+    "Create": [
+      {
+        "Key": "NVM_HOME",
+        "Desired": "${toolchains.node.windows.nvm_home}"
+      },
+      {
+        "Key": "GROW_ENV",
+        "Desired": "local"
+      },
+      {
+        "Key": "NVM_SYMLINK",
+        "Desired": "${toolchains.node.windows.nvm_symlink}"
+      },
+      {
+        "Key": "NODE_OPTIONS",
+        "Desired": "--max-old-space-size=4096"
+      },
+      {
+        "Key": "UV_PYTHON_BIN_DIR",
+        "Desired": "${toolchains.python.windows.shim_dir}"
+      },
+      {
+        "Key": "UV_CACHE_DIR",
+        "Desired": "${dev_home.win}\\uv_cache"
+      },
+      {
+        "Key": "platform_overrides",
+        "Desired": "System.Collections.Hashtable"
+      },
+      {
+        "Key": "AMP_DEV_PROJECT",
+        "Desired": "${dev_home.wsl}/dev/repos/amp.dev"
+      },
+      {
+        "Key": "USERNAME",
+        "Desired": "${identity.owner_id}"
+      }
+    ],
+    "Update": [],
+    "Keep": []
+  },
+  "Recommendations": [
+    "Install Node or add its directory to PATH (User)."
+  ]
+}

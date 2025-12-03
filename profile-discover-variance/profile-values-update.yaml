@@ -1,0 +1,158 @@
+# Profile Values – TO-BE-5 (merged, portable, multi-user, Windows-first)
+identity:
+  owner_id: gigster              # contractors override
+
+dev_home:
+  win: "E:\\users\\${identity.owner_id}\\workspace"
+  wsl: "/mnt/e/users/${identity.owner_id}/workspace"
+  mac: "/Users/${identity.owner_id}/workspace"
+
+toolchains:
+  python:
+    versions:
+      default: "3.13"
+      alternatives: ["3.9"]
+    windows:
+      # uv-managed launchers live here (on PATH)
+      shim_dir: "${dev_home.win}\\dev\\tools\\python-bin"
+  node:
+    versions:
+      default: "22"
+      alternatives: ["20", "18"]
+    windows:
+      # nvm-windows home (versions live here)
+      nvm_home: "${dev_home.win}\\dev\\tools\\nvm"
+      # Active node.exe symlink directory (on PATH)
+      nvm_symlink: "${dev_home.win}\\dev\\tools\\nodejs"
+
+paths:
+  win:
+    # deterministic front of PATH (in this order)
+    prepend:
+      - "${toolchains.python.windows.shim_dir}"
+      - "${toolchains.node.windows.nvm_symlink}"
+      - "${dev_home.win}\\dev\\bin"
+      - "${dev_home.win}\\dev\\tools"
+
+    # optional entries to strip from PATH if present (stale system entries)
+    remove_matches:
+      - "C:\\Users\\Owner\\AppData\\Local\\Programs\\Python\\Python313"
+      - "C:\\Users\\Owner\\AppData\\Local\\Programs\\Python\\Python311"
+      - "%PYENV_ROOT%\\shims"
+      - "E:\\nvm"
+      - "E:\\nodejs"
+env:
+  # base keys (cross-platform defaults)
+  USERNAME: "${identity.owner_id}"
+  GROW_ENV: "local"
+  NODE_OPTIONS: "--max-old-space-size=4096"
+  # Example cross-reference to a WSL-side repo root (advisory; not on PATH)
+  AMP_DEV_PROJECT: "${dev_home.wsl}/dev/repos/amp.dev"
+
+  platform_overrides:
+    windows:
+      # Node (nvm-windows)
+      NVM_HOME:    "${toolchains.node.windows.nvm_home}"
+      NVM_SYMLINK: "${toolchains.node.windows.nvm_symlink}"
+      # Python (uv)
+      UV_PYTHON_BIN_DIR: "${toolchains.python.windows.shim_dir}"
+      # Keep uv caches in workspace (optional)
+      UV_CACHE_DIR: "${dev_home.win}\\uv_cache"
+
+secrets:
+  # The generator script will look for this file and load its contents
+  # into the session securely.
+  env_file: "${dev_home.win}\\.env.secrets"
+
+profiles:
+  windows:
+    ps_out:  "${dev_home.win}\\dev\\profiles\\ps\\profile.generated.ps1"
+    command_set: "windows_ps" # Add this line
+  wsl:
+    bash_out: "${dev_home.wsl}/dev/profiles/bash/.bashrc.generated"
+    zsh_out:  "${dev_home.wsl}/dev/profiles/zsh/.zshrc.generated"
+
+preflight:
+  checks:
+    - name: "dev_home exists"
+      type: "path_exists"
+      path: "${dev_home.win}"
+    - name: "python shims dir exists"
+      type: "path_exists"
+      path: "${toolchains.python.windows.shim_dir}"
+    - name: "node symlink dir exists"
+      type: "path_exists"
+      path: "${toolchains.node.windows.nvm_symlink}"
+    - name: "uv command is available"
+      type: "command_exists"
+      command: "uv"
+    - name: "Default Node.js version is active"
+      type: "command_version"
+      command: "node"
+      expected_version: "${toolchains.node.versions.default}"
+
+helpers:
+  generate:
+    - name: "Initialize-DevEnvironment"
+      description: "Idempotent function to set/correct the session environment."
+    - name: "Check-Versions"
+      description: "Verifies the versions of key toolchains like Python and Node."
+    - name: "Show-Path"
+      description: "Displays the PATH variable, split for readability."
+
+interface:
+  banners:
+    - name: "ProfileHeader"
+      text: "[[ Portable Dev Environment Initialized ]]"
+      foregroundColor: "Green"
+    - name: "QuickRefHeader"
+      text: "Quick Reference"
+      foregroundColor: "Cyan"
+      underline: true
+
+  aliases:
+    - name: "show_commands"
+      definition: "Show-QuickReference"
+    - name: "sc"
+      definition: "Show-QuickReference"
+
+  command_reference:
+    # These are the helper functions we generate, available on all platforms.
+    helpers:
+      - "Initialize-DevEnvironment  # Reload this environment"
+      - "Check-Versions             # Display tool versions"
+      - "Show-Path                  # Display PATH variable"
+
+    # Platform-specific commands and messages are defined here.
+    platform_specific:
+      # For PowerShell on both Windows and macOS
+      powershell_common:
+        - "Get-Command <cmd>          # Find command location"
+        - "ls, dir, cd, ...           # Standard navigation"
+        
+      # For Unix-like shells (Zsh, Bash)
+      unix_common:
+        - "which <cmd>                # Find command location"
+        - "ls, cd, pwd, ...           # Standard navigation"
+
+      # Specific overrides or additions for each target
+      windows_ps:
+        - "explorer .                 # Open current directory in Explorer"
+      macos_ps:
+        - "open .                     # Open current directory in Finder"
+      wsl_debian:
+        - "explorer.exe .             # Open in Windows Explorer (interop)"
+        - "sudo apt update            # Update package lists"
+      macos_zsh:
+        - "open .                     # Open current directory in Finder"
+        - "brew update                # Update Homebrew formulae"
+
+  startup_sequence:
+    - "Clear-Host"
+    - "Show-QuickReference"
+
+plan:
+  notes:
+    - "Use uv to install Python ${toolchains.python.versions.default} default, ${toolchains.python.versions.alternatives[0]} as secondary if needed."
+    - "Use nvm-windows to select Node ${toolchains.node.versions.default}.x (node.exe appears in nodejs symlink)."
+    - "Secrets should be stored in OS home .env.secrets (do not echo to env)."
